@@ -1,58 +1,44 @@
-// Smooth scroll
+
+
 document.addEventListener('DOMContentLoaded', function() {
-    var navLinks = document.querySelectorAll('.navbar a');
-  
-    for (var i = 0; i < navLinks.length; i++) {
-      navLinks[i].addEventListener('click', smoothScroll);
-    }
-  
-    function smoothScroll(e) {
-      e.preventDefault();
-  
-      var targetId = this.getAttribute('href');
-      var targetPosition = document.querySelector(targetId).offsetTop;
-      var startPosition = window.pageYOffset;
-      var distance = targetPosition - startPosition;
-      var duration = 1000;
-      var start = null;
-  
-      function animation(currentTime) {
-        if (start === null) {
-          start = currentTime;
-        }
-        var timeElapsed = currentTime - start;
-        var run = ease(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0, run);
-        if (timeElapsed < duration) {
-          requestAnimationFrame(animation);
-        }
-      }
-  
-      function ease(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t--;
-        return -c / 2 * (t * (t - 2) - 1) + b;
-      }
-  
-      requestAnimationFrame(animation);
-    }
-});
-  
+  const navLinks = document.querySelectorAll('.navbar a');
+  const navbar = document.querySelector(".navigation-bar");
 
-window.addEventListener("scroll", function() {
-  var vScroll = window.scrollY;
-  var navbar = document.querySelector(".navigation-bar");
-
-  if (vScroll > 70) {
-    navbar.classList.add("fixed");
-    navbar.classList.add("mt-[0px]");
-    navbar.classList.add("w-screen");
-  } else {
-    navbar.classList.remove("fixed");
-    navbar.classList.remove("mt-[0px]");
-    navbar.classList.remove("w-screen");
+  for (const link of navLinks) {
+    link.addEventListener('click', smoothScroll);
   }
+
+  function smoothScroll(e) {
+    e.preventDefault();
+
+    const targetId = this.getAttribute('href');
+    const targetPosition = document.querySelector(targetId).offsetTop;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 1000;
+    let start = null;
+
+    function animation(currentTime) {
+      if (!start) start = currentTime;
+      const timeElapsed = currentTime - start;
+      const run = ease(timeElapsed, startPosition, distance, duration);
+      window.scrollTo(0, run);
+      if (timeElapsed < duration) requestAnimationFrame(animation);
+    }
+
+    function ease(t, b, c, d) {
+      t /= d / 2;
+      if (t < 1) return c / 2 * t * t + b;
+      t--;
+      return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+
+    requestAnimationFrame(animation);
+  }
+
+  window.addEventListener("scroll", function() {
+    navbar.classList.toggle("fixed", window.scrollY > 70);
+    navbar.classList.toggle("mt-[0px]", window.scrollY > 70);
+    navbar.classList.toggle("w-screen", window.scrollY > 70);
+  });
 });
-
-

@@ -46,10 +46,13 @@ window.addEventListener("scroll", function() {
 
   if (vScroll > 70) {
     navbar.classList.add("fixed");
-    navbar.classList.add("py-0");
+    navbar.classList.add("mt-[0px]");
+    navbar.classList.add("w-screen");
   } else {
     navbar.classList.remove("fixed");
-    navbar.classList.remove("py-0");
+    navbar.classList.remove("mt-[0px]");
+    navbar.classList.remove("w-screen");
   }
 });
+
 

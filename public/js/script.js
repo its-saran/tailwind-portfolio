@@ -39,3 +39,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
   
+
+window.addEventListener("scroll", function() {
+  var vScroll = window.scrollY;
+  var navbar = document.querySelector(".navigation-bar");
+
+  if (vScroll > 70) {
+    navbar.classList.add("fixed");
+    navbar.classList.add("py-0");
+  } else {
+    navbar.classList.remove("fixed");
+    navbar.classList.remove("py-0");
+  }
+});
+

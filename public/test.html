@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx" data-theme="dark">
+<html lang="zxx" data-theme="dracula">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,14 +14,41 @@
         <link rel="stylesheet" href="../public/css/style.css" />
         <script src="js/script.js"></script>
     </head>
-    <body class="overflow-x-hidden">
+    <body>
+        <header></header>
+        <main>
+            <div id="intro">
+                <div class="container"></div>
+            </div>
+            <div id="about">
+                <div class="container"></div>
+            </div>
+            <div id="skills">
+                <div class="container"></div>
+            </div>
+            <div id="portfolio">
+                <div class="container"></div>
+            </div>
+            <div id="qualifications">
+                <div class="container"></div>
+            </div>
+            <div id="contact">
+                <div class="container"></div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="container"></div>
+            </div>
+        </footer>
+
         <div id="app">
             <div id="home" class="flex flex-col items-center bg-slate-400">
                 <div
-                    class="navigation-bar flex flex-col items-center w-4/5 mx-auto mt-6 z-10 transition-all duration-500 ease delay-0"
+                    class="navigation-bar flex flex-col items-center w-10/12 mx-auto mt-6 z-10 transition-all duration-500 ease delay-0 bg-base-100 shadow-xl rounded-md"
                 >
                     <div
-                        class="navbar bg-base-100 shadow-xl rounded-md overflow-hidden z-10 px-8"
+                        class="navbar overflow-hidden z-10 py-2 sm:px-4 lg:px-8 transition-all duration-500 ease delay-0"
                     >
                         <div class="navbar-start">
                             <a class="btn btn-ghost normal-case text-xl"
@@ -29,18 +56,42 @@
                             >
                         </div>
                         <div class="navbar-center hidden lg:flex">
-                            <ul class="menu menu-horizontal px-1 gap-2">
-                                <li><a href="#hero">Home</a></li>
-                                <li><a href="#mockup">About</a></li>
-                                <li><a href=".mockup-window">Skills</a></li>
-                                <li><a href="#mockup2">Portfolio</a></li>
-                                <li><a href="#mockup3">Experience</a></li>
-                                <li><a href="#mockup1">Contact</a></li>
+                            <ul
+                                class="menu menu-horizontal px-1 transition-all duration-500 ease delay-0"
+                            >
+                                <li>
+                                    <a href="#home" class="rounded-md">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#mockup" class="rounded-md"
+                                        >About</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href=".mockup-window" class="rounded-md"
+                                        >Skills</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#mockup2" class="rounded-md"
+                                        >Portfolio</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#mockup3" class="rounded-md"
+                                        >Experience</a
+                                    >
+                                </li>
+                                <li>
+                                    <a href="#mockup1" class="rounded-md"
+                                        >Contact</a
+                                    >
+                                </li>
                             </ul>
                         </div>
                         <div class="navbar-end">
                             <div
-                                class="btn btn-outline normal-case hidden lg:flex"
+                                class="btn btn-outline normal-case hidden lg:flex rounded-sm"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -57,31 +108,68 @@
                             </div>
                             <div class="dropdown">
                                 <label
-                                    tabindex="0"
-                                    class="btn btn-ghost lg:hidden"
+                                    class="btn btn-ghost swap swap-rotate lg:hidden"
                                 >
+                                    <input type="checkbox" />
+
                                     <svg
+                                        class="swap-off fill-current"
                                         xmlns="http://www.w3.org/2000/svg"
-                                        class="h-5 w-5"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
+                                        width="28"
+                                        height="28"
+                                        viewBox="0 0 512 512"
                                     >
                                         <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M4 6h16M4 12h8m-8 6h16"
-                                        ></path>
+                                            d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"
+                                        />
+                                    </svg>
+
+                                    <svg
+                                        class="swap-on fill-current"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="28"
+                                        height="28"
+                                        viewBox="0 0 512 512"
+                                    >
+                                        <polygon
+                                            points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"
+                                        />
                                     </svg>
                                 </label>
                             </div>
                         </div>
                     </div>
+                    <div
+                        id="content"
+                        class="lg:hidden flex-item self-start w-full transition-height duration-500 ease delay-0"
+                    >
+                        <ul
+                            class="menu menu-vertical px-4 transition-all duration-500 ease delay-0"
+                        >
+                            <li>
+                                <a href="#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="#mockup">About</a>
+                            </li>
+                            <li>
+                                <a href="#mockup-window">Skills</a>
+                            </li>
+                            <li>
+                                <a href="#mockup2">Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="#mockup3">Experience</a>
+                            </li>
+                            <li>
+                                <a href="#mockup1">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div
                     id="hero"
-                    class="hero min-h-screen bg-base-200 mt-8 w-4/5 mx-auto rounded-md"
+                    class="hero min-h-screen bg-base-200 mt-8 w-10/12 mx-auto rounded-md"
                 >
                     <div class="hero-content text-center">
                         <div class="max-w-md">
@@ -98,7 +186,7 @@
                 </div>
                 <div
                     id="mockup"
-                    class="mockup-code w-4/5 mx-auto overflow-wrap"
+                    class="mockup-code w-10/12 mx-auto overflow-wrap"
                 >
                     <pre>
         <code>
@@ -140,10 +228,16 @@
                     ><code>Done!</code></pre>
                 </div>
                 <div
-                    class="mockup-window border bg-base-300 w-4/5 mx-auto border-none"
+                    id="mockup-window"
+                    class="mockup-window border bg-base-300 w-10/12 mx-auto border-none"
                 >
                     <div class="flex justify-center px-4 py-16 bg-base-200">
-                        Hello!
+                        <!-- <div
+                            onclick="toggleVisibility()"
+                            class="bg-blue-500 text-white font-bold py-2 px-4 rounded cursor-pointer"
+                        >
+                            Toggle Visibility>
+                        </div> -->
                     </div>
                 </div>
             </div>

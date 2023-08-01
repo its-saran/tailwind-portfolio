@@ -2,7 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
   const navLinks = document.querySelectorAll('.navbar a');
-  const navbar = document.querySelector(".navigation-bar");
 
   for (const link of navLinks) {
     link.addEventListener('click', smoothScroll);
@@ -36,9 +35,17 @@ document.addEventListener('DOMContentLoaded', function() {
     requestAnimationFrame(animation);
   }
 
+
+  const navbar = document.querySelector(".navigation-bar");
+  const navbarMenu = document.querySelector(".navbar .menu")
+
   window.addEventListener("scroll", function() {
     navbar.classList.toggle("fixed", window.scrollY > 70);
     navbar.classList.toggle("mt-[0px]", window.scrollY > 70);
     navbar.classList.toggle("w-screen", window.scrollY > 70);
+    navbarMenu.classList.toggle("gap-6", window.scrollY > 70);
   });
 });
+
+
+

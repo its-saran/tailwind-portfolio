@@ -1,6 +1,6 @@
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const navLinks = document.querySelectorAll('.navbar a');
 
   for (const link of navLinks) {
@@ -39,13 +39,29 @@ document.addEventListener('DOMContentLoaded', function() {
   const navbar = document.querySelector(".navigation-bar");
   const navbarMenu = document.querySelector(".navbar .menu")
 
-  window.addEventListener("scroll", function() {
+  window.addEventListener("scroll", function () {
     navbar.classList.toggle("fixed", window.scrollY > 70);
     navbar.classList.toggle("mt-[0px]", window.scrollY > 70);
     navbar.classList.toggle("w-screen", window.scrollY > 70);
     navbarMenu.classList.toggle("gap-6", window.scrollY > 70);
   });
 });
+
+
+function toggleElementVisibility() {
+  const toggleElement = document.getElementById("content");
+  if (toggleElement.style.display === "none") {
+    toggleElement.style.display = "block";
+  } else {
+    toggleElement.style.display = "none";
+  }
+}
+
+const myDiv = document.getElementById("dropdown");
+myDiv.onclick = toggleElementVisibility;
+
+
+
 
 
 

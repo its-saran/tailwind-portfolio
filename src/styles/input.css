@@ -3,7 +3,20 @@
 @tailwind utilities;
 
 @layer components {
-    .container {
-        @apply w-10/12;
+}
+
+@layer utilities {
+    .scrollbar::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+        background: linear-gradient(135deg, #ff8c05 0%, #d61a5e 100%);
+        border-radius: 2px;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #ff8c05 0%, #d61a5e 65%);
     }
 }
+

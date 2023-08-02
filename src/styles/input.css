@@ -3,6 +3,28 @@
 @tailwind utilities;
 
 @layer components {
+
+    #content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+    
+    #content.show {
+        max-height: 280px; 
+    }
+
+    
+    svg.hidden {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    svg.visible {
+        opacity: 1;
+        transition: opacity 0.5s ease;
+    }
+
 }
 
 @layer utilities {

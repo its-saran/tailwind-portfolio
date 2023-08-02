@@ -77,28 +77,23 @@
                                 </svg>
                                 <span>Resume</span>
                             </div>
-                            <button id="dropdown" class="btn btn-ghost lg:hidden">
+
+                            <label class="btn btn-circle btn-ghost swap swap-rotate lg:hidden">
+  
+                                <!-- this hidden checkbox controls the state -->
+                                <input type="checkbox" id="toggleMenu" />
                                 
-                                <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
-                                    <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
-                                </svg>
+                                <!-- hamburger icon -->
+                                <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
+                                
+                                <!-- close icon -->
+                                <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
+                                
+                            </label>
 
-                            </button>
-<!-- 
-                                <label class="btn btn-ghost swap swap-rotate lg:hidden">
-                                    <input type="checkbox" />
-
-                                    <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
-                                        <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
-                                    </svg>
-
-                                    <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 512 512">
-                                        <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
-                                    </svg>
-                                </label> -->
                         </div>
                     </div>
-                    <div id="content" class="flex-item self-start w-full transition-height duration-500 ease delay-0 lg:hidden"  style="display: none">
+                    <div id="content" class="flex-item self-start w-full lg:hidden">
                         <ul class="menu menu-vertical px-4 transition-all duration-500 ease delay-0">
                             <li>
                                 <a href="#home">Home</a>
@@ -107,7 +102,7 @@
                                 <a href="#mockup">About</a>
                             </li>
                             <li>
-                                <a href="#mockup-window">Skills</a>
+                                <a href=".mockup-window">Skills</a>
                             </li>
                             <li>
                                 <a href="#mockup2">Portfolio</a>
@@ -117,6 +112,9 @@
                             </li>
                             <li>
                                 <a href="#mockup1">Contact</a>
+                            </li>
+                            <li>
+                                <a href="#mockup1">Resume</a>
                             </li>
                         </ul>
                     </div>
@@ -134,7 +132,6 @@
                         </div>
                     </div>
                 </div>
-
 
                 <div id="mockup" class="mockup-code w-10/12 mx-auto overflow-wrap">
                     <pre>
@@ -173,7 +170,8 @@
 
 
                 <div id="mockup-window" class="mockup-window border bg-base-300 w-10/12 mx-auto border-none">
-                    <div class="flex justify-center px-4 py-16 bg-base-200">
+                    <div class="flex justify-center px-4 py-16 bg-base-200 flex-col">
+                
                     </div>
                 </div>
             </div>
@@ -181,3 +179,5 @@
         <script src="js/script.js"></script>
     </body>
 </html>
+
+

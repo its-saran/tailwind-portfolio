@@ -1,0 +1,78 @@
+/* .bar {
+    margin: 100px;
+    width: 400px;
+    height: auto;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    display: flex;
+}
+
+.bottom {
+    display: none;
+}
+
+.click {
+    height: 25px;
+    margin-right: 20px;
+} */
+
+
+
+
+
+
+
+
+/* .bar {
+    margin: 100px;
+    width: 400px;
+    height: auto;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    display: flex;
+}
+
+.bottom {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.click {
+    height: 25px;
+    margin-right: 20px;
+} */
+
+
+
+.bar {
+    margin: 100px;
+    width: 400px;
+    height: auto;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    display: flex;
+}
+
+.bottom {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.show {
+    max-height: 200px;
+    /* Adjust the height to the desired value when shown */
+}

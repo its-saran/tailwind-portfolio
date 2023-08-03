@@ -1632,9 +1632,8 @@ html {
   --sf: 316 70% 43%;
   --af: 175 70% 34%;
   --nf: 213 18% 13%;
-  --b2: 212 18% 7%;
-  --b3: 0 0% 0%;
-  --bc: 214 3% 81%;
+  --b3: 0 0% 8%;
+  --bc: 145 0% 81%;
   --pc: 268 87% 91%;
   --sc: 325 84% 92%;
   --ac: 173 30% 11%;
@@ -1656,7 +1655,8 @@ html {
   --s: 316 70% 50%;
   --a: 175 70% 41%;
   --n: 213 18% 20%;
-  --b1: 212 18% 14%;
+  --b1: 0 0% 13%;
+  --b2: 0 0% 15%;
   --in: 198 93% 60%;
   --su: 158 64% 52%;
   --wa: 43 96% 56%;
@@ -3103,6 +3103,10 @@ html {
   margin-bottom: 3rem;
 }
 
+.mr-4 {
+  margin-right: 1rem;
+}
+
 .mt-14 {
   margin-top: 3.5rem;
 }
@@ -3127,8 +3131,16 @@ html {
   display: none;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
+}
+
+.w-10 {
+  width: 2.5rem;
 }
 
 .w-10\/12 {
@@ -3187,16 +3199,6 @@ html {
   border-style: none;
 }
 
-.bg-\[\#212121\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(33 33 33 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#262626\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(38 38 38 / var(--tw-bg-opacity));
-}
-
 .bg-base-200 {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--b2) / var(--tw-bg-opacity));
@@ -3205,11 +3207,6 @@ html {
 .bg-base-300 {
   --tw-bg-opacity: 1;
   background-color: hsl(var(--b3) / var(--tw-bg-opacity));
-}
-
-.bg-base-100 {
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--b1) / var(--tw-bg-opacity));
 }
 
 .fill-current {

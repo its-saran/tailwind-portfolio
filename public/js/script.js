@@ -42,6 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
     navbarMenu.classList.toggle('gap-4', isScrolled);
   });
 
+
+  // Toggle Menu
   const toggleMenu = document.querySelector('#toggleMenu');
   const contentToggleElement = document.getElementById('content');
 
@@ -49,6 +51,38 @@ document.addEventListener('DOMContentLoaded', function () {
     contentToggleElement.classList.toggle('show', toggleMenu.checked);
   });
 
+
+  // Toggle Theme
+  const toggleTheme = document.querySelector('#toggleTheme');
+  const themeToggleElement = document.querySelector('html');
+
+  toggleTheme.addEventListener('change', () => {
+    if (toggleTheme.checked) {
+      themeToggleElement.setAttribute('data-theme', 'dark');
+    } else {
+      themeToggleElement.setAttribute('data-theme', 'light');
+    }
+  });
+
+
+  const htmlElement = document.querySelector('html');
+
+  // Function to change the data-theme attribute
+  function changeTheme(newTheme) {
+    htmlElement.setAttribute('data-theme', newTheme);
+  }
+
+  // Example usage
+  const themeButton = document.getElementById('themeButton');
+
+  themeButton.addEventListener('click', () => {
+    // Change the theme when the button is clicked
+    changeTheme('darktheme'); // Replace with the desired theme name
+  });
+
+
+
+  // Mobile menu hide while clicking <a>
   const targetElement = document.getElementById('content');
   targetElement.addEventListener('click', event => {
     if (event.target.tagName === 'A') {

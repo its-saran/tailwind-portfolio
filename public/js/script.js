@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // Smooth scroll
   const animateScroll = (targetId, duration) => {
     const targetPosition = document.querySelector(targetId).offsetTop;
     const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
+    const distance = targetPosition - (startPosition + 100);
     let start = null;
 
     const ease = (t, b, c, d) => {
@@ -31,21 +32,35 @@ document.addEventListener('DOMContentLoaded', function () {
   const navLinks = [...document.querySelectorAll('.navbar a'), ...document.querySelectorAll('.menu a')];
   navLinks.forEach(link => link.addEventListener('click', handleLinkClick));
 
-  const navbar = document.querySelector('.navigation-bar');
-  const navbarMenu = document.querySelector('.navbar .menu');
+
+  // // Fixed header
+  // const header = document.querySelector('.header');
+  // const navbarMenu = document.querySelector('.navbar .menu');
+
+  // window.addEventListener('scroll', () => {
+  //   const isScrolled = window.scrollY > 70;
+  //   header.classList.toggle('fix-header', isScrolled);
+  //   navbarMenu.classList.toggle('gap-4', isScrolled);
+  // });
+
+
+  // Fixed header
+  const header = document.querySelector('.header');
+  const navbarMenuItems = document.querySelectorAll('.navbar .menu li');
 
   window.addEventListener('scroll', () => {
     const isScrolled = window.scrollY > 70;
-    navbar.classList.toggle('fixed', isScrolled);
-    navbar.classList.toggle('mt-[0px]', isScrolled);
-    navbar.classList.toggle('w-screen', isScrolled);
-    navbarMenu.classList.toggle('gap-4', isScrolled);
+    header.classList.toggle('fix-header', isScrolled);
+
+    navbarMenuItems.forEach(item => {
+      item.classList.toggle('px-2', isScrolled);
+    });
   });
 
 
   // Toggle Menu
-  const toggleMenu = document.querySelector('#toggleMenu');
-  const contentToggleElement = document.getElementById('content');
+  const toggleMenu = document.querySelector('#menu-switch .toggleMenu');
+  const contentToggleElement = document.getElementById('mobileDropdown');
 
   toggleMenu.addEventListener('change', () => {
     contentToggleElement.classList.toggle('show', toggleMenu.checked);
@@ -53,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   // Toggle Theme
-  const toggleTheme = document.querySelector('#toggleTheme');
+  const toggleTheme = document.querySelector('#theme-switch .toggleTheme');
   const themeToggleElement = document.querySelector('html');
 
   toggleTheme.addEventListener('change', () => {
@@ -74,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   // Mobile menu hide while clicking <a>
-  const targetElement = document.getElementById('content');
+  const targetElement = document.getElementById('mobileDropdown');
   targetElement.addEventListener('click', event => {
     if (event.target.tagName === 'A') {
       event.preventDefault();

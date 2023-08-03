@@ -2,39 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    body { @apply scrollbar overflow-x-hidden; }
+    header, main, footer { @apply w-10/12}
+}
+
 @layer components {
 
-    .container {
-        @apply bg-base-200 mt-8 p-8
+    #app { @apply flex flex-col items-center; }
+    .header {
+        @apply flex flex-col items-center mx-auto mt-6 z-10 shadow-xl rounded-md bg-base-200;
+        transition: width 0.5s ease, margin 0.5s ease;
     }
 
-    #content {
-        max-height: 0;
-        overflow: hidden;
+    .container { @apply bg-base-200 mt-8 p-8; }
+    .fix-header { @apply fixed mt-[0px] w-screen}
+    .main { @apply mt-6 }
+    .navbar { @apply overflow-hidden z-10 py-2 sm:px-4 lg:px-8; }
+    .navbar .menu { @apply menu-horizontal; }
+    .navbar .menu li { transition: padding 0.5s ease; }
+    .navbar .menu a { @apply rounded-md; }
+    .menu a { font-weight: 700; }
+    .navbar-center { @apply hidden lg:flex }
+
+    #mobileDropdown { 
+        @apply self-start w-full lg:hidden max-h-0 overflow-hidden;
         transition: max-height 0.5s ease;
     }
-    
-    #content.show {
-        max-height: 280px; 
-    }
+
+    #mobileDropdown.show { max-height: 280px;}
+    #mobileDropdown .menu { @apply menu-vertical px-4 }
 
 
     #logo-text {
+        @apply btn btn-ghost normal-case text-4xl font-bold;
         background-image: linear-gradient(135deg, rgb(255, 140, 5) 0%, rgb(214, 26, 94) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
-    .menu a {
-        font-weight: 700;
-    }
+    #theme-switch { @apply swap swap-rotate mr-8; }
+    #menu-switch { @apply btn btn-circle btn-ghost swap swap-rotate lg:hidden; }
 
     #download-resume {
+        @apply normal-case rounded-md hidden lg:flex;
         color: #fff;
         border: 1px solid rgba(255,255,255, .3);
         font-weight: 500;
-        /* border-radius: 3px; */
         padding: 5px 15px 5px 10px;
+        /* border-radius: 3px; */
     }
 
     #download-resume:hover {
@@ -43,8 +59,6 @@
         background: linear-gradient(135deg, #ff8c05 0%, #d61a5e 65%);
         border: 1px solid rgba(0, 0, 0, 0.5);
     }
-
-
 }
 
 @layer utilities {

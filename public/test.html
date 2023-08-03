@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx" data-theme="dracula">
+<html lang="zxx" data-theme="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -42,11 +42,13 @@
         </footer>
 
         <div id="app">
-            <div id="home" class="flex flex-col items-center bg-[#212121]">
-                <div class="navigation-bar flex flex-col items-center w-10/12 mx-auto mt-6 z-10 transition-all duration-500 ease delay-0 bg-[#262626] shadow-xl rounded-md">
+            <div id="home" class="flex flex-col items-center"> 
+                <!-- bg-[#212121] -->
+                <div class="navigation-bar flex flex-col items-center w-10/12 mx-auto mt-6 z-10 transition-all duration-500 ease delay-0 shadow-xl rounded-md bg-base-100">
+                    <!-- bg-[#262626] -->
                     <div class="navbar overflow-hidden z-10 py-2 sm:px-4 lg:px-8 transition-all duration-500 ease delay-0">
                         <div class="navbar-start">
-                            <a class="btn btn-ghost normal-case text-xl">SARAN</a>
+                            <a id="logo-text" class="btn btn-ghost normal-case text-4xl font-bold">SARAN</a>
                         </div>
                         <div class="navbar-center hidden lg:flex">
                             <ul class="menu menu-horizontal px-1 transition-all duration-500 ease delay-0">
@@ -60,23 +62,23 @@
                                     <a href=".mockup-window" class="rounded-md">Skills</a>
                                 </li>
                                 <li>
-                                    <a href="#mockup2" class="rounded-md">Portfolio</a>
+                                    <a href="#home" class="rounded-md">Portfolio</a>
                                 </li>
                                 <li>
-                                    <a href="#mockup3" class="rounded-md">Experience</a>
+                                    <a href="#home" class="rounded-md">Experience</a>
                                 </li>
                                 <li>
-                                    <a href="#mockup1" class="rounded-md">Contact</a>
+                                    <a href="#home" class="rounded-md">Contact</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="navbar-end">
-                            <div class="btn btn-outline normal-case hidden lg:flex rounded-sm">
+                            <button id="download-resume" class="normal-case rounded-md hidden lg:flex">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25">
                                     <image xlink:href="images/download-icon.svg" width="25" height="25"></image>
                                 </svg>
                                 <span>Resume</span>
-                            </div>
+                            </button>
 
                             <label class="btn btn-circle btn-ghost swap swap-rotate lg:hidden">
   
@@ -105,16 +107,16 @@
                                 <a href=".mockup-window">Skills</a>
                             </li>
                             <li>
-                                <a href="#mockup2">Portfolio</a>
+                                <a href="#home">Portfolio</a>
                             </li>
                             <li>
-                                <a href="#mockup3">Experience</a>
+                                <a href="#home">Experience</a>
                             </li>
                             <li>
-                                <a href="#mockup1">Contact</a>
+                                <a href="#home">Contact</a>
                             </li>
                             <li>
-                                <a href="#mockup1">Resume</a>
+                                <a href="#home">Resume</a>
                             </li>
                         </ul>
                     </div>

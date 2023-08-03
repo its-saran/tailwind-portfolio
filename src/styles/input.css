@@ -4,6 +4,10 @@
 
 @layer components {
 
+    .container {
+        @apply bg-base-200 mt-8 p-8
+    }
+
     #content {
         max-height: 0;
         overflow: hidden;

@@ -72,15 +72,6 @@ document.addEventListener('DOMContentLoaded', function () {
     htmlElement.setAttribute('data-theme', newTheme);
   }
 
-  // Example usage
-  const themeButton = document.getElementById('themeButton');
-
-  themeButton.addEventListener('click', () => {
-    // Change the theme when the button is clicked
-    changeTheme('darktheme'); // Replace with the desired theme name
-  });
-
-
 
   // Mobile menu hide while clicking <a>
   const targetElement = document.getElementById('content');

@@ -41,15 +41,14 @@
         -webkit-text-fill-color: transparent;
     }
 
-    #theme-switch { @apply swap swap-rotate mr-8; }
+    #theme-switch { @apply swap swap-rotate mr-2 ; }
     #menu-switch { @apply btn btn-circle btn-ghost swap swap-rotate lg:hidden; }
 
     #download-resume {
         @apply normal-case rounded-md hidden lg:flex;
-        color: #fff;
         border: 1px solid rgba(255,255,255, .3);
         font-weight: 500;
-        padding: 5px 15px 5px 10px;
+        padding: 6px 14px 6px 9px;
         /* border-radius: 3px; */
     }
 

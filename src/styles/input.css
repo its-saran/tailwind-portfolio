@@ -48,14 +48,16 @@
     #menu-switch { @apply btn btn-circle btn-ghost swap swap-rotate lg:hidden; }
 
     #download-resume {
-        @apply normal-case rounded-md hidden lg:flex;
-        border: 1px solid rgba(255,255,255, .3);
+        @apply normal-case rounded-md hidden lg:flex border border-base-content border-opacity-60 font-medium py-1.5 px-3.5;
+        border-width: 1px;
+        /* border: 1px solid rgba(255,255,255, .3);
         font-weight: 500;
-        padding: 6px 14px 6px 9px;
+        padding: 6px 14px 6px 9px; */
         /* border-radius: 3px; */
     }
 
     #download-resume:hover {
+
         background: -moz-linear-gradient(-45deg, #ff8c05 0%, #d61a5e 65%);
         background: -webkit-linear-gradient(-45deg, #ff8c05 0%, #d61a5e 65%);
         background: linear-gradient(135deg, #ff8c05 0%, #d61a5e 65%);
@@ -66,7 +68,6 @@
 @layer utilities {
     .scrollbar::-webkit-scrollbar {
         width: 12px;
-        background:#212121;
     }
 
     .scrollbar::-webkit-scrollbar-thumb {

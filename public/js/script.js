@@ -33,17 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
   navLinks.forEach(link => link.addEventListener('click', handleLinkClick));
 
 
-  // // Fixed header
-  // const header = document.querySelector('.header');
-  // const navbarMenu = document.querySelector('.navbar .menu');
-
-  // window.addEventListener('scroll', () => {
-  //   const isScrolled = window.scrollY > 70;
-  //   header.classList.toggle('fix-header', isScrolled);
-  //   navbarMenu.classList.toggle('gap-4', isScrolled);
-  // });
-
-
   // Fixed header
   const header = document.querySelector('.header');
   const navbarMenuItems = document.querySelectorAll('.navbar .menu li');
@@ -70,12 +59,15 @@ document.addEventListener('DOMContentLoaded', function () {
   // Toggle Theme
   const toggleTheme = document.querySelector('#theme-switch .toggleTheme');
   const themeToggleElement = document.querySelector('html');
+  const downloadButton = document.querySelector('#download-resume svg image');
 
   toggleTheme.addEventListener('change', () => {
     if (toggleTheme.checked) {
       themeToggleElement.setAttribute('data-theme', 'dark');
+      downloadButton.setAttribute('xlink:href', 'images/download-light.svg');
     } else {
       themeToggleElement.setAttribute('data-theme', 'light');
+      downloadButton.setAttribute('xlink:href', 'images/download-dark.svg');
     }
   });
 
@@ -98,3 +90,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+
+

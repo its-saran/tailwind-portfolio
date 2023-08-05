@@ -3,17 +3,20 @@
 @tailwind utilities;
 
 @layer base {
+    
     body { @apply scrollbar overflow-x-hidden; }
     header, main, footer { @apply w-10/12}
+    header {
+        @apply flex flex-col items-center mx-auto mt-6 z-10 shadow-xl rounded-md bg-base-200;
+        transition: width 0.5s ease, margin 0.5s ease;
+    }
+    footer { @apply bg-base-200 mt-8 mb-6 flex justify-center; }
 }
 
 @layer components {
 
     #app { @apply flex flex-col items-center; }
-    .header {
-        @apply flex flex-col items-center mx-auto mt-6 z-10 shadow-xl rounded-md bg-base-200;
-        transition: width 0.5s ease, margin 0.5s ease;
-    }
+    #copyright { @apply p-6; }
 
     .container { @apply bg-base-200 mt-8 p-8; }
     .fix-header { @apply fixed mt-[0px] w-screen}

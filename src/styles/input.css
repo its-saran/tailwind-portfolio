@@ -10,6 +10,7 @@
         @apply flex flex-col items-center mx-auto mt-6 z-10 shadow-xl rounded-md bg-base-200;
         transition: width 0.5s ease, margin 0.5s ease;
     }
+    main { @apply mt-6 }
     footer { @apply bg-base-200 mt-8 mb-6 flex justify-center; }
 }
 
@@ -20,7 +21,6 @@
 
     .container { @apply bg-base-200 mt-8 p-8; }
     .fix-header { @apply fixed mt-[0px] w-screen}
-    .main { @apply mt-6 }
     .navbar { @apply overflow-hidden z-10 py-2 sm:px-4 lg:px-8; }
     .navbar .menu { @apply menu-horizontal; }
     .navbar .menu li { transition: padding 0.5s ease; }
@@ -47,22 +47,25 @@
     #theme-switch { @apply swap swap-rotate mr-2 ; }
     #menu-switch { @apply btn btn-circle btn-ghost swap swap-rotate lg:hidden; }
 
-    #download-resume {
-        @apply normal-case rounded-md hidden lg:flex border border-base-content border-opacity-60 font-medium py-1.5 px-3.5;
-        border-width: 1px;
-        /* border: 1px solid rgba(255,255,255, .3);
-        font-weight: 500;
-        padding: 6px 14px 6px 9px; */
-        /* border-radius: 3px; */
-    }
-
-    #download-resume:hover {
-
-        background: -moz-linear-gradient(-45deg, #ff8c05 0%, #d61a5e 65%);
-        background: -webkit-linear-gradient(-45deg, #ff8c05 0%, #d61a5e 65%);
-        background: linear-gradient(135deg, #ff8c05 0%, #d61a5e 65%);
-        border: 1px solid rgba(0, 0, 0, 0.5);
-    }
+    .download-resume {
+        @apply normal-case rounded-md hidden lg:flex font-medium border-none cursor-pointer select-none transition-all duration-300;
+        padding: 8px 16px 8px 12px;
+        background-size: 200% auto;
+        color: #1F2937;
+        box-shadow: 0px 0px 14px -7px #f09819;
+        background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+        touch-action: manipulation;
+      }
+      
+      .download-resume:hover {
+        background-position: right center;
+        color: #1F2937;
+        text-decoration: none;
+      }
+      
+      .download-resume:active {
+        transform: scale(0.9);
+      }
 }
 
 @layer utilities {

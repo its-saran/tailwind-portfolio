@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   // Fixed header
-  const header = document.querySelector('.header');
+  const header = document.querySelector('header'); // Select the header element using the <header> tag
   const navbarMenuItems = document.querySelectorAll('.navbar .menu li');
 
   window.addEventListener('scroll', () => {
@@ -45,7 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
       item.classList.toggle('px-2', isScrolled);
     });
   });
-
 
   // Toggle Menu
   const toggleMenu = document.querySelector('#menu-switch .toggleMenu');

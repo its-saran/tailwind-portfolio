@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       oufit: ["Outfit", "sans-serif"]
-    }
+    },
   },
   plugins: [require("daisyui"), require('@tailwindcss/typography')],
   daisyui: {

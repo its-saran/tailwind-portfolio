@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
     header.classList.toggle('fix-header', isScrolled);
 
     navbarMenuItems.forEach(item => {
-      item.classList.toggle('px-2', isScrolled);
+      item.classList.toggle('mx-2', isScrolled);
     });
   });
 

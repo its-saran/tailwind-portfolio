@@ -6,84 +6,100 @@
 @layer base {
     
     body { @apply scrollbar font-oufit overflow-x-hidden; }
-    header, main, footer { @apply w-10/12}
-    header {
-        @apply flex flex-col items-center mx-auto mt-6 z-10 shadow-xl rounded-md bg-base-200;
+    header, main, footer {
+        width: 80%; 
         transition: width 0.5s ease, margin 0.5s ease;
+        @apply rounded-md; 
     }
+
+    header { @apply flex flex-col mt-6 z-10 shadow-xl bg-base-200; }
     main { @apply mt-6 }
     footer { @apply bg-base-200 mt-8 mb-6 flex justify-center; }
-}
 
+    @media (max-width: 1280px) { header, main, footer { width: 85%; } }
+    @media (max-width: 640px) { header, main, footer { width: 94%; } }
+ }
+ 
 @layer components {
-
+ 
     #app { @apply flex flex-col items-center; }
     #copyright { @apply p-6; }
-
-    .container { @apply bg-base-200 mt-8 p-8; }
+    .frame { @apply bg-base-200 mt-8 p-8; }
     .fix-header { @apply fixed mt-[0px] w-screen}
-    .navbar { @apply overflow-hidden z-10 py-2 sm:px-4 lg:px-8; }
+    .navbar { @apply overflow-hidden z-10 py-2 px-4 ; }
     .navbar .menu { @apply menu-horizontal; }
-    .navbar .menu li { transition: padding 0.5s ease; }
+    .navbar .menu li { transition: margin 0.5s ease; }
     .navbar .menu a { @apply rounded-md; }
     .menu a { 
         letter-spacing: 1px;
         font-weight: 500; 
     }
-    .navbar-center { @apply hidden lg:flex }
-
+    .navbar-center { @apply flex }
     #mobileDropdown { 
-        @apply self-start w-full lg:hidden max-h-0 overflow-hidden;
-        transition: max-height 0.5s ease;
-    }
-
-    #mobileDropdown.show { max-height: 280px;}
+         @apply self-start w-full max-h-0 overflow-hidden;
+         transition: max-height 0.5s ease;
+     }
+ 
+    #mobileDropdown.show { max-height: 285px;}
     #mobileDropdown .menu { @apply menu-vertical px-4 }
-
-
+ 
     #logo-text {
-        @apply btn btn-ghost normal-case text-4xl font-bold;
-        background-image: linear-gradient(135deg, rgb(255, 140, 5) 0%, rgb(214, 26, 94) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
+         @apply btn btn-ghost normal-case text-4xl font-bold;
+         background-image: linear-gradient(135deg, rgb(255, 140, 5) 0%, rgb(214, 26, 94) 100%);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+     }
+ 
     #theme-switch { @apply swap swap-rotate mr-8 ; }
-    #menu-switch { @apply btn btn-circle btn-ghost swap swap-rotate lg:hidden; }
+    #menu-switch { @apply btn btn-circle btn-ghost swap swap-rotate ; }
 
-    .download-resume {
-        @apply normal-case rounded-md hidden lg:flex font-medium border-none cursor-pointer select-none transition-all duration-300 mr-4;
+    .main-button {
+        @apply normal-case rounded-md flex font-medium border-none cursor-pointer select-none transition-all duration-300;
         padding: 8px 16px 8px 12px;
         background-size: 200% auto;
         color: #1F2937;
         box-shadow: 0px 0px 14px -7px #f09819;
         background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
         touch-action: manipulation;
-      }
-      
-      .download-resume:hover {
+    }
+
+    .main-button:hover {
         background-position: right center;
         color: #1F2937;
         text-decoration: none;
-      }
-      
-      .download-resume:active {
-        transform: scale(0.9);
-      }
-}
+    }
+       
+    .main-button:active { transform: scale(0.9);}
+    .download-resume { @apply mr-4; }
+    .download-resume-mobile { @apply ml-8 mb-8; }
 
+    @media (min-width: 1280px) { #menu-switch { display: none; }}
+    @media (max-width: 640px) {}
+    @media (max-width: 768px) {}
+    @media (max-width: 1024px) {}
+    @media (max-width: 1280px) {
+        .download-resume { display: none }
+        .navbar-center { display: none }
+        #theme-switch { @apply mr-5}
+    }
+}
+ 
 @layer utilities {
-    .scrollbar::-webkit-scrollbar {
-        width: 12px;
-    }
-
-    .scrollbar::-webkit-scrollbar-thumb {
-        background: linear-gradient(135deg, #ff8c05 0%, #d61a5e 100%);
-        border-radius: 2px;
-    }
-
-    .scrollbar::-webkit-scrollbar-thumb:hover {
-        background: linear-gradient(135deg, #ff8c05 0%, #d61a5e 65%);
-    }
+     .scrollbar::-webkit-scrollbar {
+         width: 12px;
+     }
+ 
+     .scrollbar::-webkit-scrollbar-thumb {
+         background: linear-gradient(135deg, #ff8c05 0%, #d61a5e 100%);
+         border-radius: 2px;
+     }
+ 
+     .scrollbar::-webkit-scrollbar-thumb:hover {
+         background: linear-gradient(135deg, #ff8c05 0%, #d61a5e 65%);
+     }
 }
+ 
+ 
+
+
 

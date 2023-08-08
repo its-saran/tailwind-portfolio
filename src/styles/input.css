@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
     
-    body { @apply scrollbar overflow-x-hidden; }
+    body { @apply scrollbar font-oufit overflow-x-hidden; }
     header, main, footer { @apply w-10/12}
     header {
         @apply flex flex-col items-center mx-auto mt-6 z-10 shadow-xl rounded-md bg-base-200;
@@ -25,7 +26,10 @@
     .navbar .menu { @apply menu-horizontal; }
     .navbar .menu li { transition: padding 0.5s ease; }
     .navbar .menu a { @apply rounded-md; }
-    .menu a { font-weight: 700; }
+    .menu a { 
+        letter-spacing: 1px;
+        font-weight: 500; 
+    }
     .navbar-center { @apply hidden lg:flex }
 
     #mobileDropdown { 
@@ -44,11 +48,11 @@
         -webkit-text-fill-color: transparent;
     }
 
-    #theme-switch { @apply swap swap-rotate mr-2 ; }
+    #theme-switch { @apply swap swap-rotate mr-8 ; }
     #menu-switch { @apply btn btn-circle btn-ghost swap swap-rotate lg:hidden; }
 
     .download-resume {
-        @apply normal-case rounded-md hidden lg:flex font-medium border-none cursor-pointer select-none transition-all duration-300;
+        @apply normal-case rounded-md hidden lg:flex font-medium border-none cursor-pointer select-none transition-all duration-300 mr-4;
         padding: 8px 16px 8px 12px;
         background-size: 200% auto;
         color: #1F2937;

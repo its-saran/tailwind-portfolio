@@ -24,7 +24,7 @@
  
     #app { @apply flex flex-col items-center; }
     #copyright { @apply p-6; }
-    .frame { @apply bg-base-200 mt-8 p-8; }
+    .frame { @apply bg-base-200 mt-8 p-8 rounded-md; }
     .fix-header { @apply fixed mt-[0px] w-screen}
     .navbar { @apply overflow-hidden z-10 py-2 px-4 ; }
     .navbar .menu { @apply menu-horizontal; }
@@ -72,6 +72,12 @@
     .main-button:active { transform: scale(0.9);}
     .download-resume { @apply mr-4; }
     .download-resume-mobile { @apply ml-8 mb-8; }
+
+    .section-title h3 { @apply mt-0 }
+    .section-content p { @apply my-0}
+
+    .intro-left { width: 620px}
+    .intro-image { filter: drop-shadow(-3px 17px 8px rgba(0, 0, 0, 0.3));}
 
     @media (min-width: 1280px) { #menu-switch { display: none; }}
     @media (max-width: 640px) {}

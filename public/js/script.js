@@ -91,4 +91,19 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+// // Highlight active nav item
+// var navItems = document.querySelectorAll('.navbar-nav .nav-item');
+
+// navItems.forEach(function(navItem) {
+//     navItem.addEventListener('click', function() {
+//         var activeNavItem = document.querySelector('.navbar-nav .nav-item.active');
+//         if (activeNavItem) {
+//             activeNavItem.classList.remove('active');
+//         }
+//         this.classList.add('active');
+//     });
+// });
+
+
+
 

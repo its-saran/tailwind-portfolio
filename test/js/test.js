@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var grid = document.querySelector(".grid");
-    var isotopeOptions = {
+    const grid = document.querySelector(".grid");
+    const isotopeOptions = {
         itemSelector: ".element-item",
         layoutMode: "fitRows",
         getSortData: {
@@ -9,37 +9,29 @@ document.addEventListener("DOMContentLoaded", function () {
             number: ".number parseInt",
             category: "[data-category]",
             weight: function (itemElem) {
-                var weight = itemElem.querySelector(".weight").textContent;
+                const weight = itemElem.querySelector(".weight").textContent;
                 return parseFloat(weight.replace(/[\(\)]/g, ""));
             },
         }
     };
-    var isotopeInstance = new Isotope(grid, isotopeOptions);
+    const isotopeInstance = new Isotope(grid, isotopeOptions);
 
-    var filterButtons = document.querySelectorAll("#filters button");
+    const filterButtons = document.querySelectorAll("#filters button");
     filterButtons.forEach(function (button) {
         button.addEventListener("click", function () {
-            var filterValue = button.getAttribute("data-filter");
+            const filterValue = button.getAttribute("data-filter");
             isotopeInstance.arrange({ filter: filterValue });
         });
     });
 
-    var sortButtons = document.querySelectorAll("#sorts button");
-    sortButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            var sortByValue = button.getAttribute("data-sort-by");
-            isotopeInstance.arrange({ sortBy: sortByValue });
-        });
-    });
-
-    var buttonGroups = document.querySelectorAll(".button-group");
+    const buttonGroups = document.querySelectorAll(".button-group");
     buttonGroups.forEach(function (buttonGroup) {
         buttonGroup.addEventListener("click", function (event) {
             if (
                 event.target &&
                 event.target.nodeName === "BUTTON"
             ) {
-                var buttons = buttonGroup.querySelectorAll("button");
+                const buttons = buttonGroup.querySelectorAll("button");
                 buttons.forEach(function (button) {
                     button.classList.remove("is-checked");
                 });

@@ -108,29 +108,43 @@ document.addEventListener('DOMContentLoaded', function () {
   };
   const isotopeInstance = new Isotope(squareSection, isotopeOptions);
 
-  const filterButtons = document.querySelectorAll("#filters button");
-  filterButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      const filterValue = button.getAttribute("data-filter");
-      isotopeInstance.arrange({ filter: filterValue });
-    });
-  });
+  // const filterButtons = document.querySelectorAll("#filters button");
+  // filterButtons.forEach(function (button) {
+  //   button.addEventListener("click", function () {
+  //     const filterValue = button.getAttribute("data-filter");
+  //     isotopeInstance.arrange({ filter: filterValue });
+  //   });
+  // });
 
-  const buttonGroups = document.querySelectorAll(".button-group");
-  buttonGroups.forEach(function (buttonGroup) {
-    buttonGroup.addEventListener("click", function (event) {
-      if (
-        event.target &&
-        event.target.nodeName === "BUTTON"
-      ) {
-        const buttons = buttonGroup.querySelectorAll("button");
-        buttons.forEach(function (button) {
-          button.classList.remove("is-checked");
-        });
-        event.target.classList.add("is-checked");
+  const daisyFilterButtons = document.querySelectorAll("#daisy-filters input");
+
+  daisyFilterButtons.forEach(function (input) {
+    input.addEventListener("change", function () {
+      if (input.checked) {
+        const filterValue = input.getAttribute("data-filter");
+        isotopeInstance.arrange({ filter: filterValue });
       }
     });
   });
+
+
+
+  // const buttonGroups = document.querySelectorAll(".button-group");
+  // buttonGroups.forEach(function (buttonGroup) {
+  //   buttonGroup.addEventListener("click", function (event) {
+  //     if (
+  //       event.target &&
+  //       event.target.nodeName === "BUTTON"
+  //     ) {
+  //       const buttons = buttonGroup.querySelectorAll("button");
+  //       buttons.forEach(function (button) {
+  //         button.classList.remove("is-checked");
+  //       });
+  //       event.target.classList.add("is-checked");
+  //     }
+  //   });
+  // });
+
 });
 
 

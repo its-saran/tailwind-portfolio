@@ -22,12 +22,12 @@
                     </div>
                     <div class="navbar-center">
                         <ul class="menu">
-                            <li><a href="#intro">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href=".mockup-window">Skills</a></li>
-                            <li><a href="#hero">Portfolio</a></li>
-                            <li><a href="#hero">Experience</a></li>
-                            <li><a href="#hero">Contact</a></li>
+                            <li><a href="#intro" class="transition-none">Home</a></li>
+                            <li><a href="#about" class="transition-none">About</a></li>
+                            <li><a href="#skills" class="transition-none">Skills</a></li>
+                            <li><a href="#portfolio" class="transition-none">Portfolio</a></li>
+                            <li><a href="#hero" class="transition-none">Experience</a></li>
+                            <li><a href="#hero" class="transition-none">Contact</a></li>
                         </ul>
                     </div>
                     <div class="navbar-end">
@@ -57,8 +57,8 @@
                     <ul class="menu">
                         <li><a href="#intro">Home</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#mockup-window">Skills</a></li>
-                        <li><a href="#hero">Portfolio</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#hero">Experience</a></li>
                         <li><a href="#hero">Contact</a></li>
                     </ul>
@@ -75,14 +75,13 @@
                 <section id="intro" class="frame">
                     <div class="intro-content flex">
                         <div class="intro-left">
-                            <div class="intro-text">
-                                <div class="header">
+                            <div class="intro-text py-2">
+                                <div class="header text-5xl">
                                     <div>Hi, my <br>name is <b class="author">Saran<span class="dot">.</span></b></div>
                                 </div>
-                                <div class="description">
-                                    <div class="first">
-                                        <div class="profession">I'm a <b class="job-title">data analyst</b> from</div>
-                                        <div class="district">Kanniyakumari,</div>
+                                <div class="description text-2xl py-12">
+                                    <div class="first flex">
+                                        <div class="profession">I'm a <b class="job-title">data analyst</b> from Kanniyakumari,</div>
                                     </div>
                                     <div class="second">
                                         <span class="state">Tamil Nadu.</span>
@@ -90,14 +89,14 @@
                                 </div>
                             </div>
                             <div class="intro-button">
-                                <button class="main-button text-white" role="button">
+                                <button class="main-button" role="button">
                                     <span>Contact Me</span>
                                 </button>
                             </div>
                         </div>
                         <div class="intro-right">
-                            <div class="intro-image">
-                                <img src="images/intro-image-350.png" alt="" srcset="">
+                            <div class="intro-image mx-8 mt-1.5 mb-4">
+                                <img src="images/intro-image-320.png" alt="" srcset="">
                             </div>
                         </div>
                     </div>
@@ -110,8 +109,15 @@
                         <p class="leading-7">Hello there, friend! I'm your go-to data analyst, armed with a mighty spreadsheet sword and a heart full of humor. I dive deep into the realms of data, slaying confusion and bringing clarity to the numbers that dare to challenge us. But fear not, I'm not all seriousness and formulas—I sprinkle laughter and wit into every analysis I do. So join me on this data-driven quest, where we'll conquer data dragons, unravel statistical riddles, and create insights that will make you laugh out loud. Let's turn your data journey into an epic adventure with a dash of comedy!</p>
                     </div>
                 </section>
-                <section id="skills" class="frame">
-
+                <section id="skills" class="frame prose-xl max-w-none">
+                    <div class="section-title flex justify-center flex-col">
+                        <h3 class="mb-4">Skills</h3>
+                        <progress class="progress h-2 my-2" value="0" max="100" style="width: 700px;"></progress>
+                        <progress class="progress h-2 my-2" value="10" max="100" style="width: 700px;"></progress>
+                        <progress class="progress h-2 my-2" value="40" max="100" style="width: 700px;"></progress>
+                        <progress class="progress h-2 my-2" value="70" max="100" style="width: 700px;"></progress>
+                        <progress class="progress h-2 my-2" value="100" max="100" style="width: 700px"></progress>
+                    </div>
                 </section>
                 <section id="portfolio" class="frame prose-xl max-w-none">
                     <div class="section-title flex justify-center">
@@ -236,20 +242,56 @@
                         </div>
                     </div>
                 </section>
-                <section id="qualifications" class="frame">
+                <section id="qualifications" class="frame prose-xl max-w-none">
+                    <div class="section-title flex justify-center">
+                        <h3>Qualifications</h3>
+                    </div>
                 </section>
-                <section id="contact" class="frame">
-                </section>
-                <section id="hero" class="hero min-h-98 rounded-md py-30 frame">
-                    <div class="hero-content text-center">
-                        <div class="max-w-md">
-                            <h1 class="text-5xl font-bold">Hello there</h1>
-                            <p class="py-6">
-                                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
-                            </p>
-                            <button class="btn btn-primary">Get Started</button>
+                <section id="experience" class="frame">
+                    <div class="relative mt-5 rounded-lg bg-zinc-800 py-4 px-2 text-zinc-200">
+                        <div class="absolute top-0 left-1/2 -ml-[8px] h-full w-4 rounded-full bg-gradient-to-b from-sky-900 via-cyan-900 to-teal-900">
+                            <div class="sticky top-1/2">
+                                <div class="relative h-4 w-4">
+                                <div
+                                    class="absolute h-4 w-4 animate-ping rounded-full bg-pink-500 opacity-75"
+                                ></div>
+                                <div class="relative h-4 w-4 rounded-full bg-rose-500"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-8">
+                            <div>
+                                <h4 class="my-4 rounded-lg bg-zinc-900 p-2">1st July</h4>
+                            </div>
+                            <div></div>
+                            <div class="text-right">
+                                <div class="font-bold">Jackie Chaston</div>
+                                <div class="text-zinc-400">6pm - Sage Stage</div>
+                            </div>
+                            <div></div>
+                            <div></div>
+                            <div>
+                                <div class="font-bold">Jackie Chaston</div>
+                                <div class="text-zinc-400">6pm - Sage Stage</div>
+                            </div>
+                            <div>
+                                <h4 class="my-4 rounded-lg bg-zinc-900 p-2">1st July</h4>
+                            </div>
+                            <div></div>
+                            <div class="text-right">
+                                <div class="font-bold">Jackie Chaston</div>
+                                <div class="text-zinc-400">6pm - Sage Stage</div>
+                            </div>
+                            <div></div>
+                            <div></div>
+                            <div>
+                                <div class="font-bold">Jackie Chaston</div>
+                                <div class="text-zinc-400">6pm - Sage Stage</div>
+                            </div>
                         </div>
                     </div>
+                </section>
+                <section id="contact" class="frame">
                 </section>
                 <section class="frame">
                     <div id="mockup" class="mockup-code mx-auto overflow-wrap">

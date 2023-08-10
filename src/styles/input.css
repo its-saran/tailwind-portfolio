@@ -6,7 +6,7 @@
 @layer base {
     body { @apply scrollbar font-oufit overflow-x-hidden; }
     header, main, footer {
-        width: 80%; 
+        width: 82%; 
         transition: width 0.5s ease, margin 0.5s ease;
         @apply rounded-md; 
     }
@@ -23,9 +23,9 @@
  
     #app { @apply flex flex-col items-center; }
     #copyright { @apply p-6; }
-    .frame { @apply bg-base-200 mt-8 p-8 rounded-md; }
+    .frame { @apply bg-base-200 mt-8 py-8 px-10 rounded-md; }
     .fix-header { @apply fixed mt-[0px] w-screen}
-    .navbar { @apply overflow-hidden z-10 py-2 px-4 ; }
+    .navbar { @apply overflow-hidden z-10 py-2 px-6 ; }
     .navbar .menu { @apply menu-horizontal; }
     .navbar .menu li { transition: margin 0.5s ease; }
     .navbar .menu a { @apply rounded-md; }
@@ -53,13 +53,15 @@
     #menu-switch { @apply btn btn-circle btn-ghost swap swap-rotate ; }
 
     .main-button {
-        @apply normal-case rounded-md flex font-medium border-none cursor-pointer select-none transition-all duration-300;
+        @apply normal-case rounded-md flex font-medium border-none cursor-pointer select-none transition-all;
         padding: 8px 16px 8px 12px;
         background-size: 200% auto;
         color: #1F2937;
         box-shadow: 0px 0px 14px -7px #f09819;
         background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
         touch-action: manipulation;
+        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        transition-duration: 200ms;
     }
 
     .main-button:hover {
@@ -76,7 +78,9 @@
     .section-content p { @apply my-0}
 
     .intro-left { width: 620px}
-    .intro-image { filter: drop-shadow(-3px 17px 8px rgba(0, 0, 0, 0.3));}
+    .intro-image { 
+      width: 320px;
+      filter: drop-shadow(-3px 17px 8px rgba(0, 0, 0, 0.3));}
 
     @media (min-width: 1280px) { #menu-switch { display: none; }}
     @media (max-width: 640px) {}
@@ -105,6 +109,25 @@
 }
  
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .button {
   display: inline-block;

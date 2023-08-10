@@ -74,8 +74,6 @@
     .download-resume { @apply mr-4; }
     .download-resume-mobile { @apply ml-8 mb-8; }
 
-    .section-title h3 { @apply mt-0 }
-    .section-content p { @apply my-0}
 
     .intro-left { width: 620px}
     .intro-image { 

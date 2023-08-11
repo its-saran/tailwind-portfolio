@@ -97,7 +97,6 @@ document.addEventListener('DOMContentLoaded', function () {
     layoutMode: "fitRows",
   };
   const isotopeInstance = new Isotope(squareSection, isotopeOptions);
-
   const daisyFilterButtons = document.querySelectorAll("#daisy-filters input");
 
   daisyFilterButtons.forEach(function (input) {
@@ -108,6 +107,52 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+
+  //Dynamically generate skills content 
+  const skills = document.querySelectorAll('#skills .skill');
+  skills.forEach(skill => {
+    const skillName = skill.getAttribute('name');
+    const skillValue = skill.getAttribute('value');
+
+    skill.innerHTML = `
+  <div class="skill-container">
+    <div class="skill-title prose-lg max-w-none">
+      <h4>${skillName}</h4>
+    </div>
+    <div class="skill-progress">
+      <div style="width: 0;"></div>
+    </div>
+  </div>
+  `;
+  });
+
+  // Add width when the element is visited
+  const skillProgressBars = document.querySelectorAll('#skills .skill .skill-progress div');
+  const handleIntersection = (entries, observer) => {
+    console.log("Callback triggered!");
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        console.log("Element is intersecting!");
+        const skillProgress = entry.target;
+        const skillElement = skillProgress.closest('.skill');
+        const skillValue = skillElement.getAttribute('value');
+        skillProgress.style.width = `${skillValue}%`;
+        observer.unobserve(skillProgress);
+      }
+    });
+  };
+
+  // Set up the Intersection Observer
+  const observer = new IntersectionObserver(handleIntersection, { threshold: 0.1 });
+
+  // Observe each skill progress element
+  skillProgressBars.forEach(progressBar => {
+    observer.observe(progressBar);
+  });
+
+
+
 
 });
 

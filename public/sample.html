@@ -73,11 +73,11 @@
 
             <main>
                 <section id="intro" class="frame">
-                    <div class="intro-content flex">
+                    <div class="section-content flex">
                         <div class="intro-left">
                             <div class="intro-text py-2">
                                 <div class="header text-5xl">
-                                    <div>Hi, my <br>name is <b class="author">Saran<span class="dot">.</span></b></div>
+                                    <div>Hi, my <br>name is <b class="author">Saran<span class="dot text-orange-500 text-3xl ml-0.5">.</span></b></div>
                                 </div>
                                 <div class="description text-2xl py-12">
                                     <div class="first flex">
@@ -114,62 +114,43 @@
                         <h2>Skills</h2>
                     </div>
                     <div class="section-content">
-                        <div class="grid grid-cols-2">
-                            <div class="prose-xl max-w-none pl-2">
-                                <h4 class="my-4 uppercase tracking-wider mt-0">Personal Skill</h4>
+                        <div id="personal-skills" class="grid grid-cols-2">
+                            <div class="skills-left prose-xl max-w-none pl-2">
+                                <h4 class="my-4 uppercase tracking-wider mt-0 text-orange-500">Personal Skill</h4>
                                 <h3>Skills that Define Me</h2>
                             </div>
-                            <div class="pl-3 pr-4">
+                            <div class="skills-right pl-3 pr-4">
                                 <ul>
-                                    <li>
-                                        <div class="skill-title">Critical thinking</div>
-                                        <progress class="progress h-2 my-2" value="85" max="100"></progress>
+                                    <li class="skill" name="Critical thinking" value="85">
                                     </li>
-                                    <li>
-                                        <div class="skill-title">Problem-solving</div>
-                                        <progress class="progress h-2 my-2" value="80" max="100"></progress>
+                                    <li class="skill" name="Problem-solving" value="80">
                                     </li>
-                                    <li>
-                                        <div class="skill-title">Attention to detail</div>
-                                        <progress class="progress h-2 my-2" value="90" max="100"></progress>
+                                    <li class="skill" name="Attention to detail" value="90">
                                     </li>
-                                    <li>
-                                        <div class="skill-title">Communication</div>
-                                        <progress class="progress h-2 my-2" value="95" max="100"></progress>
+                                    <li class="skill" name="Communication" value="95">
                                     </li>
-                                    <li>
-                                        <div class="skill-title">Collaboration</div>
-                                        <progress class="progress h-2 my-2" value="95" max="100"></progress>
+                                    <li class="skill" name="Collaboration" value="95">
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="grid grid-cols-2 pt-12">
-                            <div class="prose-xl max-w-none pl-2">
-                                <h4 class="my-4 uppercase tracking-wider mt-0">Professional Skill</h4>
+                        <div id="professional-skills" class="grid grid-cols-2 pt-12">
+                            <div class="skills-left prose-xl max-w-none pl-2">
+                                <h4 class="my-4 uppercase tracking-wider mt-0 text-orange-500">Professional Skill</h4>
+
                                 <h3>Specialized Skills for Impact</h2>
                             </div>
-                            <div class="pl-3 pr-4">
+                            <div class="skills-right pl-3 pr-4">
                                 <ul>
-                                    <li>
-                                        <div class="skill-title">Excel</div>
-                                        <progress class="progress h-2 my-2" value="98" max="100"></progress>
+                                    <li class="skill" name="Excel" value="98">
                                     </li>
-                                    <li>
-                                        <div class="skill-title">SQL</div>
-                                        <progress class="progress h-2 my-2" value="90" max="100"></progress>
+                                    <li class="skill" name="SQL" value="90">
                                     </li>
-                                    <li>
-                                        <div class="skill-title">Statistics</div>
-                                        <progress class="progress h-2 my-2" value="80" max="100"></progress>
+                                    <li class="skill" name="Statistics" value="80">
                                     </li>
-                                    <li>
-                                        <div class="skill-title">Python</div>
-                                        <progress class="progress h-2 my-2" value="75" max="100"></progress>
+                                    <li class="skill" name="Python" value="75">
                                     </li>
-                                    <li>
-                                        <div class="skill-title">Power BI</div>
-                                        <progress class="progress h-2 my-2" value="70" max="100"></progress>
+                                    <li class="skill" name="Power Bi" value="70">
                                     </li>
                                 </ul>
                             </div>
@@ -180,7 +161,7 @@
                     <div class="section-title prose-lg max-w-none font-bold mb-6 text-orange-500 text-center">
                         <h2>My Portfolio</h2>
                     </div>
-                    <div class="section-content flex justify-center flex-col items-center">
+                    <div class="section-filters flex justify-center flex-col items-center">
                         <div id="daisy-filters" class="join pb-5">
                             <input class="join-item btn" type="radio" name="options" aria-label="show all" data-filter="*" checked/>
                             <input class="join-item btn" type="radio" name="options" aria-label="Excel" data-filter=".alkali, .alkaline-earth"/>
@@ -197,8 +178,8 @@
                                 <h3 class="title font-bold">Finance dashboard</h3>
                                 <div class="info prose-sm max-w-none  flex gap-4 items-center">
                                     <h4 class="date m-0 p-0">August 10,2023</h4>
-                                    <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
-                                    <h4 class="tag m-0 p-0 uppercase">Excel</h4>
+                                    <div class="circle w-1.5  bg-zinc-600 rounded-full"></div>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
                                 </div>
                             </div>
                         </div>
@@ -210,8 +191,8 @@
                                 <h3 class="title font-bold">Finance dashboard</h3>
                                 <div class="info prose-sm max-w-none  flex gap-4 items-center">
                                     <h4 class="date m-0 p-0">August 10,2023</h4>
-                                    <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
-                                    <h4 class="tag m-0 p-0 uppercase">Excel</h4>
+                                    <div class="circle w-1.5  bg-zinc-600 rounded-full"></div>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
                                 </div>
                             </div>
                         </div>
@@ -223,8 +204,8 @@
                                 <h3 class="title font-bold">Finance dashboard</h3>
                                 <div class="info prose-sm max-w-none  flex gap-4 items-center">
                                     <h4 class="date m-0 p-0">August 10,2023</h4>
-                                    <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
-                                    <h4 class="tag m-0 p-0 uppercase">Excel</h4>
+                                    <div class="circle w-1.5  bg-zinc-600 rounded-full"></div>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
                                 </div>
                             </div>                           
                         </div>
@@ -237,7 +218,7 @@
                                 <div class="info prose-sm max-w-none  flex gap-4 items-center">
                                     <h4 class="date m-0 p-0">August 10,2023</h4>
                                     <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
-                                    <h4 class="tag m-0 p-0 uppercase">Excel</h4>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
                                 </div>
                             </div>                        
                         </div>
@@ -250,7 +231,7 @@
                                 <div class="info prose-sm max-w-none  flex gap-4 items-center">
                                     <h4 class="date m-0 p-0">August 10,2023</h4>
                                     <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
-                                    <h4 class="tag m-0 p-0 uppercase">Excel</h4>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
                                 </div>
                             </div>                          
                         </div>
@@ -263,7 +244,7 @@
                                 <div class="info prose-sm max-w-none  flex gap-4 items-center">
                                     <h4 class="date m-0 p-0">August 10,2023</h4>
                                     <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
-                                    <h4 class="tag m-0 p-0 uppercase">Excel</h4>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
                                 </div>
                             </div>
                         </div>
@@ -276,7 +257,7 @@
                                 <div class="info prose-sm max-w-none  flex gap-4 items-center">
                                     <h4 class="date m-0 p-0">August 10,2023</h4>
                                     <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
-                                    <h4 class="tag m-0 p-0 uppercase">Excel</h4>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
                                 </div>
                             </div>                          
                         </div>
@@ -289,7 +270,7 @@
                                 <div class="info prose-sm max-w-none  flex gap-4 items-center">
                                     <h4 class="date m-0 p-0">August 10,2023</h4>
                                     <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
-                                    <h4 class="tag m-0 p-0 uppercase">Excel</h4>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
                                 </div>
                             </div>                           
                         </div>
@@ -302,7 +283,7 @@
                                 <div class="info prose-sm max-w-none  flex gap-4 items-center">
                                     <h4 class="date m-0 p-0">August 10,2023</h4>
                                     <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
-                                    <h4 class="tag m-0 p-0 uppercase">Excel</h4>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
                                 </div>
                             </div>                           
                         </div>
@@ -315,7 +296,7 @@
                                 <div class="info prose-sm max-w-none  flex gap-4 items-center">
                                     <h4 class="date m-0 p-0">August 10,2023</h4>
                                     <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
-                                    <h4 class="tag m-0 p-0 uppercase">Excel</h4>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
                                 </div>
                             </div>                           
                         </div>
@@ -328,7 +309,7 @@
                                 <div class="info prose-sm max-w-none  flex gap-4 items-center">
                                     <h4 class="date m-0 p-0">August 10,2023</h4>
                                     <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
-                                    <h4 class="tag m-0 p-0 uppercase">Excel</h4>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
                                 </div>
                             </div>                            
                         </div>
@@ -341,7 +322,7 @@
                                 <div class="info prose-sm max-w-none  flex gap-4 items-center">
                                     <h4 class="date m-0 p-0">August 10,2023</h4>
                                     <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
-                                    <h4 class="tag m-0 p-0 uppercase">Excel</h4>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
                                 </div>
                             </div>                            
                         </div>
@@ -354,7 +335,7 @@
                                 <div class="info prose-sm max-w-none  flex gap-4 items-center">
                                     <h4 class="date m-0 p-0">August 10,2023</h4>
                                     <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
-                                    <h4 class="tag m-0 p-0 uppercase">Excel</h4>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
                                 </div>
                             </div>                          
                         </div>
@@ -367,7 +348,7 @@
                                 <div class="info prose-sm max-w-none  flex gap-4 items-center">
                                     <h4 class="date m-0 p-0">August 10,2023</h4>
                                     <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
-                                    <h4 class="tag m-0 p-0 uppercase">Excel</h4>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
                                 </div>
                             </div>
                         </div>
@@ -380,7 +361,7 @@
                                 <div class="info prose-sm max-w-none  flex gap-4 items-center">
                                     <h4 class="date m-0 p-0">August 10,2023</h4>
                                     <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
-                                    <h4 class="tag m-0 p-0 uppercase">Excel</h4>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
                                 </div>
                             </div>                         
                         </div>
@@ -393,7 +374,7 @@
                                 <div class="info prose-sm max-w-none  flex gap-4 items-center">
                                     <h4 class="date m-0 p-0">August 10,2023</h4>
                                     <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
-                                    <h4 class="tag m-0 p-0 uppercase">Excel</h4>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
                                 </div>
                             </div>                           
                         </div>
@@ -406,7 +387,7 @@
                                 <div class="info prose-sm max-w-none  flex gap-4 items-center">
                                     <h4 class="date m-0 p-0">August 10,2023</h4>
                                     <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
-                                    <h4 class="tag m-0 p-0 uppercase">Excel</h4>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
                                 </div>
                             </div>                           
                         </div>
@@ -419,7 +400,7 @@
                                 <div class="info prose-sm max-w-none  flex gap-4 items-center">
                                     <h4 class="date m-0 p-0">August 10,2023</h4>
                                     <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
-                                    <h4 class="tag m-0 p-0 uppercase">Excel</h4>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
                                 </div>
                             </div>
                         </div>
@@ -443,7 +424,7 @@
                             </div>
                             <div class="grid grid-cols-2 gap-x-8 gap-y-14">
                                 <div class="prose-xl max-w-none pl-4">
-                                    <h4 class="my-4 uppercase tracking-wider mt-0">Experience</h4>
+                                    <h4 class="my-4 uppercase tracking-wider mt-0 text-orange-500">Experience</h4>
                                     <h3>Highlighting career Milestones</h2>
                                 </div>
                                 <div class="prose-xl max-w-none pl-4">
@@ -457,7 +438,7 @@
                                     </div>
                                 </div>
                                 <div class="prose-xl max-w-none pl-4">
-                                    <h4 class="my-4 uppercase tracking-wider">Education</h4>
+                                    <h4 class="my-4 uppercase tracking-wider text-orange-500">Education</h4>
                                     <h3>Discover my educational Journey</h2>
                                 </div>
                                 <div class="prose-xl max-w-none pl-4">
@@ -483,7 +464,7 @@
                             <h3>Let's connect and explore the possibilities</h2>
                         </div>
                         <ul class="social-medias flex pt-8 gap-8">
-                            <li>
+                            <li class="skill">
                                 <a href="https://github.com/its-saran" target="_blank">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25">
                                         <image xlink:href="images/github-icon.svg" width="25" height="25"></image>

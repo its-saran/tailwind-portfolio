@@ -22,12 +22,12 @@
                     </div>
                     <div class="navbar-center">
                         <ul class="menu">
-                            <li><a href="#intro">Home</a></li>
-                            <li><a href="#mockup">About</a></li>
-                            <li><a href=".mockup-window">Skills</a></li>
-                            <li><a href="#hero">Portfolio</a></li>
-                            <li><a href="#hero">Experience</a></li>
-                            <li><a href="#hero">Contact</a></li>
+                            <li><a href="#intro" class="transition-none">Home</a></li>
+                            <li><a href="#about" class="transition-none">About</a></li>
+                            <li><a href="#skills" class="transition-none">Skills</a></li>
+                            <li><a href="#portfolio" class="transition-none">Portfolio</a></li>
+                            <li><a href="#qualifications" class="transition-none">Experience</a></li>
+                            <li><a href="#contact" class="transition-none">Contact</a></li>
                         </ul>
                     </div>
                     <div class="navbar-end">
@@ -56,11 +56,11 @@
                 <div id="mobileDropdown" class="flex-item">
                     <ul class="menu">
                         <li><a href="#intro">Home</a></li>
-                        <li><a href="#mockup">About</a></li>
-                        <li><a href="#mockup-window">Skills</a></li>
-                        <li><a href="#hero">Portfolio</a></li>
-                        <li><a href="#hero">Experience</a></li>
-                        <li><a href="#hero">Contact</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#qualifications">Experience</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                     <button class="main-button download-resume-mobile" role="button">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25">
@@ -73,16 +73,15 @@
 
             <main>
                 <section id="intro" class="frame">
-                    <div class="intro-content flex">
+                    <div class="section-content flex">
                         <div class="intro-left">
-                            <div class="intro-text">
-                                <div class="header">
-                                    <div>Hi, my <br>name is <b class="author">Saran<span class="dot">.</span></b></div>
+                            <div class="intro-text py-2">
+                                <div class="header text-5xl">
+                                    <div>Hi, my <br>name is <b class="author">Saran<span class="dot text-orange-500 text-3xl ml-0.5">.</span></b></div>
                                 </div>
-                                <div class="description">
-                                    <div class="first">
-                                        <div class="profession">I'm a <b class="job-title">data analyst</b> from</div>
-                                        <div class="district">Kanniyakumari,</div>
+                                <div class="description text-2xl py-12">
+                                    <div class="first flex">
+                                        <div class="profession">I'm a <b class="job-title">data analyst</b> from Kanniyakumari,</div>
                                     </div>
                                     <div class="second">
                                         <span class="state">Tamil Nadu.</span>
@@ -90,88 +89,495 @@
                                 </div>
                             </div>
                             <div class="intro-button">
-                                <button class="main-button text-white" role="button">
+                                <button class="main-button" role="button">
                                     <span>Contact Me</span>
                                 </button>
                             </div>
                         </div>
                         <div class="intro-right">
-                            <div class="intro-image">
-                                <img src="images/intro-image-350.png" alt="" srcset="">
+                            <div class="intro-image mx-8 mt-1.5 mb-4">
+                                <img src="images/intro-image-320.png" alt="" srcset="">
                             </div>
                         </div>
                     </div>
                 </section>
-                <section id="about" class="frame prose-xl max-w-none">
-                    <div class="section-title">
-                        <h3>About Me</h3>
+                <section id="about" class="frame">
+                    <div class="section-title prose-lg max-w-none font-bold mb-6 text-orange-500">
+                        <h2>About Me</h2>
                     </div>
-                    <div class="section-content">
+                    <div class="section-content prose-xl max-w-none">
                         <p class="leading-7">Hello there, friend! I'm your go-to data analyst, armed with a mighty spreadsheet sword and a heart full of humor. I dive deep into the realms of data, slaying confusion and bringing clarity to the numbers that dare to challenge us. But fear not, I'm not all seriousness and formulas—I sprinkle laughter and wit into every analysis I do. So join me on this data-driven quest, where we'll conquer data dragons, unravel statistical riddles, and create insights that will make you laugh out loud. Let's turn your data journey into an epic adventure with a dash of comedy!</p>
                     </div>
                 </section>
                 <section id="skills" class="frame">
-                    <div id="mockup-window" class="mockup-window border bg-base-300 mx-auto border-none">
-                        <div class="flex justify-center px-4 py-16 bg-base-100 flex-col">
-                            Hello
+                    <div class="section-title prose-lg max-w-none font-bold mb-6 text-orange-500 text-center">
+                        <h2>Skills</h2>
+                    </div>
+                    <div class="section-content">
+                        <div id="personal-skills" class="grid grid-cols-2">
+                            <div class="skills-left prose-xl max-w-none pl-2">
+                                <h4 class="my-4 uppercase tracking-wider mt-0 text-orange-500">Personal Skill</h4>
+                                <h3>Skills that Define Me</h2>
+                            </div>
+                            <div class="skills-right pl-3 pr-4">
+                                <ul>
+                                    <li class="skill" name="Critical thinking" value="85">
+                                        <div class="skill-title prose-lg max-w-none">
+                                            <h4>Critical thinking</h4>
+                                        </div>
+                                        <div class="skill-progress">
+                                            <div></div>
+                                        </div>
+                                    </li>
+                                    <li class="skill" name="Problem-solving" value="80">
+                                        <div class="skill-title prose-lg max-w-none">
+                                            <h4>Problem-solving</h4>
+                                        </div>
+                                        <div class="skill-progress">
+                                            <div style="width: 80%"></div>
+                                        </div>
+                                    </li>
+                                    <li class="skill" name="Attention to detail" value="90">
+                                        <div class="skill-title prose-lg max-w-none">
+                                            <h4>Attention to detail</h4>
+                                        </div>
+                                        <div class="skill-progress">
+                                            <div style="width: 90%"></div>
+                                        </div>
+                                    </li>
+                                    <li class="skill" name="Communication" value="95">
+                                        <div class="skill-title prose-lg max-w-none">
+                                            <h4>Communication</h4>
+                                        </div>
+                                        <div class="skill-progress">
+                                            <div style="width: 95%"></div>
+                                        </div>
+                                    </li>
+                                    <li class="skill" name="Collaboration" value="95">
+                                        <div class="skill-title prose-lg max-w-none">
+                                            <h4>Collaboration</h4>
+                                        </div>
+                                        <div class="skill-progress">
+                                            <div style="width: 95%"></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div> 
+                        <div id="professional-skills" class="grid grid-cols-2 pt-12">
+                            <div class="skills-left prose-xl max-w-none pl-2">
+                                <h4 class="my-4 uppercase tracking-wider mt-0 text-orange-500">Professional Skill</h4>
+
+                                <h3>Specialized Skills for Impact</h2>
+                            </div>
+                            <div class="skills-right pl-3 pr-4">
+                                <ul>
+                                    <li class="skill" name="Excel" value="98">
+                                        <div class="skill-title prose-lg max-w-none">
+                                            <h4>Excel</h4>
+                                        </div>
+                                        <div class="skill-progress">
+                                            <div style="width: 98%"></div>
+                                        </div>
+                                    </li>
+                                    <li class="skill" name="SQL" value="90">
+                                        <div class="skill-title prose-lg max-w-none">
+                                            <h4>SQL</h4>
+                                        </div>
+                                        <div class="skill-progress">
+                                            <div style="width: 90%"></div>
+                                        </div>
+                                    </li>
+                                    <li class="skill" name="Statistics" value="80">
+                                        <div class="skill-title prose-lg max-w-none">
+                                            <h4>Statistics</h4>
+                                        </div>
+                                        <div class="skill-progress">
+                                            <div style="width: 80%"></div>
+                                        </div>
+                                    </li>
+                                    <li class="skill" name="Python" value="75">
+                                        <div class="skill-title prose-lg max-w-none">
+                                            <h4>Python</h4>
+                                        </div>
+                                        <div class="skill-progress">
+                                            <div style="width: 75%"></div>
+                                        </div>
+                                    </li>
+                                    <li class="skill" name="Power Bi" value="70">
+                                        <div class="skill-title prose-lg max-w-none">
+                                            <h4>Power BI</h4>
+                                        </div>
+                                        <div class="skill-progress">
+                                            <div style="width: 70%"></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </section>
-                <section id="portfolio" class="frame">
-                    <article class="prose max-w-none">
-                        <h1>Garlic bread with cheese: What the science tells us</h1>
-                        <p>
-                          For years parents have espoused the health benefits of eating garlic bread with cheese to their
-                          children, with the food earning such an iconic status in our culture that kids will often dress
-                          up as warm, cheesy loaf for Halloween.
-                        </p>
-                        <p>
-                          But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases
-                          springing up around the country.
-                        </p>
-                    </article>
+                <section id="portfolio" class="frame px-4 bg-base-100">
+                    <div class="section-title prose-lg max-w-none font-bold mb-6 text-orange-500 text-center">
+                        <h2>My Portfolio</h2>
+                    </div>
+                    <div class="section-filters flex justify-center flex-col items-center">
+                        <div id="daisy-filters" class="join pb-5">
+                            <input class="join-item btn" type="radio" name="options" aria-label="show all" data-filter="*" checked/>
+                            <input class="join-item btn" type="radio" name="options" aria-label="Excel" data-filter=".alkali, .alkaline-earth"/>
+                            <input class="join-item btn" type="radio" name="options" aria-label="SQL" data-filter=":not(.transition)"/>
+                            <input class="join-item btn" type="radio" name="options" aria-label="Power BI" data-filter=".metal:not(.transition)"/>
+                        </div>
+                    </div>
+                    <div class="projects flex justify-center">
+                        <div class="project transition metal " data-category="transition">
+                            <div class="thumbnail w-full">
+                                <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
+                            </div>
+                            <div class="meta-data prose-lg max-w-none px-5 py-5">
+                                <h3 class="title font-bold">Finance dashboard</h3>
+                                <div class="info prose-sm max-w-none  flex gap-4 items-center">
+                                    <h4 class="date m-0 p-0">August 10,2023</h4>
+                                    <div class="circle w-1.5  bg-zinc-600 rounded-full"></div>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project metalloid " data-category="metalloid">
+                            <div class="thumbnail w-full">
+                                <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
+                            </div>
+                            <div class="meta-data prose-lg max-w-none px-5 py-5">
+                                <h3 class="title font-bold">Finance dashboard</h3>
+                                <div class="info prose-sm max-w-none  flex gap-4 items-center">
+                                    <h4 class="date m-0 p-0">August 10,2023</h4>
+                                    <div class="circle w-1.5  bg-zinc-600 rounded-full"></div>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project post-transition metal " data-category="post-transition">
+                            <div class="thumbnail w-full">
+                                <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
+                            </div>
+                            <div class="meta-data prose-lg max-w-none px-5 py-5">
+                                <h3 class="title font-bold">Finance dashboard</h3>
+                                <div class="info prose-sm max-w-none  flex gap-4 items-center">
+                                    <h4 class="date m-0 p-0">August 10,2023</h4>
+                                    <div class="circle w-1.5  bg-zinc-600 rounded-full"></div>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
+                                </div>
+                            </div>                           
+                        </div>
+                        <div class="project post-transition metal " data-category="post-transition">
+                            <div class="thumbnail w-full">
+                                <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
+                            </div>
+                            <div class="meta-data prose-lg max-w-none px-5 py-5">
+                                <h3 class="title font-bold">Finance dashboard</h3>
+                                <div class="info prose-sm max-w-none  flex gap-4 items-center">
+                                    <h4 class="date m-0 p-0">August 10,2023</h4>
+                                    <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
+                                </div>
+                            </div>                        
+                        </div>
+                        <div class="project transition metal " data-category="transition">
+                            <div class="thumbnail w-full">
+                                <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
+                            </div>
+                            <div class="meta-data prose-lg max-w-none px-5 py-5">
+                                <h3 class="title font-bold">Finance dashboard</h3>
+                                <div class="info prose-sm max-w-none  flex gap-4 items-center">
+                                    <h4 class="date m-0 p-0">August 10,2023</h4>
+                                    <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
+                                </div>
+                            </div>                          
+                        </div>
+                        <div class="project alkali metal " data-category="alkali">
+                            <div class="thumbnail w-full">
+                                <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
+                            </div>
+                            <div class="meta-data prose-lg max-w-none px-5 py-5">
+                                <h3 class="title font-bold">Finance dashboard</h3>
+                                <div class="info prose-sm max-w-none  flex gap-4 items-center">
+                                    <h4 class="date m-0 p-0">August 10,2023</h4>
+                                    <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project alkali metal " data-category="alkali">
+                            <div class="thumbnail w-full">
+                                <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
+                            </div>
+                            <div class="meta-data prose-lg max-w-none px-5 py-5">
+                                <h3 class="title font-bold">Finance dashboard</h3>
+                                <div class="info prose-sm max-w-none  flex gap-4 items-center">
+                                    <h4 class="date m-0 p-0">August 10,2023</h4>
+                                    <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
+                                </div>
+                            </div>                          
+                        </div>
+                        <div class="project transition metal " data-category="transition">
+                            <div class="thumbnail w-full">
+                                <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
+                            </div>
+                            <div class="meta-data prose-lg max-w-none px-5 py-5">
+                                <h3 class="title font-bold">Finance dashboard</h3>
+                                <div class="info prose-sm max-w-none  flex gap-4 items-center">
+                                    <h4 class="date m-0 p-0">August 10,2023</h4>
+                                    <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
+                                </div>
+                            </div>                           
+                        </div>
+                        <div class="project alkaline-earth metal " data-category="alkaline-earth">
+                            <div class="thumbnail w-full">
+                                <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
+                            </div>
+                            <div class="meta-data prose-lg max-w-none px-5 py-5">
+                                <h3 class="title font-bold">Finance dashboard</h3>
+                                <div class="info prose-sm max-w-none  flex gap-4 items-center">
+                                    <h4 class="date m-0 p-0">August 10,2023</h4>
+                                    <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
+                                </div>
+                            </div>                           
+                        </div>
+                        <div class="project transition metal " data-category="transition">
+                            <div class="thumbnail w-full">
+                                <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
+                            </div>
+                            <div class="meta-data prose-lg max-w-none px-5 py-5">
+                                <h3 class="title font-bold">Finance dashboard</h3>
+                                <div class="info prose-sm max-w-none  flex gap-4 items-center">
+                                    <h4 class="date m-0 p-0">August 10,2023</h4>
+                                    <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
+                                </div>
+                            </div>                           
+                        </div>
+                        <div class="project post-transition metal " data-category="post-transition">
+                            <div class="thumbnail w-full">
+                                <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
+                            </div>
+                            <div class="meta-data prose-lg max-w-none px-5 py-5">
+                                <h3 class="title font-bold">Finance dashboard</h3>
+                                <div class="info prose-sm max-w-none  flex gap-4 items-center">
+                                    <h4 class="date m-0 p-0">August 10,2023</h4>
+                                    <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="project metalloid " data-category="metalloid">
+                            <div class="thumbnail w-full">
+                                <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
+                            </div>
+                            <div class="meta-data prose-lg max-w-none px-5 py-5">
+                                <h3 class="title font-bold">Finance dashboard</h3>
+                                <div class="info prose-sm max-w-none  flex gap-4 items-center">
+                                    <h4 class="date m-0 p-0">August 10,2023</h4>
+                                    <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
+                                </div>
+                            </div>                            
+                        </div>
+                        <div class="project transition metal " data-category="transition">
+                            <div class="thumbnail w-full">
+                                <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
+                            </div>
+                            <div class="meta-data prose-lg max-w-none px-5 py-5">
+                                <h3 class="title font-bold">Finance dashboard</h3>
+                                <div class="info prose-sm max-w-none  flex gap-4 items-center">
+                                    <h4 class="date m-0 p-0">August 10,2023</h4>
+                                    <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
+                                </div>
+                            </div>                          
+                        </div>
+                        <div class="project lanthanoid metal inner-transition " data-category="lanthanoid">
+                            <div class="thumbnail w-full">
+                                <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
+                            </div>
+                            <div class="meta-data prose-lg max-w-none px-5 py-5">
+                                <h3 class="title font-bold">Finance dashboard</h3>
+                                <div class="info prose-sm max-w-none  flex gap-4 items-center">
+                                    <h4 class="date m-0 p-0">August 10,2023</h4>
+                                    <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project noble-gas nonmetal " data-category="noble-gas">
+                            <div class="thumbnail w-full">
+                                <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
+                            </div>
+                            <div class="meta-data prose-lg max-w-none px-5 py-5">
+                                <h3 class="title font-bold">Finance dashboard</h3>
+                                <div class="info prose-sm max-w-none  flex gap-4 items-center">
+                                    <h4 class="date m-0 p-0">August 10,2023</h4>
+                                    <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
+                                </div>
+                            </div>                         
+                        </div>
+                        <div class="project diatomic nonmetal " data-category="diatomic">
+                            <div class="thumbnail w-full">
+                                <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
+                            </div>
+                            <div class="meta-data prose-lg max-w-none px-5 py-5">
+                                <h3 class="title font-bold">Finance dashboard</h3>
+                                <div class="info prose-sm max-w-none  flex gap-4 items-center">
+                                    <h4 class="date m-0 p-0">August 10,2023</h4>
+                                    <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
+                                </div>
+                            </div>                           
+                        </div>
+                        <div class="project actinoid metal inner-transition " data-category="actinoid">
+                            <div class="thumbnail w-full">
+                                <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
+                            </div>
+                            <div class="meta-data prose-lg max-w-none px-5 py-5">
+                                <h3 class="title font-bold">Finance dashboard</h3>
+                                <div class="info prose-sm max-w-none  flex gap-4 items-center">
+                                    <h4 class="date m-0 p-0">August 10,2023</h4>
+                                    <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
+                                </div>
+                            </div>                           
+                        </div>
+                        <div class="project actinoid metal inner-transition " data-category="actinoid">
+                            <div class="thumbnail w-full">
+                                <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
+                            </div>
+                            <div class="meta-data prose-lg max-w-none px-5 py-5">
+                                <h3 class="title font-bold">Finance dashboard</h3>
+                                <div class="info prose-sm max-w-none  flex gap-4 items-center">
+                                    <h4 class="date m-0 p-0">August 10,2023</h4>
+                                    <div class="circle w-1.5 h-1.5 bg-zinc-600 rounded-full"></div>
+                                    <h4 class="tag m-0 p-0 uppercase text-orange-500">Excel</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <section id="qualifications" class="frame">
-                </section>
-                <section id="contact" class="frame">
-                </section>
-                <section id="hero" class="hero min-h-98 rounded-md py-30 frame">
-                    <div class="hero-content text-center">
-                        <div class="max-w-md">
-                            <h1 class="text-5xl font-bold">Hello there</h1>
-                            <p class="py-6">
-                                Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
-                            </p>
-                            <button class="btn btn-primary">Get Started</button>
+                    <div class="section-title prose-lg max-w-none font-bold mb-6 text-orange-500 text-center">
+                        <h2>Qualifications</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="relative mt-5 bg-base-200 px-2">
+                            <div class="absolute top-0 left-1/2 -ml-[8px] h-full w-4 rounded-full bg-base-100">
+                                <div class="sticky top-1/2">
+                                    <div class="relative h-4 w-4">
+                                    <div
+                                        class="absolute h-4 w-4 animate-ping rounded-full bg-pink-500 opacity-75"
+                                    ></div>
+                                    <div class="relative h-4 w-4 rounded-full bg-rose-500"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-x-8 gap-y-14">
+                                <div class="prose-xl max-w-none pl-4">
+                                    <h4 class="my-4 uppercase tracking-wider mt-0 text-orange-500">Experience</h4>
+                                    <h3>Highlighting career Milestones</h2>
+                                </div>
+                                <div class="prose-xl max-w-none pl-4">
+                                    <div>
+                                        <h4 class="font-bold mt-0">Project Study</h4>
+                                        <div class="text-zinc-400">Fathima Traders (March 2022)</div>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">IT Technical Support</h4>
+                                        <div class="text-zinc-400">WeFix Computer Service (Nov 2019 - June 2022)</div>
+                                    </div>
+                                </div>
+                                <div class="prose-xl max-w-none pl-4">
+                                    <h4 class="my-4 uppercase tracking-wider text-orange-500">Education</h4>
+                                    <h3>Discover my educational Journey</h2>
+                                </div>
+                                <div class="prose-xl max-w-none pl-4">
+                                    <div>
+                                        <h4 class="font-bold mt-2">Bachelor Degree - Business Administration</h4>
+                                        <div class="text-zinc-400">NMCC Marthandam (2019 - 2022)</div>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold">HSE - Computer Science</h4>
+                                        <div class="text-zinc-400">Little Flower MHSS (2017 - 2019)</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
-                <section class="frame">
-                    <div id="mockup" class="mockup-code mx-auto overflow-wrap">
-                        <pre><code>import random</code></pre>
-                        <pre><code>import string</code></pre>
-                        <pre><code>import random</code></pre>
-                        <pre><code>import string</code></pre>
-                        <pre><code>import random</code></pre>
-                        <pre><code>import string</code></pre>
-                        <pre><code>import random</code></pre>
-                        <pre><code>import string</code></pre>
-                        <pre><code>import random</code></pre>
-                        <pre><code>import string</code></pre>
-                        <pre><code>import random</code></pre>
-                        <pre><code>import string</code></pre>
-                        <pre><code>import random</code></pre>
-                        <pre><code>import string</code></pre>
-                        <pre><code>import random</code></pre>
-                        <pre><code>import string</code></pre>
-                        <pre data-prefix="$"><code>npm i daisyui</code></pre>
-                        <pre data-prefix=">" class="text-warning"><code>installing...</code></pre>
-                        <pre data-prefix=">" class="text-success"><code>Done!</code></pre>
+                <section id="contact" class="frame grid grid-cols-2">
+                    <div class="content-left">
+                        <div class="section-title prose-lg max-w-none font-bold mb-6 text-orange-500">
+                            <h2>Contact Me</h2>
+                        </div>
+                        <div class="prose-xl max-w-none">
+                            <h3>Let's connect and explore the possibilities</h2>
+                        </div>
+                        <ul class="social-medias flex pt-8 gap-8">
+                            <li class="skill">
+                                <a href="https://github.com/its-saran" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25">
+                                        <image xlink:href="images/github-icon.svg" width="25" height="25"></image>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/saran-pv-1928a222a/" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25">
+                                        <image xlink:href="images/linkedin-icon.svg" width="25" height="25"></image>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/_its.saran_/" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25">
+                                        <image xlink:href="images/instagram-icon.svg" width="25" height="25"></image>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.kaggle.com/saranpv" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+                                        <image xlink:href="images/kaggle-icon.svg" width="28" height="28"></image>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <!-- <a href="https://mail.google.com/mail/?view=cm&fs=1&to=its.saran.pv@gmail.com" target="_blank"> -->
+                                    <a href="mailto:its.saran.pv@gmail.com" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+                                        <image xlink:href="images/gmail-icon.svg" width="28" height="28"></image>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                </section>
-                <section class="frame">
-                </section>
-                <section class="frame">
+                    <div class="content-right grid grid-rows-3">
+                        <div class="flex gap-6">
+                            <input type="text" id="validationCustomName" placeholder="Name" class="form-control h-10" name="name" required="">
+                            <input type="email" id="validationCustomEmail" placeholder="Email" class="form-control h-10" name="email" required="">
+                        </div>
+                        <div>
+                            <textarea cols="30" rows="5" class="form-control w-full h-30" id="validationCustomMessage" name="message" placeholder="Message" required=""></textarea>
+                        </div>
+                        <div>
+                            <div>
+                                <button class="main-button send-msg" role="button">
+                                    <span>Send Message</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
 
@@ -179,6 +585,7 @@
                 <p id="copyright">Copyright © 2023 - All right reserved</p>
             </footer> 
         </div>
+        <script src="js/isotope-layout.min.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>

@@ -91,9 +91,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   // Isotope filter
-  const squareSection = document.querySelector(".square-section");
+  const squareSection = document.querySelector(".projects");
   const isotopeOptions = {
-    itemSelector: ".element-item",
+    itemSelector: ".project",
     layoutMode: "fitRows",
   };
   const isotopeInstance = new Isotope(squareSection, isotopeOptions);

@@ -82,12 +82,11 @@
 
     
 
-    .element-item {
+    .project {
         @apply bg-base-200;
         width: 518px;
-        height: 290px;
+        height: 450px;
         margin: 10px;
-        padding: 10px;
     }
 
 

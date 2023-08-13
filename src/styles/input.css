@@ -23,7 +23,7 @@
  
     #app { @apply flex flex-col items-center; }
     #copyright { @apply p-6; }
-    .frame { @apply bg-base-200 mt-8 py-8 px-10 rounded-md; }
+    .frame { @apply bg-base-200 mt-14 py-14 px-10 rounded-md; }
     .fix-header { @apply fixed mt-[0px] w-screen}
     .navbar { @apply overflow-hidden z-10 py-2 px-6 ; }
     .navbar .menu { @apply menu-horizontal; }
@@ -97,17 +97,14 @@
         transition: width 1s ease-in-out;
     }
 
-    #daisy-filters input {
-        @apply transition-none;
+    #daisy-filters input { @apply transition-none; }
+    #daisy-filters input[type="radio"]:checked{
+        @apply bg-primary;
+        /* background: #ff8c05; */
+        color: white;
     }
 
-    #portfolio .project {
-        @apply transition-none;
-    }
-
-
-
-
+    #portfolio .project { @apply transition-none; }
 
     .project {
         @apply bg-base-200;
@@ -115,6 +112,70 @@
         height: 450px;
         margin: 10px;
     }
+
+    #contact .content-right input{
+        width: 250px;
+    }
+
+    #contact .content-right .form-control {
+        border: 0;
+        border-bottom: 1px solid #525252;
+        border-radius: 0;
+        background: transparent;
+        padding: 0;
+        color: #fff;
+    }
+
+    #contact .content-right .form-control:hover {
+        border-color: #ff8c05;;
+    }
+
+    #contact .content-right .form-control:focus {
+        outline: 0;
+        box-shadow: none;
+        border-color: #ff8c05;
+    }
+
+
+
+
+    /* #contact .content-right .form-control.is-invalid {
+        border-color: var(--error-color);
+    }
+
+    #contact .content-right .button {
+        margin-top: 30px;
+        margin-right: 40px;
+    }
+
+    #contact .success-msg {
+        color: var(--success-color);
+        font-size: 18px;
+        padding-top: 30px;
+    }
+
+    #contact .error-msg {
+        color: var(--error-color);
+        font-size: 18px;
+        padding-top: 30px;
+    }
+
+
+    #contact .content-right .button.send-msg.loading {
+        cursor: not-allowed;
+        background: var(--locked-gradient-moz);
+        background: var(--locked-gradient-webkit);
+        background: var(--locked-gradient);
+    }
+
+ */
+
+
+
+
+
+
+
 
 
     @media (min-width: 1280px) { #menu-switch { display: none; }}

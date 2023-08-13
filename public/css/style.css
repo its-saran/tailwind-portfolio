@@ -447,14 +447,14 @@ html{
 }
 
 :root{
-  --p: 262 80% 50%;
-  --pf: 262 80% 43%;
+  --p: 32 100% 51%;
+  --pf: 32 100% 44%;
   --sf: 316 70% 43%;
   --af: 175 70% 34%;
   --nf: 213 18% 13%;
   --b3: 0 0% 8%;
   --bc: 145 0% 81%;
-  --pc: 268 87% 91%;
+  --pc: 29 57% 13%;
   --sc: 325 84% 92%;
   --ac: 173 30% 11%;
   --nc: 215 5% 82%;
@@ -484,14 +484,14 @@ html{
 }
 
 [data-theme=dark]{
-  --p: 262 80% 50%;
-  --pf: 262 80% 43%;
+  --p: 32 100% 51%;
+  --pf: 32 100% 44%;
   --sf: 316 70% 43%;
   --af: 175 70% 34%;
   --nf: 213 18% 13%;
   --b3: 0 0% 8%;
   --bc: 145 0% 81%;
-  --pc: 268 87% 91%;
+  --pc: 29 57% 13%;
   --sc: 325 84% 92%;
   --ac: 173 30% 11%;
   --nc: 215 5% 82%;
@@ -828,6 +828,16 @@ footer{
 }
 
 @media (hover: hover){
+  .btm-nav > *.disabled:hover,
+      .btm-nav > *[disabled]:hover{
+    pointer-events: none;
+    --tw-border-opacity: 0;
+    background-color: hsl(var(--n) / var(--tw-bg-opacity));
+    --tw-bg-opacity: 0.1;
+    color: hsl(var(--bc) / var(--tw-text-opacity));
+    --tw-text-opacity: 0.2;
+  }
+
   .btn:hover{
     --tw-border-opacity: 1;
     border-color: hsl(var(--b3) / var(--tw-border-opacity));
@@ -1203,6 +1213,16 @@ footer{
   background-color: hsl(var(--b1) / var(--tw-bg-opacity));
 }
 
+.btm-nav > *.disabled,
+    .btm-nav > *[disabled]{
+  pointer-events: none;
+  --tw-border-opacity: 0;
+  background-color: hsl(var(--n) / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.1;
+  color: hsl(var(--bc) / var(--tw-text-opacity));
+  --tw-text-opacity: 0.2;
+}
+
 .btm-nav > * .label{
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1419,6 +1439,22 @@ footer{
 .link:focus-visible{
   outline: 2px solid currentColor;
   outline-offset: 2px;
+}
+
+.loading{
+  pointer-events: none;
+  display: inline-block;
+  aspect-ratio: 1 / 1;
+  width: 1.5rem;
+  background-color: currentColor;
+  -webkit-mask-size: 100%;
+          mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='%23000' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_V8m1 circle%7Bstroke-linecap:round;animation:spinner_YpZS 1.5s ease-out infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%40keyframes spinner_YpZS%7B0%25%7Bstroke-dasharray:0 150;stroke-dashoffset:0%7D47.5%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-16%7D95%25%2C100%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-59%7D%7D%3C%2Fstyle%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3'%3E%3C%2Fcircle%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+          mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' stroke='%23000' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3E.spinner_V8m1%7Btransform-origin:center;animation:spinner_zKoa 2s linear infinite%7D.spinner_V8m1 circle%7Bstroke-linecap:round;animation:spinner_YpZS 1.5s ease-out infinite%7D%40keyframes spinner_zKoa%7B100%25%7Btransform:rotate(360deg)%7D%7D%40keyframes spinner_YpZS%7B0%25%7Bstroke-dasharray:0 150;stroke-dashoffset:0%7D47.5%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-16%7D95%25%2C100%25%7Bstroke-dasharray:42 150;stroke-dashoffset:-59%7D%7D%3C%2Fstyle%3E%3Cg class='spinner_V8m1'%3E%3Ccircle cx='12' cy='12' r='9.5' fill='none' stroke-width='3'%3E%3C%2Fcircle%3E%3C%2Fg%3E%3C%2Fsvg%3E");
 }
 
 :where(.menu li:empty){
@@ -3149,12 +3185,12 @@ footer{
 }
 
 .frame{
-  margin-top: 2rem;
+  margin-top: 3.5rem;
   border-radius: 0.375rem;
   --tw-bg-opacity: 1;
   background-color: hsl(var(--b2) / var(--tw-bg-opacity));
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
@@ -3962,6 +3998,13 @@ footer{
   transition-property: none;
 }
 
+#daisy-filters input[type="radio"]:checked{
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--p) / var(--tw-bg-opacity));
+  /* background: #ff8c05; */
+  color: white;
+}
+
 #portfolio .project{
   transition-property: none;
 }
@@ -3973,6 +4016,60 @@ footer{
   height: 450px;
   margin: 10px;
 }
+
+#contact .content-right input{
+  width: 250px;
+}
+
+#contact .content-right .form-control {
+  border: 0;
+  border-bottom: 1px solid #525252;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+  color: #fff;
+}
+
+#contact .content-right .form-control:hover {
+  border-color: #ff8c05;
+}
+
+#contact .content-right .form-control:focus {
+  outline: 0;
+  box-shadow: none;
+  border-color: #ff8c05;
+}
+
+/* #contact .content-right .form-control.is-invalid {
+        border-color: var(--error-color);
+    }
+
+    #contact .content-right .button {
+        margin-top: 30px;
+        margin-right: 40px;
+    }
+
+    #contact .success-msg {
+        color: var(--success-color);
+        font-size: 18px;
+        padding-top: 30px;
+    }
+
+    #contact .error-msg {
+        color: var(--error-color);
+        font-size: 18px;
+        padding-top: 30px;
+    }
+
+
+    #contact .content-right .button.send-msg.loading {
+        cursor: not-allowed;
+        background: var(--locked-gradient-moz);
+        background: var(--locked-gradient-webkit);
+        background: var(--locked-gradient);
+    }
+
+ */
 
 @media (min-width: 1280px) {
   #menu-switch {
@@ -4089,6 +4186,14 @@ footer{
 
 .mt-5{
   margin-top: 1.25rem;
+}
+
+.mt-8{
+  margin-top: 2rem;
+}
+
+.block{
+  display: block;
 }
 
 .flex{
@@ -4238,6 +4343,16 @@ footer{
   background-color: hsl(var(--b3) / var(--tw-bg-opacity));
 }
 
+.bg-orange-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 186 116 / var(--tw-bg-opacity));
+}
+
+.bg-orange-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+}
+
 .bg-pink-500{
   --tw-bg-opacity: 1;
   background-color: rgb(236 72 153 / var(--tw-bg-opacity));
@@ -4306,6 +4421,16 @@ footer{
   padding-bottom: 1.25rem;
 }
 
+.py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.py-10{
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .pb-5{
   padding-bottom: 1.25rem;
 }
@@ -4330,8 +4455,16 @@ footer{
   padding-top: 3rem;
 }
 
+.pt-6{
+  padding-top: 1.5rem;
+}
+
 .pt-8{
   padding-top: 2rem;
+}
+
+.pb-10{
+  padding-bottom: 2.5rem;
 }
 
 .text-center{

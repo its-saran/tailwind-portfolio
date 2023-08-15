@@ -3180,6 +3180,20 @@ footer{
   align-items: center;
 }
 
+#intro{
+  margin-top: 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+#portfolio{
+  margin-top: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 #copyright{
   padding: 1.5rem;
 }
@@ -4188,10 +4202,6 @@ footer{
   margin-top: 1.25rem;
 }
 
-.mt-8{
-  margin-top: 2rem;
-}
-
 .block{
   display: block;
 }
@@ -4421,16 +4431,6 @@ footer{
   padding-bottom: 1.25rem;
 }
 
-.py-20{
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-.py-10{
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
 .pb-5{
   padding-bottom: 1.25rem;
 }
@@ -4461,10 +4461,6 @@ footer{
 
 .pt-8{
   padding-top: 2rem;
-}
-
-.pb-10{
-  padding-bottom: 2.5rem;
 }
 
 .text-center{

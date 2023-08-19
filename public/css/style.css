@@ -578,12 +578,10 @@ body {
   font-family: "Outfit", sans-serif;
 }
 
-header,
-    main,
-    footer {
+header, main, footer{
+  border-radius: 0.375rem;
   width: 82%;
   transition: width 0.5s ease, margin 0.5s ease;
-  border-radius: 0.375rem;
 }
 
 header{
@@ -611,18 +609,14 @@ footer{
   background-color: hsl(var(--b2) / var(--tw-bg-opacity));
 }
 
-@media (max-width: 1280px) {
-  header,
-        main,
-        footer {
+@media (width < 1280px) {
+  header, main, footer {
     width: 85%;
   }
 }
 
-@media (max-width: 640px) {
-  header,
-        main,
-        footer {
+@media (width < 640px) {
+  header, main, footer {
     width: 94%;
   }
 }
@@ -3553,11 +3547,7 @@ footer{
   line-height: 2.5rem;
   font-weight: 700;
   text-transform: none;
-  background-image: linear-gradient(
-            135deg,
-            rgb(255, 140, 5) 0%,
-            rgb(214, 26, 94) 100%
-        );
+  background-image: linear-gradient(135deg, rgb(255, 140, 5) 0%, rgb(214, 26, 94) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -3959,12 +3949,7 @@ footer{
   background-size: 200% auto;
   color: #1f2937;
   box-shadow: 0px 0px 14px -7px #f09819;
-  background-image: linear-gradient(
-            45deg,
-            #ff512f 0%,
-            #f09819 51%,
-            #ff512f 100%
-        );
+  background-image: linear-gradient(45deg, #ff512f 0%, #f09819 51%, #ff512f 100%);
   touch-action: manipulation;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
   transition-duration: 200ms;
@@ -3999,11 +3984,7 @@ footer{
 }
 
 #intro .job-title {
-  background-image: linear-gradient(
-            135deg,
-            rgb(255, 140, 5) 0%,
-            rgb(214, 26, 94) 100%
-        );
+  background-image: linear-gradient(135deg, rgb(255, 140, 5) 0%, rgb(214, 26, 94) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -4025,11 +4006,7 @@ footer{
 
 #skills .skill-progress div{
   height: 0.375rem;
-  background: linear-gradient(
-            135deg,
-            rgb(255, 140, 5) 0%,
-            rgb(214, 26, 94) 100%
-        );
+  background: linear-gradient(135deg, rgb(255, 140, 5) 0%, rgb(214, 26, 94) 100%);
   width: 0%;
   transition: width 1s ease-in-out;
 }
@@ -4041,9 +4018,10 @@ footer{
 #daisy-filters input[type="radio"]:checked{
   --tw-bg-opacity: 1;
   background-color: hsl(var(--p) / var(--tw-bg-opacity));
-  /* background: #ff8c05; */
   color: white;
 }
+
+/* background: #ff8c05; */
 
 #portfolio .project{
   transition-property: none;
@@ -4080,58 +4058,27 @@ footer{
   border-color: #ff8c05;
 }
 
-/* #contact .content-right .form-control.is-invalid {
-        border-color: var(--error-color);
-    }
-
-    #contact .content-right .button {
-        margin-top: 30px;
-        margin-right: 40px;
-    }
-
-    #contact .success-msg {
-        color: var(--success-color);
-        font-size: 18px;
-        padding-top: 30px;
-    }
-
-    #contact .error-msg {
-        color: var(--error-color);
-        font-size: 18px;
-        padding-top: 30px;
-    }
-
-
-    #contact .content-right .button.send-msg.loading {
-        cursor: not-allowed;
-        background: var(--locked-gradient-moz);
-        background: var(--locked-gradient-webkit);
-        background: var(--locked-gradient);
-    }
-
- */
-
-@media (min-width: 1280px) {
-  #menu-switch {
+@media (width >= 1280px) {
+  #menu-switch{
     display: none;
   }
 }
 
-@media (max-width: 640px) {
+@media (width < 640px) {
 }
 
-@media (max-width: 768px) {
+@media (width < 768px) {
 }
 
-@media (max-width: 1024px) {
+@media (width < 1024px) {
 }
 
-@media (max-width: 1280px) {
-  .download-resume {
+@media (width < 1280px) {
+  .download-resume{
     display: none;
   }
 
-  .navbar-center {
+  .navbar-center{
     display: none;
   }
 
@@ -4540,3 +4487,34 @@ footer{
 .transition-none{
   transition-property: none;
 }
+
+/* #contact .content-right .form-control.is-invalid {
+        border-color: var(--error-color);
+    }
+
+    #contact .content-right .button {
+        margin-top: 30px;
+        margin-right: 40px;
+    }
+
+    #contact .success-msg {
+        color: var(--success-color);
+        font-size: 18px;
+        padding-top: 30px;
+    }
+
+    #contact .error-msg {
+        color: var(--error-color);
+        font-size: 18px;
+        padding-top: 30px;
+    }
+
+
+    #contact .content-right .button.send-msg.loading {
+        cursor: not-allowed;
+        background: var(--locked-gradient-moz);
+        background: var(--locked-gradient-webkit);
+        background: var(--locked-gradient);
+    }
+
+ */

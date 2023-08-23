@@ -1,10 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-    body { @apply scrollbar overflow-x-hidden; font-family: "Outfit", sans-serif; }
+    body { 
+        @apply scrollbar overflow-x-hidden; 
+        font-family: "Outfit", sans-serif; 
+    }
     header, main, footer {
         @apply rounded-md;
         width: 82%;
@@ -36,9 +40,16 @@
     .navbar .menu a { @apply rounded-md;}
     .menu a { letter-spacing: 1px; font-weight: 500; }
     .navbar-center { @apply flex; }
-    #mobileDropdown { @apply self-start w-full max-h-0 overflow-hidden;transition: max-height 0.5s ease;}
-    #mobileDropdown.show { max-height: 285px; }
+    #mobileDropdown { 
+        @apply self-start w-full max-h-0 overflow-hidden;
+        transition: max-height 0.5s ease;
+    }
+    #mobileDropdown.show { 
+        @apply 2xl:hidden;
+        max-height: 285px; 
+    }
     #mobileDropdown .menu { @apply menu-vertical px-4; }
+    #mobileDropdown .menu a { @apply transition-none; }
 
     #logo-text {
         @apply btn btn-ghost normal-case font-bold text-3xl md:text-4xl;
@@ -88,10 +99,15 @@
         transition: width 1s ease-in-out;
     }
 
+    #skills h3 {
+        font-family: "Roboto", sans-serif
+    }
+
     #daisy-filters input { @apply transition-none; }
     #daisy-filters input[type="radio"]:checked { @apply bg-primary; color: white; }
     /* background: #ff8c05; */
 
+    #portfolio { @apply bg-base-200}
     #portfolio .project { @apply transition-none; }
     .project {
         @apply bg-base-200;
@@ -126,7 +142,6 @@
     @media (width < 1280px) {
         .download-resume { @apply hidden }
         .navbar-center { @apply hidden}
-        /* #theme-switch { @apply mr-5; } */
     }
 }
 

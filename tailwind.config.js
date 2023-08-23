@@ -3,7 +3,8 @@ module.exports = {
   content: ["./public/**/*.{html,js}"],
   theme: {
     fontFamily: {
-      oufit: ["Outfit", "sans-serif"]
+      oufit: ["Outfit", "sans-serif"],
+      roboto: ["Roboto", "sans-serif"]
     },
     screens: {
       'xs': '320px',

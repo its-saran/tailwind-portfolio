@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 /*
 ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com
 */
@@ -3315,6 +3317,12 @@ footer{
   transition: max-height 0.5s ease;
 }
 
+@media (min-width: 1280px){
+  #mobileDropdown.show{
+    display: none;
+  }
+}
+
 #mobileDropdown.show {
   max-height: 285px;
 }
@@ -3336,6 +3344,10 @@ footer{
 #mobileDropdown .menu{
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+#mobileDropdown .menu a{
+  transition-property: none;
 }
 
 #logo-text{
@@ -4098,6 +4110,10 @@ footer{
   transition: width 1s ease-in-out;
 }
 
+#skills h3 {
+  font-family: "Roboto", sans-serif
+}
+
 #daisy-filters input{
   transition-property: none;
 }
@@ -4109,6 +4125,11 @@ footer{
 }
 
 /* background: #ff8c05; */
+
+#portfolio{
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b2) / var(--tw-bg-opacity));
+}
 
 #portfolio .project{
   transition-property: none;
@@ -4168,8 +4189,6 @@ footer{
   .navbar-center{
     display: none;
   }
-
-  /* #theme-switch { @apply mr-5; } */
 }
 
 .absolute{
@@ -4507,6 +4526,10 @@ footer{
   padding-top: 3rem;
 }
 
+.pt-5{
+  padding-top: 1.25rem;
+}
+
 .pt-6{
   padding-top: 1.5rem;
 }
@@ -4530,6 +4553,10 @@ footer{
   line-height: 1;
 }
 
+.font-black{
+  font-weight: 900;
+}
+
 .font-bold{
   font-weight: 700;
 }
@@ -4540,6 +4567,10 @@ footer{
 
 .leading-7{
   line-height: 1.75rem;
+}
+
+.leading-9{
+  line-height: 2.25rem;
 }
 
 .tracking-wider{
@@ -4633,8 +4664,16 @@ footer{
     order: 2;
   }
 
+  .lg\:grid{
+    display: grid;
+  }
+
   .lg\:w-1\/2{
     width: 50%;
+  }
+
+  .lg\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:flex-row{
@@ -4648,6 +4687,18 @@ footer{
   .lg\:py-12{
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+
+  .lg\:pl-5{
+    padding-left: 1.25rem;
+  }
+
+  .lg\:pr-4{
+    padding-right: 1rem;
+  }
+
+  .lg\:pt-0{
+    padding-top: 0px;
   }
 
   .lg\:text-left{

@@ -5,6 +5,14 @@ module.exports = {
     fontFamily: {
       oufit: ["Outfit", "sans-serif"]
     },
+    screens: {
+      'xs': '320px',
+      'sm': '420px', 
+      'md': '640px',
+      'lg': '768px',
+      'xl': '1024px',
+      '2xl': '1280px',
+    },
   },
   plugins: [require("daisyui"), require('@tailwindcss/typography')],
   daisyui: {

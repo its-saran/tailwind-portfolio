@@ -15,8 +15,12 @@
     main { @apply mt-6; }
     footer { @apply bg-base-200 mt-8 mb-6 flex justify-center; }
 
+    /* @media (width < 1280px) { header, main, footer { width: 85%; } }
+    @media (width < 640px) { header, main, footer { width: 94%; } } */
     @media (width < 1280px) { header, main, footer { width: 85%; } }
-    @media (width < 640px) { header, main, footer { width: 94%; } }
+    @media (width < 1024px) { header, main, footer { width: 80%; } }
+    @media (width < 768px) { header, main, footer { width: 77%; } }
+    @media (width < 420px) { header, main, footer { width: 95%; } }
 }
 
 @layer components {
@@ -24,9 +28,9 @@
     #intro { @apply mt-8 py-10; }
     #portfolio { @apply px-4 bg-base-100 mt-2; }
     #copyright { @apply p-6;}
-    .frame { @apply bg-base-200 mt-14 py-14 px-10 rounded-md; }
+    .frame { @apply bg-base-200 mt-14 py-14 px-5 xs:px-8 sm:px-10 rounded-md; }
     .fix-header { @apply fixed mt-[0px] w-screen; }
-    .navbar { @apply overflow-hidden z-10 py-2 px-6; }
+    .navbar { @apply overflow-hidden z-10 py-2 px-2 md:px-6; }
     .navbar .menu { @apply menu-horizontal; }
     .navbar .menu li { transition: margin 0.5s ease; }
     .navbar .menu a { @apply rounded-md;}
@@ -37,14 +41,14 @@
     #mobileDropdown .menu { @apply menu-vertical px-4; }
 
     #logo-text {
-        @apply btn btn-ghost normal-case text-4xl font-bold;
+        @apply btn btn-ghost normal-case font-bold text-3xl md:text-4xl;
         background-image: linear-gradient(135deg, rgb(255, 140, 5) 0%, rgb(214, 26, 94) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
-    #theme-switch { @apply swap swap-rotate mr-8; }
-    #menu-switch { @apply btn btn-circle btn-ghost swap swap-rotate; }
+    #theme-switch { @apply swap swap-rotate mr-1 md:mr-4 lg:mr-6 2xl:mr-8; }
+    #menu-switch { @apply btn btn-circle btn-ghost swap swap-rotate 2xl:hidden; }
 
     .main-button {
         @apply normal-case rounded-md flex font-medium border-none cursor-pointer select-none transition-all;
@@ -63,8 +67,11 @@
     .download-resume { @apply mr-4; }
     .download-resume-mobile { @apply ml-8 mb-8; }
 
-    .intro-left { width: 620px; }
-    .intro-image { width: 320px; filter: drop-shadow(-3px 17px 8px rgba(0, 0, 0, 0.3));}
+    /* .intro-left { width: 620px; } */
+    .intro-image { 
+        @apply mx-8 mt-1.5 mb-4 w-[240px] xs:w-[260px] md:w-[300px];
+        filter: drop-shadow(-3px 17px 8px rgba(0, 0, 0, 0.3));
+    }
     #intro .job-title {
         background-image: linear-gradient(135deg, rgb(255, 140, 5) 0%, rgb(214, 26, 94) 100%);
         -webkit-background-clip: text;
@@ -110,14 +117,16 @@
         border-color: #ff8c05;
     }
 
-    @media (width >= 1280px) { #menu-switch { @apply hidden} }
+    #copyright { @apply text-center; }
+
+    /* @media (width >= 1280px) { #menu-switch { @apply hidden} } */
     @media (width < 640px) {}
     @media (width < 768px) {}
     @media (width < 1024px) {}
     @media (width < 1280px) {
         .download-resume { @apply hidden }
         .navbar-center { @apply hidden}
-        #theme-switch { @apply mr-5; }
+        /* #theme-switch { @apply mr-5; } */
     }
 }
 

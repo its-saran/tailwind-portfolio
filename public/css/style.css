@@ -609,15 +609,30 @@ footer{
   background-color: hsl(var(--b2) / var(--tw-bg-opacity));
 }
 
+/* @media (width < 1280px) { header, main, footer { width: 85%; } }
+    @media (width < 640px) { header, main, footer { width: 94%; } } */
+
 @media (width < 1280px) {
   header, main, footer {
     width: 85%;
   }
 }
 
-@media (width < 640px) {
+@media (width < 1024px) {
   header, main, footer {
-    width: 94%;
+    width: 80%;
+  }
+}
+
+@media (width < 768px) {
+  header, main, footer {
+    width: 77%;
+  }
+}
+
+@media (width < 420px) {
+  header, main, footer {
+    width: 95%;
   }
 }
 
@@ -3208,8 +3223,22 @@ footer{
   background-color: hsl(var(--b2) / var(--tw-bg-opacity));
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+@media (min-width: 320px){
+  .frame{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 420px){
+  .frame{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
 }
 
 .fix-header{
@@ -3223,8 +3252,15 @@ footer{
   overflow: hidden;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media (min-width: 640px){
+  .navbar{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 .navbar .menu{
@@ -3543,10 +3579,20 @@ footer{
 }
 
 #logo-text{
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
   font-weight: 700;
   text-transform: none;
+}
+
+@media (min-width: 640px){
+  #logo-text{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+#logo-text {
   background-image: linear-gradient(135deg, rgb(255, 140, 5) 0%, rgb(214, 26, 94) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -3604,7 +3650,25 @@ footer{
 }
 
 #theme-switch{
-  margin-right: 2rem;
+  margin-right: 0.25rem;
+}
+
+@media (min-width: 640px){
+  #theme-switch{
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 768px){
+  #theme-switch{
+    margin-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1280px){
+  #theme-switch{
+    margin-right: 2rem;
+  }
 }
 
 #menu-switch{
@@ -3933,6 +3997,12 @@ footer{
   border-bottom-right-radius: var(--rounded-btn, 0.5rem);
 }
 
+@media (min-width: 1280px){
+  #menu-switch{
+    display: none;
+  }
+}
+
 .main-button{
   display: flex;
   cursor: pointer;
@@ -3974,12 +4044,29 @@ footer{
   margin-bottom: 2rem;
 }
 
-.intro-left {
-  width: 620px;
+/* .intro-left { width: 620px; } */
+
+.intro-image{
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 0.375rem;
+  margin-bottom: 1rem;
+  width: 240px;
+}
+
+@media (min-width: 320px){
+  .intro-image{
+    width: 260px;
+  }
+}
+
+@media (min-width: 640px){
+  .intro-image{
+    width: 300px;
+  }
 }
 
 .intro-image {
-  width: 320px;
   filter: drop-shadow(-3px 17px 8px rgba(0, 0, 0, 0.3));
 }
 
@@ -4058,11 +4145,11 @@ footer{
   border-color: #ff8c05;
 }
 
-@media (width >= 1280px) {
-  #menu-switch{
-    display: none;
-  }
+#copyright{
+  text-align: center;
 }
+
+/* @media (width >= 1280px) { #menu-switch { @apply hidden} } */
 
 @media (width < 640px) {
 }
@@ -4082,9 +4169,7 @@ footer{
     display: none;
   }
 
-  #theme-switch{
-    margin-right: 1.25rem;
-  }
+  /* #theme-switch { @apply mr-5; } */
 }
 
 .absolute{
@@ -4109,6 +4194,14 @@ footer{
 
 .top-1\/2{
   top: 50%;
+}
+
+.order-1{
+  order: 1;
+}
+
+.order-2{
+  order: 2;
 }
 
 .m-0{
@@ -4385,6 +4478,11 @@ footer{
   padding-bottom: 1.25rem;
 }
 
+.py-6{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .pb-5{
   padding-bottom: 1.25rem;
 }
@@ -4518,3 +4616,61 @@ footer{
     }
 
  */
+
+@media (min-width: 320px){
+  .xs\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 768px){
+  .lg\:order-1{
+    order: 1;
+  }
+
+  .lg\:order-2{
+    order: 2;
+  }
+
+  .lg\:w-1\/2{
+    width: 50%;
+  }
+
+  .lg\:flex-row{
+    flex-direction: row;
+  }
+
+  .lg\:items-start{
+    align-items: flex-start;
+  }
+
+  .lg\:py-12{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .lg\:text-left{
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px){
+  .xl\:w-5\/12{
+    width: 41.666667%;
+  }
+
+  .xl\:w-8\/12{
+    width: 66.666667%;
+  }
+
+  .xl\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .xl\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
+  }
+}

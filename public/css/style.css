@@ -4398,6 +4398,10 @@ footer{
   gap: 2rem;
 }
 
+.gap-12{
+  gap: 3rem;
+}
+
 .gap-x-8{
   -moz-column-gap: 2rem;
        column-gap: 2rem;
@@ -4664,6 +4668,10 @@ footer{
     order: 2;
   }
 
+  .lg\:mt-5{
+    margin-top: 1.25rem;
+  }
+
   .lg\:grid{
     display: grid;
   }
@@ -4684,6 +4692,14 @@ footer{
     align-items: flex-start;
   }
 
+  .lg\:gap-8{
+    gap: 2rem;
+  }
+
+  .lg\:gap-0{
+    gap: 0px;
+  }
+
   .lg\:py-12{
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -4699,6 +4715,10 @@ footer{
 
   .lg\:pt-0{
     padding-top: 0px;
+  }
+
+  .lg\:pt-5{
+    padding-top: 1.25rem;
   }
 
   .lg\:text-left{

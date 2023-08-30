@@ -136,7 +136,9 @@
     /* @media (width >= 1280px) { #menu-switch { @apply hidden} } */
     @media (width < 640px) {}
     @media (width < 768px) {}
-    @media (width < 1024px) {}
+    @media (width < 1024px) {
+        #vibe-bar { @apply hidden}
+    }
     @media (width < 1280px) {
         .download-resume { @apply hidden }
         .navbar-center { @apply hidden}

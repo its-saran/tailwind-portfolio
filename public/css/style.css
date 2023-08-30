@@ -4174,6 +4174,9 @@ footer{
 }
 
 @media (width < 1024px) {
+  #vibe-bar{
+    display: none;
+  }
 }
 
 @media (width < 1280px) {
@@ -4369,6 +4372,10 @@ footer{
   resize: both;
 }
 
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -4408,6 +4415,10 @@ footer{
 
 .gap-y-14{
   row-gap: 3.5rem;
+}
+
+.gap-y-8{
+  row-gap: 2rem;
 }
 
 .rounded-full{
@@ -4730,8 +4741,20 @@ footer{
     width: 66.666667%;
   }
 
+  .xl\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .xl\:flex-row{
     flex-direction: row;
+  }
+
+  .xl\:gap-y-14{
+    row-gap: 3.5rem;
+  }
+
+  .xl\:pl-5{
+    padding-left: 1.25rem;
   }
 
   .xl\:text-2xl{

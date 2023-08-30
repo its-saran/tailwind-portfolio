@@ -58,22 +58,49 @@ document.addEventListener('DOMContentLoaded', function () {
     // Toggle Theme
     const toggleTheme = document.querySelector('#theme-switch .toggleTheme');
     const themeToggleElement = document.querySelector('html');
-    const downloadButton = document.querySelector('#download-resume svg image');
+    const socialMediaImages = document.querySelectorAll('#social-medias svg image');
 
     toggleTheme.addEventListener('change', () => {
         if (toggleTheme.checked) {
             themeToggleElement.setAttribute('data-theme', 'light');
-            // downloadButton.setAttribute('xlink:href', 'images/download-dark.svg');
+
+            socialMediaImages.forEach((link, index) => {
+                const socialMediaUrls = [
+                    'images/svg/github-dark.svg',
+                    'images/svg/linkedin-dark.svg',
+                    'images/svg/instagram-dark.svg',
+                    'images/svg/kaggle-dark.svg',
+                    'images/svg/gmail-dark.svg'
+                ];
+            
+                if (index < socialMediaUrls.length) {
+                    link.setAttribute('xlink:href', socialMediaUrls[index]);
+                }
+            });
         } else {
             themeToggleElement.setAttribute('data-theme', 'dark');
-            // downloadButton.setAttribute('xlink:href', 'images/download-light.svg');
+            
+            socialMediaImages.forEach((link, index) => {
+                const socialMediaUrls = [
+                    'images/svg/github-light.svg',
+                    'images/svg/linkedin-light.svg',
+                    'images/svg/instagram-light.svg',
+                    'images/svg/kaggle-light.svg',
+                    'images/svg/gmail-light.svg'
+                ];
+            
+                if (index < socialMediaUrls.length) {
+                    link.setAttribute('xlink:href', socialMediaUrls[index]);
+                }
+            });
         }
     });
 
 
-    const htmlElement = document.querySelector('html');
 
-    // Function to change the data-theme attribute
+
+    // Change the data-theme attribute
+    const htmlElement = document.querySelector('html');
     function changeTheme(newTheme) {
       htmlElement.setAttribute('data-theme', newTheme);
     }

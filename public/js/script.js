@@ -63,10 +63,10 @@ document.addEventListener('DOMContentLoaded', function () {
     toggleTheme.addEventListener('change', () => {
         if (toggleTheme.checked) {
             themeToggleElement.setAttribute('data-theme', 'light');
-            downloadButton.setAttribute('xlink:href', 'images/download-dark.svg');
+            // downloadButton.setAttribute('xlink:href', 'images/download-dark.svg');
         } else {
             themeToggleElement.setAttribute('data-theme', 'dark');
-            downloadButton.setAttribute('xlink:href', 'images/download-light.svg');
+            // downloadButton.setAttribute('xlink:href', 'images/download-light.svg');
         }
     });
 

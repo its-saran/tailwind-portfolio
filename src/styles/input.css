@@ -116,14 +116,12 @@
         margin: 10px;
     }
 
-    #contact .content-right input { width: 250px;}
     #contact .content-right .form-control {
         border: 0;
         border-bottom: 1px solid #525252;
         border-radius: 0;
         background: transparent;
         padding: 0;
-        color: #fff;
     }
 
     #contact .content-right .form-control:hover { border-color: #ff8c05; }

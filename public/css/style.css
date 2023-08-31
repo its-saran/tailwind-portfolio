@@ -4173,11 +4173,9 @@ footer{
 @media (width < 768px) {
 }
 
-@media (width < 1024px) {
-  #vibe-bar{
-    display: none;
-  }
-}
+/* @media (width < 1024px) {
+        #vibe-bar { @apply hidden}
+    } */
 
 @media (width < 1280px) {
   .download-resume{
@@ -4211,6 +4209,10 @@ footer{
 
 .top-1\/2{
   top: 50%;
+}
+
+.left-1\/4{
+  left: 25%;
 }
 
 .order-1{
@@ -4548,6 +4550,18 @@ footer{
   padding-top: 1.5rem;
 }
 
+.pl-6{
+  padding-left: 1.5rem;
+}
+
+.pl-8{
+  padding-left: 2rem;
+}
+
+.pl-10{
+  padding-left: 2.5rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -4730,9 +4744,18 @@ footer{
   .lg\:text-left{
     text-align: left;
   }
+
+  .lg\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
 }
 
 @media (min-width: 1024px){
+  .xl\:left-1\/2{
+    left: 50%;
+  }
+
   .xl\:w-5\/12{
     width: 41.666667%;
   }
@@ -4755,6 +4778,10 @@ footer{
 
   .xl\:pl-5{
     padding-left: 1.25rem;
+  }
+
+  .xl\:pl-0{
+    padding-left: 0px;
   }
 
   .xl\:text-2xl{

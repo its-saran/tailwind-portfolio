@@ -117,21 +117,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    // Isotope filter
+
+
+        // Isotope filter
     const squareSection = document.querySelector(".projects");
     const isotopeOptions = {
         itemSelector: ".project",
         layoutMode: "fitRows",
+        masonry: {
+            columnWidth: ".project", 
+        },
     };
     const isotopeInstance = new Isotope(squareSection, isotopeOptions);
     const daisyFilterButtons = document.querySelectorAll("#daisy-filters input");
 
     daisyFilterButtons.forEach(function (input) {
         input.addEventListener("change", function () {
-          if (input.checked) {
-              const filterValue = input.getAttribute("data-filter");
-              isotopeInstance.arrange({ filter: filterValue });
-          }
+            if (input.checked) {
+                const filterValue = input.getAttribute("data-filter");
+                isotopeInstance.arrange({ filter: filterValue });
+            }
         });
     });
 

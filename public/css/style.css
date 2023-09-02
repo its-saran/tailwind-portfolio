@@ -4126,20 +4126,31 @@ footer{
 
 /* background: #ff8c05; */
 
-#portfolio{
-  --tw-bg-opacity: 1;
-  background-color: hsl(var(--b2) / var(--tw-bg-opacity));
-}
+/* #portfolio { @apply bg-base-200} */
 
 #portfolio .project{
   transition-property: none;
 }
 
+/* .project {
+        @apply bg-base-200;
+        width: 518px;
+        height: 450px;
+        margin: 10px;
+    } */
+
+.projects {
+  display: flex;
+  justify-content: center;
+  /* Center-align the projects horizontally */
+  flex-wrap: wrap;
+}
+
 .project{
   --tw-bg-opacity: 1;
   background-color: hsl(var(--b2) / var(--tw-bg-opacity));
-  width: 518px;
-  height: 450px;
+  width: calc(33.33% - 20px);
+  height: 380px;
   margin: 10px;
 }
 
@@ -4173,9 +4184,8 @@ footer{
 @media (width < 768px) {
 }
 
-/* @media (width < 1024px) {
-        #vibe-bar { @apply hidden}
-    } */
+@media (width < 1024px) {
+}
 
 @media (width < 1280px) {
   .download-resume{
@@ -4209,10 +4219,6 @@ footer{
 
 .top-1\/2{
   top: 50%;
-}
-
-.left-1\/4{
-  left: 25%;
 }
 
 .order-1{
@@ -4534,6 +4540,10 @@ footer{
   padding-left: 1rem;
 }
 
+.pl-8{
+  padding-left: 2rem;
+}
+
 .pr-4{
   padding-right: 1rem;
 }
@@ -4548,18 +4558,6 @@ footer{
 
 .pt-6{
   padding-top: 1.5rem;
-}
-
-.pl-6{
-  padding-left: 1.5rem;
-}
-
-.pl-8{
-  padding-left: 2rem;
-}
-
-.pl-10{
-  padding-left: 2.5rem;
 }
 
 .text-center{
@@ -4776,12 +4774,12 @@ footer{
     row-gap: 3.5rem;
   }
 
-  .xl\:pl-5{
-    padding-left: 1.25rem;
-  }
-
   .xl\:pl-0{
     padding-left: 0px;
+  }
+
+  .xl\:pl-5{
+    padding-left: 1.25rem;
   }
 
   .xl\:text-2xl{

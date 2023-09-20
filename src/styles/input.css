@@ -128,8 +128,7 @@
 
     .project {
         @apply bg-base-200;
-        width: calc(33.33% - 20px);
-        height: 420px;
+        /* width: calc(33.33% - 20px); */
         margin: 10px;
     }
 
@@ -151,7 +150,14 @@
 
     #copyright { @apply text-center; }
 
-    /* @media (width >= 1280px) { #menu-switch { @apply hidden} } */
+
+    @media (width >= 768px) {
+        .project { width: calc(49.33% - 20px);}
+    }
+    @media (width >= 1024px) {
+        .project { width: calc(33.33% - 20px);}
+    }
+
     @media (width < 640px) {}
     @media (width < 768px) {}
     @media (width < 1024px) {}

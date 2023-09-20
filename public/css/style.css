@@ -4149,8 +4149,7 @@ footer{
 .project{
   --tw-bg-opacity: 1;
   background-color: hsl(var(--b2) / var(--tw-bg-opacity));
-  width: calc(33.33% - 20px);
-  height: 420px;
+  /* width: calc(33.33% - 20px); */
   margin: 10px;
 }
 
@@ -4176,7 +4175,17 @@ footer{
   text-align: center;
 }
 
-/* @media (width >= 1280px) { #menu-switch { @apply hidden} } */
+@media (width >= 768px) {
+  .project {
+    width: calc(49.33% - 20px);
+  }
+}
+
+@media (width >= 1024px) {
+  .project {
+    width: calc(33.33% - 20px);
+  }
+}
 
 @media (width < 640px) {
 }
@@ -4384,6 +4393,10 @@ footer{
   flex-direction: column;
 }
 
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
 .items-center{
   align-items: center;
 }
@@ -4394,6 +4407,10 @@ footer{
 
 .gap-12{
   gap: 3rem;
+}
+
+.gap-2{
+  gap: 0.5rem;
 }
 
 .gap-4{
@@ -4408,14 +4425,6 @@ footer{
   gap: 2rem;
 }
 
-.gap-3{
-  gap: 0.75rem;
-}
-
-.gap-2{
-  gap: 0.5rem;
-}
-
 .gap-x-8{
   -moz-column-gap: 2rem;
        column-gap: 2rem;
@@ -4427,14 +4436,6 @@ footer{
 
 .rounded-full{
   border-radius: 9999px;
-}
-
-.rounded-sm{
-  border-radius: 0.125rem;
-}
-
-.rounded-lg{
-  border-radius: 0.5rem;
 }
 
 .rounded-md{
@@ -4464,6 +4465,11 @@ footer{
   background-color: hsl(var(--b3) / var(--tw-bg-opacity));
 }
 
+.bg-green-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+}
+
 .bg-orange-300{
   --tw-bg-opacity: 1;
   background-color: rgb(253 186 116 / var(--tw-bg-opacity));
@@ -4474,24 +4480,14 @@ footer{
   background-color: rgb(249 115 22 / var(--tw-bg-opacity));
 }
 
-.bg-zinc-600{
-  --tw-bg-opacity: 1;
-  background-color: rgb(82 82 91 / var(--tw-bg-opacity));
-}
-
-.bg-slate-600{
-  --tw-bg-opacity: 1;
-  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
-}
-
-.bg-green-500{
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
-}
-
 .bg-yellow-500{
   --tw-bg-opacity: 1;
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
+}
+
+.bg-zinc-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(82 82 91 / var(--tw-bg-opacity));
 }
 
 .fill-current{
@@ -4502,8 +4498,9 @@ footer{
   padding: 0px;
 }
 
-.p-2{
-  padding: 0.5rem;
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .px-3{
@@ -4521,6 +4518,11 @@ footer{
   padding-right: 1.25rem;
 }
 
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .py-16{
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -4534,16 +4536,6 @@ footer{
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-
-.px-2{
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
-.py-1{
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
 }
 
 .pb-5{
@@ -4608,6 +4600,11 @@ footer{
   letter-spacing: 0.05em;
 }
 
+.text-black{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 .text-orange-500{
   --tw-text-opacity: 1;
   color: rgb(249 115 22 / var(--tw-text-opacity));
@@ -4623,19 +4620,14 @@ footer{
   color: hsl(var(--wa) / var(--tw-text-opacity));
 }
 
-.text-zinc-400{
-  --tw-text-opacity: 1;
-  color: rgb(161 161 170 / var(--tw-text-opacity));
-}
-
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-black{
+.text-zinc-400{
   --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+  color: rgb(161 161 170 / var(--tw-text-opacity));
 }
 
 .opacity-75{

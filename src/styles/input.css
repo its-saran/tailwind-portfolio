@@ -129,7 +129,7 @@
     .project {
         @apply bg-base-200;
         width: calc(33.33% - 20px);
-        height: 380px;
+        height: 420px;
         margin: 10px;
     }
 

@@ -456,7 +456,6 @@ html{
   --nf: 213 18% 13%;
   --b3: 0 0% 8%;
   --bc: 145 0% 81%;
-  --pc: 29 57% 13%;
   --sc: 325 84% 92%;
   --ac: 173 30% 11%;
   --nc: 215 5% 82%;
@@ -474,6 +473,7 @@ html{
   --border-btn: 1px;
   --tab-border: 1px;
   --tab-radius: 0.5rem;
+  --pc: 240 5% 65%;
   --s: 316 70% 50%;
   --a: 175 70% 41%;
   --n: 213 18% 20%;
@@ -493,7 +493,6 @@ html{
   --nf: 213 18% 13%;
   --b3: 0 0% 8%;
   --bc: 145 0% 81%;
-  --pc: 29 57% 13%;
   --sc: 325 84% 92%;
   --ac: 173 30% 11%;
   --nc: 215 5% 82%;
@@ -511,6 +510,7 @@ html{
   --border-btn: 1px;
   --tab-border: 1px;
   --tab-radius: 0.5rem;
+  --pc: 240 5% 65%;
   --s: 316 70% 50%;
   --a: 175 70% 41%;
   --n: 213 18% 20%;
@@ -523,8 +523,8 @@ html{
 }
 
 [data-theme=light]{
-  --p: 259 94% 51%;
-  --pf: 259 94% 44%;
+  --p: 32 100% 51%;
+  --pf: 32 100% 44%;
   --sf: 314 100% 40%;
   --af: 174 75% 39%;
   --nf: 214 20% 14%;
@@ -546,7 +546,7 @@ html{
   --border-btn: 1px;
   --tab-border: 1px;
   --tab-radius: 0.5rem;
-  --pc: 259 96% 91%;
+  --pc: 240 4% 46%;
   --s: 314 100% 47%;
   --sc: 314 100% 91%;
   --a: 174 75% 46%;
@@ -3210,8 +3210,8 @@ footer{
   margin-top: 0.5rem;
   --tw-bg-opacity: 1;
   background-color: hsl(var(--b1) / var(--tw-bg-opacity));
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 #copyright{
@@ -4132,13 +4132,6 @@ footer{
   transition-property: none;
 }
 
-/* .project {
-        @apply bg-base-200;
-        width: 518px;
-        height: 450px;
-        margin: 10px;
-    } */
-
 .projects {
   display: flex;
   justify-content: center;
@@ -4175,6 +4168,9 @@ footer{
   text-align: center;
 }
 
+@media (width >= 640px) {
+}
+
 @media (width >= 768px) {
   .project {
     width: calc(49.33% - 20px);
@@ -4188,6 +4184,9 @@ footer{
 }
 
 @media (width < 640px) {
+  #daisy-filters{
+    border-radius: 0px;
+  }
 }
 
 @media (width < 768px) {
@@ -4581,6 +4580,11 @@ footer{
   color: rgb(249 115 22 / var(--tw-text-opacity));
 }
 
+.text-primary-content{
+  --tw-text-opacity: 1;
+  color: hsl(var(--pc) / var(--tw-text-opacity));
+}
+
 .text-success{
   --tw-text-opacity: 1;
   color: hsl(var(--su) / var(--tw-text-opacity));
@@ -4599,6 +4603,11 @@ footer{
 .text-zinc-400{
   --tw-text-opacity: 1;
   color: rgb(161 161 170 / var(--tw-text-opacity));
+}
+
+.text-zinc-500{
+  --tw-text-opacity: 1;
+  color: rgb(113 113 122 / var(--tw-text-opacity));
 }
 
 .opacity-75{

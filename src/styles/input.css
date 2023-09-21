@@ -30,7 +30,7 @@
 @layer components {
     #app { @apply flex flex-col items-center; }
     #intro { @apply mt-8 py-10; }
-    #portfolio { @apply px-4 bg-base-100 mt-2; }
+    #portfolio { @apply px-0 bg-base-100 mt-2 ; }
     #copyright { @apply p-6;}
     .frame { @apply bg-base-200 mt-14 py-14 px-5 xs:px-8 sm:px-10 rounded-md; }
     .fix-header { @apply fixed mt-[0px] w-screen; }
@@ -112,12 +112,6 @@
 
     /* #portfolio { @apply bg-base-200} */
     #portfolio .project { @apply transition-none; }
-    /* .project {
-        @apply bg-base-200;
-        width: 518px;
-        height: 450px;
-        margin: 10px;
-    } */
 
     .projects {
         display: flex;
@@ -151,6 +145,7 @@
     #copyright { @apply text-center; }
 
 
+    @media (width >= 640px) {}
     @media (width >= 768px) {
         .project { width: calc(49.33% - 20px);}
     }
@@ -158,7 +153,9 @@
         .project { width: calc(33.33% - 20px);}
     }
 
-    @media (width < 640px) {}
+    @media (width < 640px) {
+        #daisy-filters { @apply rounded-none; }
+    }
     @media (width < 768px) {}
     @media (width < 1024px) {}
     @media (width < 1280px) {

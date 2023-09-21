@@ -29,7 +29,10 @@ document.addEventListener('DOMContentLoaded', function () {
         animateScroll(e.currentTarget.getAttribute('href'), 1000);
     };
 
-    const navLinks = [...document.querySelectorAll('.navbar a'), ...document.querySelectorAll('.menu a')];
+    const navLinks = [
+        ...document.querySelectorAll('.menu a'),
+        ...document.querySelectorAll('.intro-button a'),
+    ];
     navLinks.forEach(link => link.addEventListener('click', handleLinkClick));
 
 
@@ -55,55 +58,46 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
+
     // Toggle Theme
     const toggleTheme = document.querySelector('#theme-switch .toggleTheme');
     const themeToggleElement = document.querySelector('html');
     const socialMediaImages = document.querySelectorAll('#social-medias svg image');
 
-    toggleTheme.addEventListener('change', () => {
-        if (toggleTheme.checked) {
-            themeToggleElement.setAttribute('data-theme', 'light');
+    // Function to change the theme and save the preference in local storage
+    function setTheme(theme) {
+        themeToggleElement.setAttribute('data-theme', theme);
 
-            socialMediaImages.forEach((link, index) => {
-                const socialMediaUrls = [
-                    '../images/svg/github-dark.svg',
-                    '../images/svg/linkedin-dark.svg',
-                    '../images/svg/instagram-dark.svg',
-                    '../images/svg/kaggle-dark.svg',
-                    '../images/svg/gmail-dark.svg'
-                ];
-            
-                if (index < socialMediaUrls.length) {
-                    link.setAttribute('xlink:href', socialMediaUrls[index]);
-                }
-            });
-        } else {
-            themeToggleElement.setAttribute('data-theme', 'dark');
-            
-            socialMediaImages.forEach((link, index) => {
-                const socialMediaUrls = [
-                    '../images/svg/github-light.svg',
-                    '../images/svg/linkedin-light.svg',
-                    '../images/svg/instagram-light.svg',
-                    '../images/svg/kaggle-light.svg',
-                    '../images/svg/gmail-light.svg'
-                ];
-            
-                if (index < socialMediaUrls.length) {
-                    link.setAttribute('xlink:href', socialMediaUrls[index]);
-                }
-            });
-        }
-    });
+        socialMediaImages.forEach((link, index) => {
+            const socialMediaUrls = [
+                'images/svg/github-' + theme + '.svg',
+                'images/svg/linkedin-' + theme + '.svg',
+                'images/svg/instagram-' + theme + '.svg',
+                'images/svg/kaggle-' + theme + '.svg',
+                'images/svg/gmail-' + theme + '.svg'
+            ];
 
+            if (index < socialMediaUrls.length) {
+                link.setAttribute('xlink:href', socialMediaUrls[index]);
+            }
+        });
 
-
-
-    // Change the data-theme attribute
-    const htmlElement = document.querySelector('html');
-    function changeTheme(newTheme) {
-      htmlElement.setAttribute('data-theme', newTheme);
+        // Save the theme preference in local storage
+        localStorage.setItem('theme', theme);
     }
+
+    // Check if a theme preference is saved in local storage and apply it
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        toggleTheme.checked = savedTheme === 'light';
+        setTheme(savedTheme);
+    }
+
+    // Event listener for theme toggle
+    toggleTheme.addEventListener('change', () => {
+        const newTheme = toggleTheme.checked ? 'light' : 'dark';
+        setTheme(newTheme);
+    });
 
 
     // Mobile menu hide while clicking <a>
@@ -118,8 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-        // Isotope filter
+    // Isotope filter
     const squareSection = document.querySelector(".projects");
     const isotopeOptions = {
         itemSelector: ".project",

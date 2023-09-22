@@ -70,6 +70,9 @@ class App {
         const themeToggleElement = document.querySelector('html');
         const socialMediaImages = document.querySelectorAll('#social-medias svg image');
 
+        const darkMode = document.querySelector('#dark-mode');
+        const lightMode = document.querySelector('#light-mode');
+
         function setTheme(theme) {
             themeToggleElement.setAttribute('data-theme', theme);
             socialMediaImages.forEach((link, index) => {
@@ -93,12 +96,34 @@ class App {
         // Check if a theme preference is saved in local storage and apply it
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme) {
-            themeToggleElement.setAttribute('data-theme', savedTheme);
+            if (savedTheme === 'light') {
+                console.log('Light')
+
+                darkMode.classList.remove('swap-on');
+                lightMode.classList.remove('swap-off');
+
+                darkMode.classList.add('swap-off');
+                lightMode.classList.add('swap-on');
+
+            } else {
+                console.log('Dark')
+
+                darkMode.classList.remove('swap-off');
+                lightMode.classList.remove('swap-on');
+
+                darkMode.classList.add('swap-on');
+                lightMode.classList.add('swap-off');
+            }
             setTheme(savedTheme)
+        } else {
+            darkMode.classList.add('swap-on');
+            lightMode.classList.add('swap-off');
         }
+        
 
         toggleTheme.addEventListener('change', () => {
-            const newTheme = themeToggleElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light'
+            const dataTheme = themeToggleElement.getAttribute('data-theme');
+            const newTheme = (dataTheme === 'light') ? 'dark' : 'light';
             setTheme(newTheme);
         });
     }

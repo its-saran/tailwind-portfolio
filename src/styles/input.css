@@ -30,6 +30,30 @@
 @layer components {
     #app { @apply flex flex-col items-center; }
     #intro { @apply mt-8 py-10; }
+    #intro .section-content { @apply flex flex-col items-center lg:flex-row; }
+    
+    #about .section-title { @apply font-bold mb-6 text-orange-500 text-center lg:text-left; }
+    #about .section-content p { @apply leading-7}
+
+    /* Skills */
+    #skills .section-title { @apply font-bold mb-6 text-orange-500 text-center; }
+    #skills .section-content .skills-left h4 { @apply my-4 uppercase tracking-wider mt-0 text-orange-500; }
+    #skills .section-content .skills-left h3 { @apply font-black leading-9; }
+    #skills .section-content .skills-right { @apply pt-5 lg:pr-4 lg:pl-5 lg:pt-0; }
+    #skills .skill { @apply pb-4; }
+    #skills .skill-title { @apply pb-2; }
+    #skills .skill-progress { @apply bg-[#414141]; } /* <!-- bg-neutral-700 -->*/
+    #skills .skill-progress div {
+        @apply h-1.5;
+        background: linear-gradient(135deg, rgb(255, 140, 5) 0%, rgb(214, 26, 94) 100%);
+        width: 0%;
+        transition: width 1s ease-in-out;
+    }
+    #skills h3 {
+        font-family: "Roboto", sans-serif
+    }
+
+
     #portfolio { @apply px-0 bg-base-100 mt-2 ; }
     #copyright { @apply p-6;}
     .frame { @apply bg-base-200 mt-14 py-14 px-5 xs:px-8 sm:px-10 rounded-md; }
@@ -40,6 +64,7 @@
     .navbar .menu a { @apply rounded-md;}
     .menu a { letter-spacing: 1px; font-weight: 500; }
     .navbar-center { @apply flex; }
+    .navbar-center .menu a { @apply transition-none; }
     #mobileDropdown { 
         @apply self-start w-full max-h-0 overflow-hidden;
         transition: max-height 0.5s ease;
@@ -89,20 +114,7 @@
         -webkit-text-fill-color: transparent;
     }
 
-    #skills .skill { @apply pb-4; }
-    #skills .skill-title { @apply pb-2; }
-    #skills .skill-progress { @apply bg-[#414141]; } /* <!-- bg-neutral-700 -->*/
-    #skills .skill-progress div {
-        @apply h-1.5;
-        background: linear-gradient(135deg, rgb(255, 140, 5) 0%, rgb(214, 26, 94) 100%);
-        width: 0%;
-        transition: width 1s ease-in-out;
-    }
-
-    #skills h3 {
-        font-family: "Roboto", sans-serif
-    }
-
+    
     #daisy-filters input { @apply transition-none; }
     #daisy-filters input[type="radio"]:checked { 
         @apply bg-primary; 

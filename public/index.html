@@ -74,10 +74,10 @@
             <main>
                 <section id="intro" class="frame">
                     <div class="section-content">
-                        <div class="intro-left order-2 lg:order-1 flex flex-col items-center text-center lg:text-left lg:items-start lg:w-1/2 xl:w-8/12">
+                        <div class="intro-left">
                             <div class="intro-text">
-                                <div class="header text-3xl xs:text-4xl xl:text-5xl">
-                                    <div>Hi, my <br>name is <b class="author">Saran<span class="dot text-orange-500 text-3xl ml-0.5">.</span></b></div>
+                                <div class="header">
+                                    <div>Hi, my <br>name is <b class="author">Saran<span class="dot">.</span></b></div>
                                 </div>
                                 <div class="description py-6 lg:py-12 text-1xl xl:text-2xl">
                                     <div class="first flex">
@@ -94,8 +94,8 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="intro-right order-1 lg:order-2 lg:w-1/2 xl:w-5/12">
-                            <div class="intro-image mx-8 mt-1.5 mb-4">
+                        <div class="intro-right">
+                            <div class="intro-image">
                                 <img src="images/intro-image-320.png" alt="" srcset="">
                             </div>
                         </div>
@@ -116,10 +116,10 @@
                         <h2>Skills</h2>
                     </div>
                     <div class="section-content">
-                        <div id="personal-skills" class="flex flex-col lg:grid lg:grid-cols-2">
+                        <div id="personal-skills">
                             <div class="skills-left prose-xl max-w-none">
-                                <h4>Personal Skill</h4>
-                                <h3>Skills that Define Me</h2>
+                                <h4 class="mini-title">Personal Skill</h4>
+                                <h3 class="mini-highlight">Skills that Define Me</h2>
                             </div>
                             <div class="skills-right">
                                 <ul>
@@ -136,10 +136,10 @@
                                 </ul>
                             </div>
                         </div>
-                        <div id="professional-skills" class="flex flex-col lg:grid lg:grid-cols-2 pt-12">
+                        <div id="professional-skills">
                             <div class="skills-left prose-xl max-w-none">
-                                <h4>Professional Skill</h4>
-                                <h3>Specialized Skills for Impact</h2>
+                                <h4 class="mini-title">Professional Skill</h4>
+                                <h3 class="mini-highlight">Specialized Skills for Impact</h2>
                             </div>
                             <div class="skills-right">
                                 <ul>
@@ -160,269 +160,269 @@
                 </section>
                 
                 <section id="portfolio" class="frame">
-                    <div class="section-title prose-lg max-w-none font-bold mb-6 text-orange-500 text-center">
+                    <div class="section-title prose-lg max-w-none">
                         <h2>My Portfolio</h2>
                     </div>
-                    <div class="section-filters flex flex-col justify-center items-center">
-                        <div id="daisy-filters" class="join pb-5 flex flex-wrap justify-center ">
-                            <input class="join-item btn" type="radio" name="options" aria-label="show all" data-filter="*" checked/>
-                            <input class="join-item btn" type="radio" name="options" aria-label="Excel" data-filter=".alkali, .alkaline-earth"/>
-                            <input class="join-item btn" type="radio" name="options" aria-label="SQL" data-filter=":not(.transition)"/>
-                            <input class="join-item btn" type="radio" name="options" aria-label="Power BI" data-filter=".metal:not(.transition)"/>
-                            <input class="join-item btn" type="radio" name="options" aria-label="Python" data-filter=".metal:not(.transition)"/>
+                    <div class="section-filters">
+                        <div id="daisy-filters">
+                            <input class="btn" type="radio" name="options" aria-label="show all" data-filter="*" checked/>
+                            <input class="btn" type="radio" name="options" aria-label="Excel" data-filter=".alkali, .alkaline-earth"/>
+                            <input class="btn" type="radio" name="options" aria-label="SQL" data-filter=":not(.transition)"/>
+                            <input class="btn" type="radio" name="options" aria-label="Power BI" data-filter=".metal:not(.transition)"/>
+                            <input class="btn" type="radio" name="options" aria-label="Python" data-filter=".metal:not(.transition)"/>
                         </div>
                     </div>
                     <div class="isotope-container">
-                        <div class="projects flex justify-center items-center">
+                        <div class="projects">
                             <div class="project transition metal " data-category="transition">
-                                <div class="thumbnail w-full">
+                                <div class="thumbnail">
                                     <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
                                 </div>
-                                <div class="meta-data prose-lg max-w-none px-5 py-5">
-                                    <h3 class="title font-bold">Finance dashboard</h3>
-                                    <p class="text-primary-content">Learn how to build awesome full-stack apps with SvelteKit</p>
-                                    <div class="info prose-sm max-w-none flex flex-wrap gap-2 items-center">
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-green-500">Excel</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-black bg-yellow-500">Firebase</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-orange-500">Svelte</h4>
+                                <div class="meta-data prose-lg max-w-none">
+                                    <h3 class="title">Finance dashboard</h3>
+                                    <p class="description">Learn how to build awesome full-stack apps with SvelteKit</p>
+                                    <div class="tags prose-sm max-w-none">
+                                        <h4 class="tag excel">Excel</h4>
+                                        <h4 class="tag firebase">Firebase</h4>
+                                        <h4 class="tag svelte">Svelte</h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="project metalloid " data-category="metalloid">
-                                <div class="thumbnail w-full">
+                                <div class="thumbnail">
                                     <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
                                 </div>
-                                <div class="meta-data prose-lg max-w-none px-5 py-5">
-                                    <h3 class="title font-bold">Finance dashboard</h3>
-                                    <p class="text-primary-content">Learn how to build awesome full-stack apps with SvelteKit</p>
-                                    <div class="info prose-sm max-w-none flex flex-wrap gap-2 items-center">
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-green-500">Excel</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-black bg-yellow-500">Firebase</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-orange-500">Svelte</h4>
+                                <div class="meta-data prose-lg max-w-none">
+                                    <h3 class="title">Finance dashboard</h3>
+                                    <p class="description">Learn how to build awesome full-stack apps with SvelteKit</p>
+                                    <div class="tags prose-sm max-w-none">
+                                        <h4 class="tag excel">Excel</h4>
+                                        <h4 class="tag firebase">Firebase</h4>
+                                        <h4 class="tag svelte">Svelte</h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="project post-transition metal " data-category="post-transition">
-                                <div class="thumbnail w-full">
+                                <div class="thumbnail">
                                     <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
                                 </div>
-                                <div class="meta-data prose-lg max-w-none px-5 py-5">
-                                    <h3 class="title font-bold">Finance dashboard</h3>
-                                    <p class="text-primary-content">Learn how to build awesome full-stack apps with SvelteKit</p>
-                                    <div class="info prose-sm max-w-none flex flex-wrap gap-2 items-center">
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-green-500">Excel</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-black bg-yellow-500">Firebase</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-orange-500">Svelte</h4>
+                                <div class="meta-data prose-lg max-w-none">
+                                    <h3 class="title">Finance dashboard</h3>
+                                    <p class="description">Learn how to build awesome full-stack apps with SvelteKit</p>
+                                    <div class="tags prose-sm max-w-none">
+                                        <h4 class="tag excel">Excel</h4>
+                                        <h4 class="tag firebase">Firebase</h4>
+                                        <h4 class="tag svelte">Svelte</h4>
                                     </div>
                                 </div>                           
                             </div>
                             <div class="project post-transition metal " data-category="post-transition">
-                                <div class="thumbnail w-full">
+                                <div class="thumbnail">
                                     <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
                                 </div>
-                                <div class="meta-data prose-lg max-w-none px-5 py-5">
-                                    <h3 class="title font-bold">Finance dashboard</h3>
-                                    <p class="text-primary-content">Learn how to build awesome full-stack apps with SvelteKit</p>
-                                    <div class="info prose-sm max-w-none flex flex-wrap gap-2 items-center">
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-green-500">Excel</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-black bg-yellow-500">Firebase</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-orange-500">Svelte</h4>
+                                <div class="meta-data prose-lg max-w-none">
+                                    <h3 class="title">Finance dashboard</h3>
+                                    <p class="description">Learn how to build awesome full-stack apps with SvelteKit</p>
+                                    <div class="tags prose-sm max-w-none">
+                                        <h4 class="tag excel">Excel</h4>
+                                        <h4 class="tag firebase">Firebase</h4>
+                                        <h4 class="tag svelte">Svelte</h4>
                                     </div>
                                 </div>                        
                             </div>
                             <div class="project transition metal " data-category="transition">
-                                <div class="thumbnail w-full">
+                                <div class="thumbnail">
                                     <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
                                 </div>
-                                <div class="meta-data prose-lg max-w-none px-5 py-5">
-                                    <h3 class="title font-bold">Finance dashboard</h3>
-                                    <p class="text-primary-content">Learn how to build awesome full-stack apps with SvelteKit</p>
-                                    <div class="info prose-sm max-w-none flex flex-wrap gap-2 items-center">
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-green-500">Excel</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-black bg-yellow-500">Firebase</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-orange-500">Svelte</h4>
+                                <div class="meta-data prose-lg max-w-none">
+                                    <h3 class="title">Finance dashboard</h3>
+                                    <p class="description">Learn how to build awesome full-stack apps with SvelteKit</p>
+                                    <div class="tags prose-sm max-w-none">
+                                        <h4 class="tag excel">Excel</h4>
+                                        <h4 class="tag firebase">Firebase</h4>
+                                        <h4 class="tag svelte">Svelte</h4>
                                     </div>
                                 </div>                          
                             </div>
                             <div class="project alkali metal " data-category="alkali">
-                                <div class="thumbnail w-full">
+                                <div class="thumbnail">
                                     <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
                                 </div>
-                                <div class="meta-data prose-lg max-w-none px-5 py-5">
-                                    <h3 class="title font-bold">Finance dashboard</h3>
-                                    <p class="text-primary-content">Learn how to build awesome full-stack apps with SvelteKit</p>
-                                    <div class="info prose-sm max-w-none flex flex-wrap gap-2 items-center">
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-green-500">Excel</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-black bg-yellow-500">Firebase</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-orange-500">Svelte</h4>
+                                <div class="meta-data prose-lg max-w-none">
+                                    <h3 class="title">Finance dashboard</h3>
+                                    <p class="description">Learn how to build awesome full-stack apps with SvelteKit</p>
+                                    <div class="tags prose-sm max-w-none">
+                                        <h4 class="tag excel">Excel</h4>
+                                        <h4 class="tag firebase">Firebase</h4>
+                                        <h4 class="tag svelte">Svelte</h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="project alkali metal " data-category="alkali">
-                                <div class="thumbnail w-full">
+                                <div class="thumbnail">
                                     <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
                                 </div>
-                                <div class="meta-data prose-lg max-w-none px-5 py-5">
-                                    <h3 class="title font-bold">Finance dashboard</h3>
-                                    <p class="text-primary-content">Learn how to build awesome full-stack apps with SvelteKit</p>
-                                    <div class="info prose-sm max-w-none flex flex-wrap gap-2 items-center">
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-green-500">Excel</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-black bg-yellow-500">Firebase</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-orange-500">Svelte</h4>
+                                <div class="meta-data prose-lg max-w-none">
+                                    <h3 class="title">Finance dashboard</h3>
+                                    <p class="description">Learn how to build awesome full-stack apps with SvelteKit</p>
+                                    <div class="tags prose-sm max-w-none">
+                                        <h4 class="tag excel">Excel</h4>
+                                        <h4 class="tag firebase">Firebase</h4>
+                                        <h4 class="tag svelte">Svelte</h4>
                                     </div>
                                 </div>                          
                             </div>
                             <div class="project transition metal " data-category="transition">
-                                <div class="thumbnail w-full">
+                                <div class="thumbnail">
                                     <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
                                 </div>
-                                <div class="meta-data prose-lg max-w-none px-5 py-5">
-                                    <h3 class="title font-bold">Finance dashboard</h3>
-                                    <p class="text-primary-content">Learn how to build awesome full-stack apps with SvelteKit</p>
-                                    <div class="info prose-sm max-w-none flex flex-wrap gap-2 items-center">
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-green-500">Excel</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-black bg-yellow-500">Firebase</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-orange-500">Svelte</h4>
+                                <div class="meta-data prose-lg max-w-none">
+                                    <h3 class="title">Finance dashboard</h3>
+                                    <p class="description">Learn how to build awesome full-stack apps with SvelteKit</p>
+                                    <div class="tags prose-sm max-w-none">
+                                        <h4 class="tag excel">Excel</h4>
+                                        <h4 class="tag firebase">Firebase</h4>
+                                        <h4 class="tag svelte">Svelte</h4>
                                     </div>
                                 </div>                           
                             </div>
                             <div class="project alkaline-earth metal " data-category="alkaline-earth">
-                                <div class="thumbnail w-full">
+                                <div class="thumbnail">
                                     <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
                                 </div>
-                                <div class="meta-data prose-lg max-w-none px-5 py-5">
-                                    <h3 class="title font-bold">Finance dashboard</h3>
-                                    <p class="text-primary-content">Learn how to build awesome full-stack apps with SvelteKit</p>
-                                    <div class="info prose-sm max-w-none flex flex-wrap gap-2 items-center">
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-green-500">Excel</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-black bg-yellow-500">Firebase</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-orange-500">Svelte</h4>
+                                <div class="meta-data prose-lg max-w-none">
+                                    <h3 class="title">Finance dashboard</h3>
+                                    <p class="description">Learn how to build awesome full-stack apps with SvelteKit</p>
+                                    <div class="tags prose-sm max-w-none">
+                                        <h4 class="tag excel">Excel</h4>
+                                        <h4 class="tag firebase">Firebase</h4>
+                                        <h4 class="tag svelte">Svelte</h4>
                                     </div>
                                 </div>                           
                             </div>
                             <div class="project transition metal " data-category="transition">
-                                <div class="thumbnail w-full">
+                                <div class="thumbnail">
                                     <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
                                 </div>
-                                <div class="meta-data prose-lg max-w-none px-5 py-5">
-                                    <h3 class="title font-bold">Finance dashboard</h3>
-                                    <p class="text-primary-content">Learn how to build awesome full-stack apps with SvelteKit</p>
-                                    <div class="info prose-sm max-w-none flex flex-wrap gap-2 items-center">
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-green-500">Excel</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-black bg-yellow-500">Firebase</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-orange-500">Svelte</h4>
+                                <div class="meta-data prose-lg max-w-none">
+                                    <h3 class="title">Finance dashboard</h3>
+                                    <p class="description">Learn how to build awesome full-stack apps with SvelteKit</p>
+                                    <div class="tags prose-sm max-w-none">
+                                        <h4 class="tag excel">Excel</h4>
+                                        <h4 class="tag firebase">Firebase</h4>
+                                        <h4 class="tag svelte">Svelte</h4>
                                     </div>
                                 </div>                           
                             </div>
                             <div class="project post-transition metal " data-category="post-transition">
-                                <div class="thumbnail w-full">
+                                <div class="thumbnail">
                                     <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
                                 </div>
-                                <div class="meta-data prose-lg max-w-none px-5 py-5">
-                                    <h3 class="title font-bold">Finance dashboard</h3>
-                                    <p class="text-primary-content">Learn how to build awesome full-stack apps with SvelteKit</p>
-                                    <div class="info prose-sm max-w-none flex flex-wrap gap-2 items-center">
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-green-500">Excel</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-black bg-yellow-500">Firebase</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-orange-500">Svelte</h4>
+                                <div class="meta-data prose-lg max-w-none">
+                                    <h3 class="title">Finance dashboard</h3>
+                                    <p class="description">Learn how to build awesome full-stack apps with SvelteKit</p>
+                                    <div class="tags prose-sm max-w-none">
+                                        <h4 class="tag excel">Excel</h4>
+                                        <h4 class="tag firebase">Firebase</h4>
+                                        <h4 class="tag svelte">Svelte</h4>
                                     </div>
                                 </div>                            
                             </div>
                             <div class="project metalloid " data-category="metalloid">
-                                <div class="thumbnail w-full">
+                                <div class="thumbnail">
                                     <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
                                 </div>
-                                <div class="meta-data prose-lg max-w-none px-5 py-5">
-                                    <h3 class="title font-bold">Finance dashboard</h3>
-                                    <p class="text-primary-content">Learn how to build awesome full-stack apps with SvelteKit</p>
-                                    <div class="info prose-sm max-w-none flex flex-wrap gap-2 items-center">
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-green-500">Excel</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-black bg-yellow-500">Firebase</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-orange-500">Svelte</h4>
+                                <div class="meta-data prose-lg max-w-none">
+                                    <h3 class="title">Finance dashboard</h3>
+                                    <p class="description">Learn how to build awesome full-stack apps with SvelteKit</p>
+                                    <div class="tags prose-sm max-w-none">
+                                        <h4 class="tag excel">Excel</h4>
+                                        <h4 class="tag firebase">Firebase</h4>
+                                        <h4 class="tag svelte">Svelte</h4>
                                     </div>
                                 </div>                            
                             </div>
                             <div class="project transition metal " data-category="transition">
-                                <div class="thumbnail w-full">
+                                <div class="thumbnail">
                                     <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
                                 </div>
-                                <div class="meta-data prose-lg max-w-none px-5 py-5">
-                                    <h3 class="title font-bold">Finance dashboard</h3>
-                                    <p class="text-primary-content">Learn how to build awesome full-stack apps with SvelteKit</p>
-                                    <div class="info prose-sm max-w-none flex flex-wrap gap-2 items-center">
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-green-500">Excel</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-black bg-yellow-500">Firebase</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-orange-500">Svelte</h4>
+                                <div class="meta-data prose-lg max-w-none">
+                                    <h3 class="title">Finance dashboard</h3>
+                                    <p class="description">Learn how to build awesome full-stack apps with SvelteKit</p>
+                                    <div class="tags prose-sm max-w-none">
+                                        <h4 class="tag excel">Excel</h4>
+                                        <h4 class="tag firebase">Firebase</h4>
+                                        <h4 class="tag svelte">Svelte</h4>
                                     </div>
                                 </div>                          
                             </div>
                             <div class="project lanthanoid metal inner-transition " data-category="lanthanoid">
-                                <div class="thumbnail w-full">
+                                <div class="thumbnail">
                                     <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
                                 </div>
-                                <div class="meta-data prose-lg max-w-none px-5 py-5">
-                                    <h3 class="title font-bold">Finance dashboard</h3>
-                                    <p class="text-primary-content">Learn how to build awesome full-stack apps with SvelteKit</p>
-                                    <div class="info prose-sm max-w-none flex flex-wrap gap-2 items-center">
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-green-500">Excel</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-black bg-yellow-500">Firebase</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-orange-500">Svelte</h4>
+                                <div class="meta-data prose-lg max-w-none">
+                                    <h3 class="title">Finance dashboard</h3>
+                                    <p class="description">Learn how to build awesome full-stack apps with SvelteKit</p>
+                                    <div class="tags prose-sm max-w-none">
+                                        <h4 class="tag excel">Excel</h4>
+                                        <h4 class="tag firebase">Firebase</h4>
+                                        <h4 class="tag svelte">Svelte</h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="project noble-gas nonmetal " data-category="noble-gas">
-                                <div class="thumbnail w-full">
+                                <div class="thumbnail">
                                     <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
                                 </div>
-                                <div class="meta-data prose-lg max-w-none px-5 py-5">
-                                    <h3 class="title font-bold">Finance dashboard</h3>
-                                    <p class="text-primary-content">Learn how to build awesome full-stack apps with SvelteKit</p>
-                                    <div class="info prose-sm max-w-none flex flex-wrap gap-2 items-center">
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-green-500">Excel</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-black bg-yellow-500">Firebase</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-orange-500">Svelte</h4>
+                                <div class="meta-data prose-lg max-w-none">
+                                    <h3 class="title">Finance dashboard</h3>
+                                    <p class="description">Learn how to build awesome full-stack apps with SvelteKit</p>
+                                    <div class="tags prose-sm max-w-none">
+                                        <h4 class="tag excel">Excel</h4>
+                                        <h4 class="tag firebase">Firebase</h4>
+                                        <h4 class="tag svelte">Svelte</h4>
                                     </div>
                                 </div>                         
                             </div>
                             <div class="project diatomic nonmetal " data-category="diatomic">
-                                <div class="thumbnail w-full">
+                                <div class="thumbnail">
                                     <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
                                 </div>
-                                <div class="meta-data prose-lg max-w-none px-5 py-5">
-                                    <h3 class="title font-bold">Finance dashboard</h3>
-                                    <p class="text-primary-content">Learn how to build awesome full-stack apps with SvelteKit</p>
-                                    <div class="info prose-sm max-w-none flex flex-wrap gap-2 items-center">
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-green-500">Excel</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-black bg-yellow-500">Firebase</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-orange-500">Svelte</h4>
+                                <div class="meta-data prose-lg max-w-none">
+                                    <h3 class="title">Finance dashboard</h3>
+                                    <p class="description">Learn how to build awesome full-stack apps with SvelteKit</p>
+                                    <div class="tags prose-sm max-w-none">
+                                        <h4 class="tag excel">Excel</h4>
+                                        <h4 class="tag firebase">Firebase</h4>
+                                        <h4 class="tag svelte">Svelte</h4>
                                     </div>
                                 </div>                           
                             </div>
                             <div class="project actinoid metal inner-transition " data-category="actinoid">
-                                <div class="thumbnail w-full">
+                                <div class="thumbnail">
                                     <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
                                 </div>
-                                <div class="meta-data prose-lg max-w-none px-5 py-5">
-                                    <h3 class="title font-bold">Finance dashboard</h3>
-                                    <p class="text-primary-content">Learn how to build awesome full-stack apps with SvelteKit</p>
-                                    <div class="info prose-sm max-w-none flex flex-wrap gap-2 items-center">
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-green-500">Excel</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-black bg-yellow-500">Firebase</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-orange-500">Svelte</h4>
+                                <div class="meta-data prose-lg max-w-none">
+                                    <h3 class="title">Finance dashboard</h3>
+                                    <p class="description">Learn how to build awesome full-stack apps with SvelteKit</p>
+                                    <div class="tags prose-sm max-w-none">
+                                        <h4 class="tag excel">Excel</h4>
+                                        <h4 class="tag firebase">Firebase</h4>
+                                        <h4 class="tag svelte">Svelte</h4>
                                     </div>
                                 </div>                           
                             </div>
                             <div class="project actinoid metal inner-transition " data-category="actinoid">
-                                <div class="thumbnail w-full">
+                                <div class="thumbnail">
                                     <img src="images/dash1-full.png" alt="" srcset="" class="w-full">
                                 </div>
-                                <div class="meta-data prose-lg max-w-none px-5 py-5">
-                                    <h3 class="title font-bold">Finance dashboard</h3>
-                                    <p class="text-primary-content">Learn how to build awesome full-stack apps with SvelteKit</p>
-                                    <div class="info prose-sm max-w-none flex flex-wrap gap-2 items-center">
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-green-500">Excel</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-black bg-yellow-500">Firebase</h4>
-                                        <h4 class="tag m-0 px-2 py-1 rounded-md text-white bg-orange-500">Svelte</h4>
+                                <div class="meta-data prose-lg max-w-none">
+                                    <h3 class="title">Finance dashboard</h3>
+                                    <p class="description">Learn how to build awesome full-stack apps with SvelteKit</p>
+                                    <div class="tags prose-sm max-w-none">
+                                        <h4 class="tag excel">Excel</h4>
+                                        <h4 class="tag firebase">Firebase</h4>
+                                        <h4 class="tag svelte">Svelte</h4>
                                     </div>
                                 </div>
                             </div>
@@ -431,12 +431,12 @@
                 </section>
                 
                 <section id="qualifications" class="frame">
-                    <div class="section-title prose-lg max-w-none font-bold mb-6 text-orange-500 text-center">
+                    <div class="section-title prose-lg max-w-none">
                         <h2>Qualifications</h2>
                     </div>
                     <div class="section-content">
-                        <div class="relative mt-5 bg-base-200">
-                            <div id="vibe-bar" class="absolute top-0 -ml-[8px] h-full w-4 rounded-full bg-base-100 xl:left-1/2">
+                        <div class="section-container">
+                            <div id="vibe-bar">
                                 <div class="sticky top-1/2">
                                     <div class="relative h-4 w-4">
                                     <div
@@ -446,33 +446,33 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="grid grid-cols-1 xl:grid-cols-2 gap-x-8 gap-y-8 xl:gap-y-14 pl-8 xl:pl-0">
+                            <div class="qualifications-container">
                                 <div class="prose-xl max-w-none">
-                                    <h4 class="my-4 uppercase tracking-wider mt-0 text-orange-500">Experience</h4>
-                                    <h3 class="font-black leading-9 text-2xl lg:text-3xl">Highlighting career Milestones</h2>
+                                    <h4 class="mini-title">Experience</h4>
+                                    <h3 class="mini-highlight">Highlighting career Milestones</h2>
                                 </div>
-                                <div class="prose-xl max-w-none xl:pl-5">
+                                <div class="experience prose-xl max-w-none">
                                     <div>
-                                        <h4 class="font-bold mt-0">Project Study</h4>
-                                        <div class="text-primary-content">Fathima Traders (March 2022)</div>
+                                        <h4 class="title font-bold mt-0">Project Study</h4>
+                                        <div class="organization">Fathima Traders (March 2022)</div>
                                     </div>
                                     <div>
-                                        <h4 class="font-bold">IT Technical Support</h4>
-                                        <div class="text-primary-content">WeFix Computer Service (Nov 2019 - June 2022)</div>
+                                        <h4 class="title font-bold">IT Technical Support</h4>
+                                        <div class="organization">WeFix Computer Service (Nov 2019 - June 2022)</div>
                                     </div>
                                 </div>
                                 <div class="prose-xl max-w-none">
-                                    <h4 class="my-4 uppercase tracking-wider text-orange-500">Education</h4>
-                                    <h3 class="font-black leading-9 text-2xl lg:text-3xl">Discover my educational Journey</h2>
+                                    <h4 class="mini-title">Education</h4>
+                                    <h3 class="mini-highlight">Discover my educational Journey</h2>
                                 </div>
-                                <div class="prose-xl max-w-none xl:pl-5">
+                                <div class="education prose-xl max-w-none">
                                     <div>
-                                        <h4 class="font-bold mt-2">Bachelor Degree - Business Administration</h4>
-                                        <div class="text-primary-content">NMCC Marthandam (2019 - 2022)</div>
+                                        <h4 class="title font-bold mt-2">Bachelor Degree - Business Administration</h4>
+                                        <div class="organization">NMCC Marthandam (2019 - 2022)</div>
                                     </div>
                                     <div>
-                                        <h4 class="font-bold">HSE - Computer Science</h4>
-                                        <div class="text-primary-content">Little Flower MHSS (2017 - 2019)</div>
+                                        <h4 class="title font-bold">HSE - Computer Science</h4>
+                                        <div class="organization">Little Flower MHSS (2017 - 2019)</div>
                                     </div>
                                 </div>
                             </div>
@@ -481,15 +481,15 @@
                 </section>
                 
                 <section id="contact" class="frame">
-                    <div class="grid-container flex flex-col gap-12 lg:gap-0 lg:grid lg:grid-cols-2 ">
-                        <div class="content-left flex flex-col gap-8 mr-5">
-                            <div class="section-title prose-lg max-w-none font-bold text-orange-500 text-center lg:text-left">
+                    <div class="contact-container">
+                        <div class="content-left">
+                            <div class="contact-title prose-lg max-w-none">
                                 <h2>Contact Me</h2>
                             </div>
-                            <div class="prose-xl max-w-none">
-                                <h3 class="leading-8">Let's connect and explore the possibilities</h2>
+                            <div class="contact-highlight prose-xl max-w-none">
+                                <h3>Let's connect and explore the possibilities</h2>
                             </div>
-                            <ul id="social-medias" class="flex gap-6 lg:gap-8 mt-2">
+                            <ul id="social-medias">
                                 <li>
                                     <a href="https://github.com/its-saran" target="_blank">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25">
@@ -527,15 +527,15 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="content-right flex flex-col gap-8">
-                            <div class="flex gap-6 flex-col xl:flex-row">
-                                <input type="text" id="validationCustomName" placeholder="Name" class="form-control h-10 w-full" name="name" required="">
-                                <input type="email" id="validationCustomEmail" placeholder="Email" class="form-control h-10 w-full" name="email" required="">
+                        <div class="content-right">
+                            <div class="contact-info">
+                                <input type="text" id="validationCustomName" placeholder="Name" class="form-control" name="name" required="">
+                                <input type="email" id="validationCustomEmail" placeholder="Email" class="form-control" name="email" required="">
                             </div>
-                            <div>
-                                <textarea cols="30" rows="5" class="form-control w-full h-30" id="validationCustomMessage" name="message" placeholder="Message" required=""></textarea>
+                            <div class="contact-msg">
+                                <textarea cols="30" rows="5" class="form-control" id="validationCustomMessage" name="message" placeholder="Message" required=""></textarea>
                             </div>
-                            <div class="pt-6">
+                            <div class="contact-button">
                                 <div>
                                     <button class="main-button send-msg" role="button">
                                         <span>Send Message</span>

@@ -4131,7 +4131,26 @@ footer{
   color: rgb(249 115 22 / var(--tw-text-opacity));
 }
 
-/* #intro .section-content .intro-left .description { @apply py-6 lg:py-12 text-1xl xl:text-2xl; } */
+#intro .section-content .intro-left .summary{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+@media (min-width: 768px){
+  #intro .section-content .intro-left .summary{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+@media (min-width: 1024px){
+  #intro .section-content .intro-left .summary{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
 
 #intro .section-content .intro-right{
   order: 1;
@@ -4408,11 +4427,60 @@ footer{
     row-gap: 3.5rem;
     padding-left: 0px;
   }
+}
 
+#qualifications .section-content #vibe-bar .bar-container{
+  position: sticky;
+  top: 50%;
+}
+
+#qualifications .section-content #vibe-bar .bar-container > div{
+  position: relative;
+  height: 1rem;
+  width: 1rem;
+}
+
+#qualifications .section-content #vibe-bar .background{
+  position: absolute;
+  height: 1rem;
+  width: 1rem;
+}
+
+@keyframes ping{
+  75%, 100%{
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+#qualifications .section-content #vibe-bar .background{
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 186 116 / var(--tw-bg-opacity));
+  opacity: 0.75;
+}
+
+#qualifications .section-content #vibe-bar .foreground{
+  position: relative;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 1024px){
   #qualifications .section-content .experience{
     padding-left: 1.25rem;
   }
+}
 
+#qualifications .section-content .experience .title{
+  font-weight: 700;
+}
+
+@media (min-width: 1024px){
   #qualifications .section-content .education{
     padding-left: 1.25rem;
   }
@@ -4513,9 +4581,12 @@ footer{
 
 #contact .content-right .contact-info .form-control{
   height: 2.5rem;
+  width: 100%;
 }
 
-/* #contact .content-right .contact-msg .form-control { @apply h-30; } */
+#contact .content-right .contact-msg .form-control{
+  width: 100%;
+}
 
 #contact .content-right .contact-button{
   padding-top: 1.5rem;
@@ -4571,14 +4642,6 @@ footer{
   position: relative;
 }
 
-.sticky{
-  position: sticky;
-}
-
-.top-1\/2{
-  top: 50%;
-}
-
 .mx-2{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -4609,16 +4672,8 @@ footer{
   display: none;
 }
 
-.h-4{
-  height: 1rem;
-}
-
 .h-8{
   height: 2rem;
-}
-
-.w-4{
-  width: 1rem;
 }
 
 .w-8{
@@ -4637,17 +4692,6 @@ footer{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-@keyframes ping{
-  75%, 100%{
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-.animate-ping{
-  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
-}
-
 .resize{
   resize: both;
 }
@@ -4658,10 +4702,6 @@ footer{
 
 .justify-center{
   justify-content: center;
-}
-
-.rounded-full{
-  border-radius: 9999px;
 }
 
 .border{
@@ -4680,16 +4720,6 @@ footer{
 .bg-base-300{
   --tw-bg-opacity: 1;
   background-color: hsl(var(--b3) / var(--tw-bg-opacity));
-}
-
-.bg-orange-300{
-  --tw-bg-opacity: 1;
-  background-color: rgb(253 186 116 / var(--tw-bg-opacity));
-}
-
-.bg-orange-500{
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
 }
 
 .fill-current{
@@ -4711,15 +4741,6 @@ footer{
   padding-bottom: 4rem;
 }
 
-.py-6{
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
-.font-bold{
-  font-weight: 700;
-}
-
 .text-success{
   --tw-text-opacity: 1;
   color: hsl(var(--su) / var(--tw-text-opacity));
@@ -4728,10 +4749,6 @@ footer{
 .text-warning{
   --tw-text-opacity: 1;
   color: hsl(var(--wa) / var(--tw-text-opacity));
-}
-
-.opacity-75{
-  opacity: 0.75;
 }
 
 .filter{
@@ -4776,17 +4793,3 @@ footer{
 }
 
 */
-
-@media (min-width: 768px){
-  .lg\:py-12{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-}
-
-@media (min-width: 1024px){
-  .xl\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}

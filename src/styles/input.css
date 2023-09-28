@@ -88,7 +88,7 @@
     #intro .section-content .intro-left { @apply order-2 lg:order-1 flex flex-col items-center text-center lg:text-left lg:items-start lg:w-1/2 xl:w-8/12; }
     #intro .section-content .intro-left .header { @apply text-3xl xs:text-4xl xl:text-5xl; }
     #intro .section-content .intro-left .header .dot { @apply text-orange-500 text-3xl ml-0.5; }
-    /* #intro .section-content .intro-left .description { @apply py-6 lg:py-12 text-1xl xl:text-2xl; } */
+    #intro .section-content .intro-left .summary { @apply py-6 lg:py-12 text-xl xl:text-2xl; }
     #intro .section-content .intro-right { @apply order-1 lg:order-2 lg:w-1/2 xl:w-5/12; }
     #intro .section-content .intro-right .intro-image{ @apply mx-8 mt-1.5 mb-4; }
     .intro-image { 
@@ -150,7 +150,12 @@
     #qualifications .section-content #vibe-bar { @apply absolute top-0 -ml-[8px] h-full w-4 rounded-full bg-base-100 xl:left-1/2; }
     #qualifications .section-content .section-container{ @apply relative mt-5 bg-base-200; }
     #qualifications .section-content .qualifications-container { @apply grid grid-cols-1 xl:grid-cols-2 gap-x-8 gap-y-8 xl:gap-y-14 pl-8 xl:pl-0; }
+    #qualifications .section-content #vibe-bar .bar-container { @apply sticky top-1/2; }
+    #qualifications .section-content #vibe-bar .bar-container > div { @apply relative h-4 w-4; }
+    #qualifications .section-content #vibe-bar .background { @apply absolute h-4 w-4 animate-ping rounded-full bg-orange-300 opacity-75; }
+    #qualifications .section-content #vibe-bar .foreground { @apply  relative h-4 w-4 rounded-full bg-orange-500; }
     #qualifications .section-content .experience { @apply xl:pl-5; }
+    #qualifications .section-content .experience .title { @apply font-bold; }
     #qualifications .section-content .education { @apply xl:pl-5; }
     #qualifications .section-content .organization { @apply text-primary-content; }
 
@@ -177,8 +182,8 @@
         border-color: #ff8c05;
     }
     #contact .content-right .contact-info { @apply flex gap-6 flex-col xl:flex-row; }
-    #contact .content-right .contact-info .form-control { @apply h-10; }
-    /* #contact .content-right .contact-msg .form-control { @apply h-30; } */
+    #contact .content-right .contact-info .form-control { @apply h-10 w-full; }
+    #contact .content-right .contact-msg .form-control { @apply w-full; }
     #contact .content-right .contact-button { @apply pt-6; }
 
 

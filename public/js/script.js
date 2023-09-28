@@ -7,6 +7,7 @@ class App {
             ...document.querySelectorAll('.menu a'),
             ...document.querySelectorAll('.intro-button a'),
         ];
+        this.contactForm = document.getElementById('contact-form');
 
         this.init();
     }
@@ -204,6 +205,96 @@ class App {
             });
         });
     }
+
+    setupForm() {
+        const self = this; // Store a reference to 'this'
+    
+        this.contactForm.addEventListener('submit', function (event) {
+          event.preventDefault();
+    
+          const formControls = self.contactForm.querySelectorAll('.form-control');
+          const submitButton = self.contactForm.querySelector('.send-msg');
+    
+          // Disable the submit button and add the loading class
+          submitButton.disabled = true;
+        //   submitButton.classList.add('loading');
+        submitButton.classList.add('sending');
+    
+          // Loop through each form control
+          for (let i = 0; i < formControls.length; i++) {
+            // Check if the current control is empty or invalid
+            if ((formControls[i].value === '' && formControls[i].required) || !formControls[i].checkValidity()) {
+              // If it's empty or invalid, add the "is-invalid" class to set its border color to red
+              formControls[i].classList.add('is-invalid');
+            } else {
+              // If it's not empty or invalid, remove the "is-invalid" class (if it exists)
+              formControls[i].classList.remove('is-invalid');
+            }
+          }
+    
+          if (!self.contactForm.checkValidity()) { // Use this.contactForm
+            // Enable the submit button and remove the loading class
+            submitButton.disabled = false;
+            // submitButton.classList.remove('loading');
+            submitButton.classList.remove('sending');
+    
+            return;
+          }
+    
+          // Check if email is in a valid format only if it is not empty
+          const emailInput = self.contactForm.querySelector('#validationCustomEmail'); // Use self.contactForm
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (emailInput.value !== '' && !emailRegex.test(emailInput.value)) {
+            emailInput.setCustomValidity('Invalid email address.');
+    
+            // Add the "is-invalid" class to the email input if it is required and empty
+            if (emailInput.required && emailInput.value === '') {
+              emailInput.classList.add('is-invalid');
+            }
+          } else {
+            emailInput.setCustomValidity('');
+    
+            // Remove invalid feedback div and class if email input is valid
+            emailInput.classList.remove('is-invalid');
+          }
+    
+          self.contactForm.classList.add('was-validated'); // Use this.contactForm
+    
+          // If form is valid, submit the data via AJAX
+          const xhr = new XMLHttpRequest();
+          xhr.open('POST', 'https://script.google.com/macros/s/AKfycbywuu8dJaTJMV01hPzTGe7jQ5aRvuSBlKcw6Xf9qk2YwGfTV255zVQ_vREbSEGLifu9sQ/exec');
+          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+          xhr.onload = function () {
+            if (xhr.status === 200) {
+              document.querySelector('.success-msg').textContent = 'Message sent successfully!';
+              document.querySelector('.success-msg').style.display = 'block';
+              setTimeout(function () {
+                document.querySelector('.success-msg').style.display = 'none';
+              }, 3000);
+    
+              // Enable the submit button and remove the loading class
+              submitButton.disabled = false;
+            //   submitButton.classList.remove('loading');
+            submitButton.classList.remove('sending');
+            } else {
+              document.querySelector('.error-msg').textContent = 'Something went wrong. Please try again!';
+              document.querySelector('.error-msg').style.display = 'block';
+              setTimeout(function () {
+                document.querySelector('.error-msg').style.display = 'none';
+              }, 3000);
+    
+              // Enable the submit button and remove the loading class
+              submitButton.disabled = false;
+            //   submitButton.classList.remove('loading');
+              submitButton.classList.remove('sending');
+            }
+          };
+          xhr.onerror = function () {
+            // Error handling
+          };
+          xhr.send(new URLSearchParams(new FormData(self.contactForm))); // Use self.contactForm
+        });
+      }
     
     init() {
         this.fixHeader();
@@ -213,6 +304,7 @@ class App {
         this.hideMobileMenu();
         this.generateSkills();
         this.filterPortfolio();
+        this.setupForm();
     }
 }
 

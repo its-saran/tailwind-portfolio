@@ -106,7 +106,7 @@
                     <div class="section-title prose-lg max-w-none">
                         <h2>About Me</h2>
                     </div>
-                    <div class="section-content prose-xl max-w-none">
+                    <div class="section-content prose-lg lg:prose-xl max-w-none">
                         <p>Hello there, friend! I'm your go-to data analyst, armed with a mighty spreadsheet sword and a heart full of humor. I dive deep into the realms of data, slaying confusion and bringing clarity to the numbers that dare to challenge us. But fear not, I'm not all seriousness and formulas—I sprinkle laughter and wit into every analysis I do. So join me on this data-driven quest, where we'll conquer data dragons, unravel statistical riddles, and create insights that will make you laugh out loud. Let's turn your data journey into an epic adventure with a dash of comedy!</p>
                     </div>
                 </section>
@@ -170,6 +170,7 @@
                             <input class="btn" type="radio" name="options" aria-label="SQL" data-filter=".sql"/>
                             <input class="btn" type="radio" name="options" aria-label="Power BI" data-filter=".power-bi"/>
                             <input class="btn" type="radio" name="options" aria-label="Python" data-filter=".python"/>
+                            <input class="btn" type="radio" name="options" aria-label="Javascript" data-filter=".javascript"/>
                         </div>
                     </div>
                     <div class="isotope-container">
@@ -396,7 +397,7 @@
                 </section>
                 
                 <section id="contact" class="frame">
-                    <div class="contact-container">
+                    <form action="" class="contact-form contact-container needs-validation" id="contact-form" autocomplete="off" novalidate>
                         <div class="content-left">
                             <div class="contact-title prose-lg max-w-none">
                                 <h2>Contact Me</h2>
@@ -444,21 +445,21 @@
                         </div>
                         <div class="content-right">
                             <div class="contact-info">
-                                <input type="text" id="validationCustomName" placeholder="Name" class="form-control" name="name" required="">
-                                <input type="email" id="validationCustomEmail" placeholder="Email" class="form-control" name="email" required="">
+                                <input type="text" id="validationCustomName" placeholder="Name" class="form-control" name="name" required>
+                                <input type="email" id="validationCustomEmail" placeholder="Email" class="form-control" name="email" required>
                             </div>
                             <div class="contact-msg">
-                                <textarea cols="30" rows="5" class="form-control" id="validationCustomMessage" name="message" placeholder="Message" required=""></textarea>
+                                <textarea cols="30" rows="5" class="form-control" id="validationCustomMessage" name="message" placeholder="Message" required></textarea>
                             </div>
                             <div class="contact-button">
                                 <div>
-                                    <button class="main-button send-msg" role="button">
-                                        <span>Send Message</span>
-                                    </button>
+                                    <button class="main-button send-msg" type="submit" id="submit" name="submit" value="submit">Send Message</button>
+                                    <div class="success-msg"></div>
+                                    <div class="error-msg"></div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </section>
             </main>
 

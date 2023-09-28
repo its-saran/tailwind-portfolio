@@ -155,7 +155,7 @@
     #qualifications .section-content #vibe-bar .background { @apply absolute h-4 w-4 animate-ping rounded-full bg-orange-300 opacity-75; }
     #qualifications .section-content #vibe-bar .foreground { @apply  relative h-4 w-4 rounded-full bg-orange-500; }
     #qualifications .section-content .experience { @apply xl:pl-5; }
-    #qualifications .section-content .experience .title { @apply font-bold; }
+    #qualifications .section-content .title { @apply font-bold; }
     #qualifications .section-content .education { @apply xl:pl-5; }
     #qualifications .section-content .organization { @apply text-primary-content; }
 
@@ -185,6 +185,32 @@
     #contact .content-right .contact-info .form-control { @apply h-10 w-full; }
     #contact .content-right .contact-msg .form-control { @apply w-full; }
     #contact .content-right .contact-button { @apply pt-6; }
+
+    #contact .content-right .form-control.is-invalid {
+        border-color: #DB005B;
+    }
+
+    #contact .success-msg {
+        color: #70e000;
+        font-size: 18px;
+        padding-top: 30px;
+    }
+
+    #contact .error-msg {
+        color: #DB005B;
+        font-size: 18px;
+        padding-top: 30px;
+    }
+
+    /* #contact .content-right .send-msg.loading {
+        cursor: not-allowed;
+        background: linear-gradient(to right, #605C3C, #3C3B3F); 
+        background: -moz-linear-gradient(to right, #605C3C, #3C3B3F);
+        background: -webkit-linear-gradient(to right, #605C3C, #3C3B3F); 
+    } */
+    #contact .content-right .send-msg.sending {
+        cursor: not-allowed;
+    }
 
 
     /*Copyright*/
@@ -217,34 +243,3 @@
 }
 
 
-
-/* #contact .content-right .form-control.is-invalid {
-    border-color: var(--error-color);
-}
-
-#contact .content-right .button {
-    margin-top: 30px;
-    margin-right: 40px;
-}
-
-#contact .success-msg {
-    color: var(--success-color);
-    font-size: 18px;
-    padding-top: 30px;
-}
-
-#contact .error-msg {
-    color: var(--error-color);
-    font-size: 18px;
-    padding-top: 30px;
-}
-
-
-#contact .content-right .button.send-msg.loading {
-    cursor: not-allowed;
-    background: var(--locked-gradient-moz);
-    background: var(--locked-gradient-webkit);
-    background: var(--locked-gradient);
-}
-
-*/

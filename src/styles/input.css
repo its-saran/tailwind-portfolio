@@ -28,6 +28,7 @@
 }
 
 @layer components {
+
     #app { @apply flex flex-col items-center; }
     .frame { @apply bg-base-200 mt-14 py-14 px-5 xs:px-8 sm:px-10 rounded-md; }
     .fix-header { @apply fixed mt-[0px] w-screen; }
@@ -78,8 +79,13 @@
 
     .mini-title { @apply my-4 uppercase tracking-wider mt-0 text-orange-500; }
     .mini-highlight { @apply font-black leading-9; }
-
     .section-title { @apply font-bold mb-6 text-orange-500 text-center; }
+
+    .tags { @apply flex flex-wrap gap-2 items-center; }
+    .tags .tag { @apply m-0 px-2 py-1 rounded-md;  }
+    .tags .excel { @apply text-white bg-green-500; }
+    .tags .firebase { @apply text-black bg-yellow-500; }
+    .tags .svelte { @apply text-white bg-orange-500; }
 
 
     /*Intro*/
@@ -140,11 +146,7 @@
     #portfolio .project .meta-data { @apply px-5 py-5; }
     #portfolio .project .meta-data .title { @apply font-bold; }
     #portfolio .project .meta-data .description { @apply text-primary-content; }
-    #portfolio .project .tags { @apply flex flex-wrap gap-2 items-center; }
-    #portfolio .project .tags .tag { @apply m-0 px-2 py-1 rounded-md;  }
-    #portfolio .project .tags .excel { @apply text-white bg-green-500; }
-    #portfolio .project .tags .firebase { @apply text-black bg-yellow-500; }
-    #portfolio .project .tags .svelte { @apply text-white bg-orange-500; }
+
 
     /*Qualifications*/
     #qualifications .section-content #vibe-bar { @apply absolute top-0 -ml-[8px] h-full w-4 rounded-full bg-base-100 xl:left-1/2; }

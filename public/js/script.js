@@ -1,10 +1,11 @@
 class App {
     constructor() {
+        this.page = document.documentElement.id
         this.header = document.querySelector('header');
-        this.navbarMenuItems = document.querySelectorAll('.navbar .menu li');
+        this.navbarMenuItems = document.querySelectorAll('#home .navbar .menu li');
         this.scrollDuration = 1000;
         this.navLinks = [
-            ...document.querySelectorAll('.menu a'),
+            ...document.querySelectorAll('#home .menu a'),
             ...document.querySelectorAll('.intro-button a'),
         ];
         this.contactForm = document.getElementById('contact-form');
@@ -98,7 +99,6 @@ class App {
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme) {
             if (savedTheme === 'light') {
-                console.log('Light')
 
                 darkMode.classList.remove('swap-on');
                 lightMode.classList.remove('swap-off');
@@ -107,7 +107,6 @@ class App {
                 lightMode.classList.add('swap-on');
 
             } else {
-                console.log('Dark')
 
                 darkMode.classList.remove('swap-off');
                 lightMode.classList.remove('swap-on');
@@ -294,17 +293,24 @@ class App {
           };
           xhr.send(new URLSearchParams(new FormData(self.contactForm))); // Use self.contactForm
         });
-      }
+    }
     
     init() {
-        this.fixHeader();
-        this.animateScroll();
-        this.toggleMenu();
-        this.toggleTheme();
-        this.hideMobileMenu();
-        this.generateSkills();
-        this.filterPortfolio();
-        this.setupForm();
+        if (this.page === "home") {
+            this.fixHeader();
+            this.animateScroll();
+            this.toggleMenu();
+            this.toggleTheme();
+            this.hideMobileMenu();
+            this.generateSkills();
+            this.filterPortfolio();
+            this.setupForm();
+        } else if (this.page === "project") {
+            this.fixHeader();
+            this.toggleMenu();
+            this.toggleTheme();
+            this.hideMobileMenu();
+        }
     }
 }
 

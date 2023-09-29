@@ -140,6 +140,22 @@ class App {
             }
         });
     }
+    navigateMobileMenu() {
+        const targetElement = document.getElementById('mobileDropdown');
+        const toggleMenu = document.querySelector('#menu-switch .toggleMenu');
+        targetElement.addEventListener('click', event => {
+            if (event.target.tagName === 'A') {
+                event.preventDefault();
+                toggleMenu.click();
+
+                const href = event.target.getAttribute('href');
+                console.log(href);
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 400);
+            }
+        });
+    }
 
     generateSkills() {
         //Dynamically generate skills content 
@@ -309,8 +325,9 @@ class App {
             this.fixHeader();
             this.toggleMenu();
             this.toggleTheme();
-            this.hideMobileMenu();
+            this.navigateMobileMenu();
         }
+
     }
 }
 

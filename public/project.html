@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" id="project">
+<html lang="en" data-theme="dark" id="project">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +11,7 @@
         <link rel="icon" href="images/favicon-256x256.png" sizes="256x256" />
 
         <title>Saran | Data Analyst</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
         <link rel="stylesheet" href="css/style.css" />
     </head>
     <body>
@@ -71,8 +72,64 @@
                 </div>
             </header>
             <main>
-                <section class="frame">
-                    <article class="prose max-w-none flex">
+                <section class="frame p-0">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="box bg-red-400 flex justify-center">
+                                    <img src="images/dash1-full.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="box bg-red-400 flex justify-center">
+                                    <img src="images/dash1-full.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="box bg-red-400 flex justify-center">
+                                    <img src="images/dash1-full.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="box bg-red-400 flex justify-center">
+                                    <img src="images/dash1-full.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="box bg-red-400 flex justify-center">
+                                    <img src="images/dash1-full.png" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="box bg-red-400 flex justify-center">
+                                    <img src="images/dash1-full.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="details mt-8 px-12 pb-12 flex flex-col xl:flex-row space justify-between">
+                        <div class="date py-4">
+                            <h3>Date</h3>
+                            <h4>6, August 2022</h4>
+                        </div>
+                        <div class="role py-4">
+                            <h3>Role</h3>
+                            <h4>Developer</h4>
+                        </div>
+                        <div class="url py-4">
+                            <h3>Url</h3>
+                            <h4>its-saran.github.io/portfolio/</h4>
+                        </div>
+                        <div class="client py-4">
+                            <h3>Source</h3>
+                            <a href="https://its-saran.github.io/portfolio/">Github</a>
+                        </div>
+                    </div>
+                </section>
+                <!-- <article class="prose max-w-none mt-8 px-12 pb-12">
                         <div>
                             <h1 class="title">Tailwind - Personal Portfolio</h1>
                             <p class="description text-lg">
@@ -89,14 +146,7 @@
                                 <h4 class="tag svelte">Svelte</h4>
                             </div>
                         </div>
-                        <div class="flex flex-col">
-                            <figure class="m-0">
-                                <img src="images/projects/tailwind-portfolio.png" alt="">
-                            </figure>
-                            <button class="pt-2 text-red-600">Visit</button>
-                        </div>
-                    </article>
-                </section>
+                    </article> -->
                 <section class="frame">
                     <article class="prose max-w-none">
                         <h1>Garlic bread with cheese: What the science tells us</h1>
@@ -151,6 +201,19 @@
                 <p id="copyright">Copyright © 2023 - All right reserved</p>
             </footer> 
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
         <script src="js/script.js"></script>
+        <script>
+            const swiper = new Swiper(".mySwiper", {
+                pagination: {
+                    el: ".swiper-pagination",
+                    dynamicBullets: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        </script>
     </body>
 </html>

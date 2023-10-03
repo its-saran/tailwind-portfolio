@@ -142,9 +142,18 @@
     #portfolio .project { 
         @apply transition-none bg-base-200;
         margin: 10px; 
+        transition: box-shadow 0.2s;
+        /* transition: transform 0.2s; */
     }
-    #portfolio .project .meta-data { @apply px-5 py-5; }
-    #portfolio .project .meta-data .title { @apply font-bold; }
+
+    #portfolio .project:hover {
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+        transform: scale(1.01);
+    }
+
+
+    #portfolio .project .meta-data { @apply px-5 py-5 ; }
+    #portfolio .project .meta-data .title { @apply font-bold m-0; }
     #portfolio .project .meta-data .description { @apply text-primary-content; }
 
 
@@ -218,13 +227,11 @@
 
 
     /* Project */
- 
     .swiper {
         width: 100%;
         height: 100%;
     }
 
-  
     .swiper-slide {
         text-align: center;
         font-size: 18px;
@@ -241,7 +248,6 @@
     .swiper-slide img {
         user-select: none; /* Disable text selection */
     }
-
 
     .box img {
         width: 85%;

@@ -4332,6 +4332,13 @@ footer{
   background-color: hsl(var(--b2) / var(--tw-bg-opacity));
   transition-property: none;
   margin: 10px;
+  transition: box-shadow 0.2s;
+  /* transition: transform 0.2s; */
+}
+
+#portfolio .project:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
 }
 
 #portfolio .project .meta-data{
@@ -4342,6 +4349,7 @@ footer{
 }
 
 #portfolio .project .meta-data .title{
+  margin: 0px;
   font-weight: 700;
 }
 
@@ -4660,6 +4668,14 @@ footer{
   position: relative;
 }
 
+.col-span-1{
+  grid-column: span 1 / span 1;
+}
+
+.col-span-2{
+  grid-column: span 2 / span 2;
+}
+
 .mx-2{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -4688,6 +4704,10 @@ footer{
 
 .flex{
   display: flex;
+}
+
+.grid{
+  display: grid;
 }
 
 .hidden{
@@ -4728,6 +4748,10 @@ footer{
 
 .justify-between{
   justify-content: space-between;
+}
+
+.gap-8{
+  gap: 2rem;
 }
 
 .border{
@@ -4788,6 +4812,10 @@ footer{
 
 .pb-12{
   padding-bottom: 3rem;
+}
+
+.pt-8{
+  padding-top: 2rem;
 }
 
 .text-lg{
@@ -5034,6 +5062,10 @@ footer{
 }
 
 @media (min-width: 1024px){
+  .xl\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .xl\:flex-row{
     flex-direction: row;
   }

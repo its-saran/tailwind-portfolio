@@ -77,12 +77,15 @@
     .download-resume { @apply mr-4; }
     .download-resume-mobile { @apply ml-8 mb-8; }
 
-    .mini-title { @apply my-4 uppercase tracking-wider mt-0 text-orange-500; }
-    .mini-highlight { @apply font-black leading-9; }
-    .section-title { @apply font-bold mb-6 text-orange-500 text-center; }
+    .mini-title { @apply text-xl uppercase tracking-wider text-orange-500; }
+    .mini-highlight { @apply hidden lg:block text-3xl font-black leading-9; }
+    .section-title { 
+        @apply font-bold mb-6 text-orange-500 text-center;
+        font-size: 28px;
+    }
 
     .tags { @apply flex flex-wrap gap-2 items-center; }
-    .tags .tag { @apply m-0 px-2 py-1 rounded-md;  }
+    .tags .tag { @apply m-0 px-2 py-1 rounded-md text-sm;  }
     .tags .excel { @apply text-white bg-green-500; }
     .tags .firebase { @apply text-black bg-yellow-500; }
     .tags .svelte { @apply text-white bg-orange-500; }
@@ -112,11 +115,17 @@
     #about .section-content p { @apply leading-7}
 
     /*Skills*/
-    #skills .section-content #personal-skills { @apply flex flex-col lg:grid lg:grid-cols-2; }
-    #skills .section-content #professional-skills { @apply flex flex-col lg:grid lg:grid-cols-2 pt-12; }
+    /* #skills .section-title { @apply mb-8 lg:mb-6; } */
+    #skills .section-content .skill-block { @apply flex flex-col lg:grid lg:grid-cols-2;; }
+    #skills .section-content #data-analytics,
+    #skills .section-content #web-technologies {
+      @apply pt-12;
+    }
+    #skills .section-content .skills-left { @apply pr-6; }
     #skills .section-content .skills-right { @apply pt-5 lg:pr-4 lg:pl-5 lg:pt-0; }
     #skills .skill { @apply pb-4; }
     #skills .skill-title { @apply pb-2; }
+    #skills .mini-title { @apply mb-0 lg:mb-2; }
     #skills .skill-progress { @apply bg-[#414141]; } /* <!-- bg-neutral-700 -->*/
     #skills .skill-progress div {
         @apply h-1.5;
@@ -153,30 +162,35 @@
 
 
     #portfolio .project .meta-data { @apply px-5 py-5 ; }
-    #portfolio .project .meta-data .title { @apply font-bold m-0; }
+    #portfolio .project .meta-data .title { 
+        @apply font-bold m-0 text-xl 2xl:text-2xl;
+    }
+    #portfolio .project .meta-data .description { 
+        @apply pt-2 pb-6 text-base 2xl:text-lg;
+    }
+   
     #portfolio .project .meta-data .description { @apply text-primary-content; }
 
 
     /*Qualifications*/
-    #qualifications .section-content #vibe-bar { @apply absolute top-0 -ml-[8px] h-full w-4 rounded-full bg-base-100 xl:left-1/2; }
-    #qualifications .section-content .section-container{ @apply relative mt-5 bg-base-200; }
-    #qualifications .section-content .qualifications-container { @apply grid grid-cols-1 xl:grid-cols-2 gap-x-8 gap-y-8 xl:gap-y-14 pl-8 xl:pl-0; }
-    #qualifications .section-content #vibe-bar .bar-container { @apply sticky top-1/2; }
-    #qualifications .section-content #vibe-bar .bar-container > div { @apply relative h-4 w-4; }
-    #qualifications .section-content #vibe-bar .background { @apply absolute h-4 w-4 animate-ping rounded-full bg-orange-300 opacity-75; }
-    #qualifications .section-content #vibe-bar .foreground { @apply  relative h-4 w-4 rounded-full bg-orange-500; }
-    #qualifications .section-content .experience { @apply xl:pl-5; }
-    #qualifications .section-content .title { @apply font-bold; }
-    #qualifications .section-content .education { @apply xl:pl-5; }
-    #qualifications .section-content .organization { @apply text-primary-content; }
-
-
+    #qualifications .section-title { @apply mb-8; }
+    #qualifications .section-container{ @apply relative mt-5 bg-base-200; }
+    #qualifications #vibe-bar { @apply absolute top-0 -ml-[8px] h-full w-4 rounded-full bg-base-100 xl:left-1/2; }
+    #qualifications #vibe-bar .bar-container { @apply sticky top-1/2; }
+    #qualifications #vibe-bar .bar-container > div { @apply relative h-4 w-4; }
+    #qualifications #vibe-bar .background { @apply absolute h-4 w-4 animate-ping rounded-full bg-orange-300 opacity-75; }
+    #qualifications #vibe-bar .foreground { @apply  relative h-4 w-4 rounded-full bg-orange-500; }
+    #qualifications .qualifications-container { @apply grid grid-cols-1 xl:grid-cols-2 gap-x-8 gap-y-6 xl:gap-y-14 pl-8 xl:pl-0; }
+    #qualifications .experience { @apply xl:pl-5; }
+    #qualifications .title { @apply font-bold text-xl leading-8 mb-2; }
+    #qualifications .education { @apply xl:pl-5; }
+    #qualifications .organization { @apply text-primary-content text-lg leading-8; }
 
     /*Contact*/
     #contact .contact-container { @apply flex flex-col gap-12 lg:gap-0 lg:grid lg:grid-cols-2; }
     #contact .content-left { @apply flex flex-col gap-8 mr-5; }
-    #contact .content-left .contact-title { @apply font-bold text-orange-500 text-center lg:text-left; }
-    #contact .content-left .contact-highlight h3 { @apply leading-8; }
+    #contact .content-left .section-title { @apply lg:text-left mb-0; }
+    #contact .content-left .contact-highlight { @apply leading-8 text-3xl; }
     #contact .content-left #social-medias { @apply flex gap-6 lg:gap-8 mt-2; } 
     #contact .content-right { @apply flex flex-col gap-8; }
     #contact .content-right .form-control {

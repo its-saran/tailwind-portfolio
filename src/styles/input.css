@@ -79,16 +79,9 @@
 
     .mini-title { @apply text-xl uppercase tracking-wider text-orange-500; }
     .mini-highlight { @apply hidden lg:block text-3xl font-black leading-9; }
-    .section-title { 
-        @apply font-bold mb-6 text-orange-500 text-center;
+    .section-title { @apply font-bold mb-6 text-orange-500 text-center;
         font-size: 28px;
     }
-
-    .tags { @apply flex flex-wrap gap-2 items-center; }
-    .tags .tag { @apply m-0 px-2 py-1 rounded-md text-sm;  }
-    .tags .excel { @apply text-white bg-green-500; }
-    .tags .firebase { @apply text-black bg-yellow-500; }
-    .tags .svelte { @apply text-white bg-orange-500; }
 
 
     /*Intro*/
@@ -154,22 +147,32 @@
         transition: box-shadow 0.2s;
         /* transition: transform 0.2s; */
     }
-
     #portfolio .project:hover {
         box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
         transform: scale(1.01);
     }
 
 
-    #portfolio .project .meta-data { @apply px-5 py-5 ; }
-    #portfolio .project .meta-data .title { 
-        @apply font-bold m-0 text-xl 2xl:text-2xl;
+    #portfolio .project .meta-data { @apply px-5 py-5 flex flex-col h-full; }
+    #portfolio .project .meta-data .title { @apply font-bold m-0 text-xl 2xl:text-2xl ;}
+    #portfolio .project .meta-data .description { @apply pt-4 text-primary-content 2xl:text-lg mb-6 lg:mb-0;
     }
-    #portfolio .project .meta-data .description { 
-        @apply pt-2 pb-6 text-base 2xl:text-lg;
-    }
-   
-    #portfolio .project .meta-data .description { @apply text-primary-content; }
+    #portfolio .project .meta-data .tags { @apply flex flex-wrap gap-1.5 items-center; }
+
+    .tags .tag { @apply m-0 px-2 py-1 rounded-md text-sm;  }
+    .tags .excel { @apply text-white bg-green-500; }
+    .tags .tailwind { @apply text-white bg-[#38bdf8];  }
+    .tags .daisy{ @apply text-white bg-[#1ad1a5]; }
+    .tags .bootstrap{ @apply text-white bg-[#563d7c]; }
+    .tags .jquery{ @apply text-white bg-[#0769ad]; }
+    .tags .javascript { @apply text-black bg-[#f7df1e]; }
+    .tags .svelte { @apply text-white bg-orange-500; }
+    .tags .nodejs { @apply text-white bg-[#3c873a]; }
+    .tags .express { @apply text-white bg-[#000000]; }
+    .tags .github{ @apply text-white bg-[#000000]; }
+    .tags .firebase { @apply text-black bg-yellow-500; }
+    .tags .gcloud { @apply text-white bg-[#4285F4]; }
+
 
 
     /*Qualifications*/
@@ -234,7 +237,6 @@
         background: -webkit-linear-gradient(to right, #605C3C, #3C3B3F);  */
     }
 
-
     /*Copyright*/
     #copyright { @apply p-6 text-center;}
 
@@ -255,27 +257,18 @@
         align-items: center;
     }
 
-    .box {
-        padding: 60px 0;
-    }
-
-    .swiper-slide img {
-        user-select: none; /* Disable text selection */
-    }
-
-    .box img {
-        width: 85%;
-    }
+    .box { padding: 60px 0; }
+    .swiper-slide img { user-select: none;}
+    .box img { width: 85%; }
 
 
 
     /* Media quieries*/
-    @media (width >= 640px) {}
-    @media (width >= 768px) { .project { width: calc(49.33% - 20px); } }
-    @media (width >= 1024px) { .project { width: calc(33.33% - 20px); } }
-
-    /* @media (width < 640px) { #daisy-filters { @apply rounded-none; } } */
-    @media (width < 768px) {}
+    @media (width >= 768px) { 
+        .project { width: calc(49.33% - 20px); } 
+        #portfolio .project .meta-data .description { height: 205px; }
+    }
+    @media (width >= 1024px) { .project { width: calc(33.33% - 20px); } } 
     @media (width < 1024px) {}
     @media (width < 1280px) {
         .download-resume { @apply hidden }

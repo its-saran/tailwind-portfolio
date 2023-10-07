@@ -3819,45 +3819,6 @@ footer{
   font-size: 28px;
 }
 
-.tags{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.tags .tag{
-  margin: 0px;
-  border-radius: 0.375rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-}
-
-.tags .excel{
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.tags .firebase{
-  --tw-bg-opacity: 1;
-  background-color: rgb(234 179 8 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.tags .svelte{
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
 /*Intro*/
 
 #intro{
@@ -4146,6 +4107,9 @@ footer{
 }
 
 #portfolio .project .meta-data{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-top: 1.25rem;
@@ -4167,10 +4131,16 @@ footer{
 }
 
 #portfolio .project .meta-data .description{
-  padding-top: 0.5rem;
-  padding-bottom: 1.5rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  --tw-text-opacity: 1;
+  color: hsl(var(--pc) / var(--tw-text-opacity));
+}
+
+@media (min-width: 768px){
+  #portfolio .project .meta-data .description{
+    margin-bottom: 0px;
+  }
 }
 
 @media (min-width: 1280px){
@@ -4180,9 +4150,106 @@ footer{
   }
 }
 
-#portfolio .project .meta-data .description{
+#portfolio .project .meta-data .tags{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.tags .tag{
+  margin: 0px;
+  border-radius: 0.375rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.tags .excel{
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: hsl(var(--pc) / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tags .tailwind{
+  --tw-bg-opacity: 1;
+  background-color: rgb(56 189 248 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tags .daisy{
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 209 165 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tags .bootstrap{
+  --tw-bg-opacity: 1;
+  background-color: rgb(86 61 124 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tags .jquery{
+  --tw-bg-opacity: 1;
+  background-color: rgb(7 105 173 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tags .javascript{
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 223 30 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.tags .svelte{
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tags .nodejs{
+  --tw-bg-opacity: 1;
+  background-color: rgb(60 135 58 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tags .express{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tags .github{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tags .firebase{
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 179 8 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.tags .gcloud{
+  --tw-bg-opacity: 1;
+  background-color: rgb(66 133 244 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 /*Qualifications*/
@@ -4450,7 +4517,6 @@ footer{
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  /* Disable text selection */
 }
 
 .box img {
@@ -4459,12 +4525,13 @@ footer{
 
 /* Media quieries*/
 
-@media (width >= 640px) {
-}
-
 @media (width >= 768px) {
   .project {
     width: calc(49.33% - 20px);
+  }
+
+  #portfolio .project .meta-data .description {
+    height: 205px;
   }
 }
 
@@ -4472,11 +4539,6 @@ footer{
   .project {
     width: calc(33.33% - 20px);
   }
-}
-
-/* @media (width < 640px) { #daisy-filters { @apply rounded-none; } } */
-
-@media (width < 768px) {
 }
 
 @media (width < 1024px) {

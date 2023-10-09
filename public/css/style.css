@@ -611,9 +611,6 @@ footer{
   background-color: hsl(var(--b2) / var(--tw-bg-opacity));
 }
 
-/* @media (width < 1280px) { header, main, footer { width: 85%; } }
-    @media (width < 640px) { header, main, footer { width: 94%; } } */
-
 @media (width < 1280px) {
   header, main, footer {
     width: 85%;
@@ -3978,8 +3975,6 @@ footer{
 
 /*Skills*/
 
-/* #skills .section-title { @apply mb-8 lg:mb-6; } */
-
 #skills .section-content .skill-block{
   display: flex;
   flex-direction: column;
@@ -3992,8 +3987,7 @@ footer{
   }
 }
 
-#skills .section-content #data-analytics,
-    #skills .section-content #web-technologies{
+#skills .section-content #data-analytics,#skills .section-content #web-technologies{
   padding-top: 3rem;
 }
 
@@ -4083,8 +4077,6 @@ footer{
   background-color: hsl(var(--p) / var(--tw-bg-opacity));
   color: white;
 }
-
-/* background: #ff8c05; */
 
 #portfolio .projects{
   display: flex;

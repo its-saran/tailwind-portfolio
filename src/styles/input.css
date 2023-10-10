@@ -234,10 +234,8 @@
         align-items: center;
     }
 
-    .box { padding: 60px 0; }
     .swiper-slide img { user-select: none;}
-    .box img { width: 85%; }
-
+    .box img { @apply w-full }
 
 
     /* Media quieries*/

@@ -237,6 +237,14 @@
     .swiper-slide img { user-select: none;}
     .box img { @apply w-full }
 
+    /* .project-about {
+        width: 70%;
+    } */
+
+    /* .project-detail {
+        width: 70%;
+    } */
+
 
     /* Media quieries*/
     @media (width >= 768px) { 

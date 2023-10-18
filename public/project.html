@@ -131,49 +131,71 @@
                     </div>
                 </section> -->
                 <section class="frame mt-4">
-                    <div class="project-image px-8 py-2">
+                    <div class="project-image 2xl:px-8 py-2">
                         <img class="rounded-lg" src="images/projects/port_boot_4.png" alt="">
                     </div>
-                    <article class="prose max-w-none mt-14 px-8 pb-12 flex">
-                        <div class="project-about flex">
-                            <div>
-                                <h1 class="title">Tailwind - Personal Portfolio</h1>
-                                <p class="description text-lg">
-                                    For years parents have espoused the health benefits of eating garlic bread with cheese to their
-                                    children, with the food earning such an iconic status in our culture that kids will often dress
-                                    up as warm, cheesy loaf for Halloween.
-                                </p>
-                                <p class="description text-lg mb-0">
-                                    For years parents have espoused the health benefits of eating garlic bread with cheese to their
-                                </p>
-                                <h2>What was the goal of the project?</h2>
-                                <h2>Project execution</h2>
-                                <h2>Project results</h2>
+                    <article class="prose max-w-none mt-14 2xl:px-8 pb-12 flex flex-col xl:flex-row">
+                        <div class="project-about xl:w-7/12  2xl:w-3/5">
+                            <h1 class="title">Tailwind - Personal Portfolio</h1>
+                            <p class="description text-lg">
+                                Discover a dynamic portfolio, brought to life with Svelte, JavaScript, and Tailwind CSS. Experience a modern, interactive interface that showcases impressive work and skills.
+                            </p>
+                            <table class="table-auto">
+                                <thead>
+                                  <tr>
+                                    <th>Song</th>
+                                    <th>Artist</th>
+                                    <th>Year</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
+                                    <td>Malcolm Lockyer</td>
+                                    <td>1961</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Witchy Woman</td>
+                                    <td>The Eagles</td>
+                                    <td>1972</td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                            <p class="text-lg">
+                                For years parents have espoused the health benefits of eating garlic bread with cheese to their
+                                children, with the food earning such an iconic status in our culture that kids will often dress
+                                up as warm, cheesy loaf for Halloween.
+                            </p>    
+                        </div>
+                        <div class="project-detail xl:w-5/12 2xl:w-2/5 xl:ml-8">
+                            <div class="bg-stone-800 border border-white border-opacity-20 rounded-md px-8 py-10 pt-6 ">
+                                <div class="top">
+                                    <div class="date font-medium">
+                                        <h3 class="mt-0">Date</h3>
+                                        <h4 class="font-light">6, August 2022</h4>
+                                    </div>
+                                    <div class="category font-medium">
+                                        <h3>Category</h3>
+                                        <h4 class="font-light">Web Development</h4>
+                                    </div>
+                                    <div class="github font-medium">
+                                        <h3>Github</h3>
+                                        <a href="https://github.com/its-saran/tailwind-portfolio" class="font-light">github.com/its-saran/tailwind-portfolio</a>
+                                    </div>
+                                </div>
+                               <div class="bottom mt-6">
+                                    <a href="https://its-saran.github.io/portfolio/">
+                                        <button class="bg-orange-500 w-full p-2 text-black rounded-md">View Site</button>
+                                    </a>
+                               </div> 
                             </div>
                         </div>
-                        <div class="border-2 border-white border-opacity-20 rounded-md w-4/5 pl-10 py-8 ml-8">
-                            <div class="divide-slate-300">
-                                <h3 class="mt-0">Date</h3>
-                                <h4>6, August 2022</h4>
-                            </div>
-                            <div class="role">
-                                <h3>Role</h3>
-                                <h4>Developer</h4>
-                            </div>
-                            <div class="url">
-                                <h3>Url</h3>
-                                <h4>its-saran.github.io/portfolio/</h4>
-                            </div>
-                            <div class="client">
-                                <h3>Source</h3>
-                                <a href="https://its-saran.github.io/portfolio/">Github</a>
-                            </div>
-                        </div>
+
                     </article>
                     <div>
                         
                     </div>
-                    <article class="prose max-w-none px-8">
+                    <article class="prose max-w-none 2xl:px-8">
                         <h1>Garlic bread with cheese: What the science tells us</h1>
                         <p class="text-lg">
                             For years parents have espoused the health benefits of eating garlic bread with cheese to their
@@ -182,11 +204,8 @@
                         </p>
                         <p class="text-lg">
                             There is no wasted time here. We won’t be using outdated technologies like PHP, Wordpress and JQuery. Although still useful, outdated technologies like these are low-paying and job demand for people with these skills is decreasing.
-
                             In this course, you'll learn the specific technologies that are the most in-demand in the industry right now.
-                            
                             These include tools and technologies used by the biggest tech companies like Google, Facebook, Uber, Netlifx, Airbnb, etc.
-                            
                             If you want to learn employable skills in 2023, then this course is for you.
                         </p>
                         <div id="mockup-window" class="mockup-window border bg-base-300 mx-auto border-none">
@@ -207,8 +226,8 @@
                         </div>
                     </article>
                     <div class="flex w-full justify-between pt-8 px-8">
-                        <button class="btn bg-base-100">Next Project</button>
-                        <button class="btn bg-base-100">Previous Project</button>
+                        <button class="btn btn-error">Next Project</button>
+                        <button class="btn btn-error">Previous Project</button>
                     </div>
                 </section>
                 <!-- <section class="frame">

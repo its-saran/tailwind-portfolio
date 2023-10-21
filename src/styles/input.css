@@ -167,6 +167,10 @@
     .tags .github{ @apply text-white bg-[#000000]; }
     .tags .firebase { @apply text-black bg-yellow-500; }
     .tags .gcloud { @apply text-white bg-[#4285F4]; }
+    .tags .swiper_js { @apply text-white bg-[#38bdf8];  }
+    .tags .isotope { @apply text-white bg-amber-600; }
+    .tags .vite { @apply text-white bg-purple-600; }
+    .tags .filterizr { @apply text-white bg-blue-700; }
 
 
     /*Qualifications*/

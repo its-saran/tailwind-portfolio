@@ -4392,21 +4392,28 @@ footer{
   padding-bottom: 3rem;
 }
 
-#project-content{
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+#project-content, #project-pagination{
+  padding-left: 1rem;
+  padding-right: 1rem;
   padding-top: 3.5rem;
 }
 
 @media (min-width: 320px){
-  #project-content{
-    padding-left: 2rem;
-    padding-right: 2rem;
+  #project-content, #project-pagination{
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
 @media (min-width: 420px){
-  #project-content{
+  #project-content, #project-pagination{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 640px){
+  #project-content, #project-pagination{
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
@@ -4600,23 +4607,7 @@ footer{
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  padding-top: 3rem;
-}
-
-@media (min-width: 320px){
-  #project-pagination{
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
-@media (min-width: 420px){
-  #project-pagination{
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
+  padding-top: 2rem;
 }
 
 #project-pagination button{

@@ -256,10 +256,11 @@
 
     #project-container { @apply mt-4 bg-base-200 pb-12;}
     #project-content { @apply pt-14 px-5 xs:px-8 sm:px-10; } 
-    #project-image img { @apply rounded-md border border-white border-opacity-20 w-full; }
+    #project-image img { @apply xl:rounded-t-md border border-white border-opacity-20 w-full; }
     #project-content #project-about { @apply flex flex-col xl:flex-row pb-6; }
     #project-content #left { @apply xl:w-7/12  2xl:w-3/5; }
     #project-content #left p { @apply text-lg; }
+    #project-content #left .tools { @apply pb-8 xl:pb-0; }
     #project-content #left .tools .tags { @apply flex flex-wrap gap-2; }
     #project-content #right { @apply xl:w-5/12 2xl:w-2/5 xl:ml-8 bg-base-100 border border-white border-opacity-20 rounded-md px-8 py-10 pt-6; }
     #project-content #right .top { @apply mt-3 mb-8 flex flex-col gap-4; }
@@ -268,12 +269,14 @@
     #project-content #right .top h3 { @apply m-0 p-0; }
     #project-content #right .bottom { @apply mt-6 flex items-center gap-4; }
     #project-content #right .bottom a { @apply no-underline; }
-    #project-content #right .bottom button { @apply flex items-center gap-2 rounded-lg; }
+    #project-content #right .bottom button { @apply flex items-center gap-2 rounded-lg px-2.5 py-2; }
     #project-content #right .bottom .github-link button { @apply border border-white button-effect text-white; }
     #project-content #right .bottom .website-link button { @apply sub-button button-effect text-black; }
     #project-content #project-description p { @apply text-lg; }
-    #project-pagination { @apply flex w-full justify-between pt-12 2xl:px-8; }
-    #project-pagination button { @apply text-white uppercase flex gap-1 button-effect; }
+
+
+    #project-pagination { @apply flex w-full justify-between pt-12 px-5 xs:px-8 sm:px-10; }
+    #project-pagination button { @apply text-white uppercase gap-1 flex button-effect; }
     
 
 

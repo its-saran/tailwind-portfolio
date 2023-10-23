@@ -58,7 +58,6 @@
 
     .button-effect {
         @apply cursor-pointer select-none transition-all normal-case;
-        box-shadow: 0px 0px 14px -7px #f09819;
         touch-action: manipulation;
         transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
         transition-duration: 200ms;
@@ -67,6 +66,7 @@
 
     .main-button {
         @apply rounded-md flex font-medium border-none;
+        box-shadow: 0px 0px 14px -7px #f09819;
         padding: 8px 16px 8px 12px;
         background-size: 200% auto;
         color: #1f2937;
@@ -76,6 +76,7 @@
     .main-button:active { transform: scale(0.9); }
 
     .sub-button {
+        box-shadow: 0px 0px 14px -7px #f09819;
         color: #1f2937;
         background-image: linear-gradient(45deg, #ff512f 20%, #f09819 100%, #ff512f 100%);
     }
@@ -253,13 +254,27 @@
     .swiper-slide img { user-select: none;}
     .box img { @apply w-full }
 
-    /* .project-about {
-        width: 70%;
-    } */
-
-    /* .project-detail {
-        width: 70%;
-    } */
+    #project-container { @apply mt-4 bg-base-200 pb-12;}
+    #project-content { @apply pt-14 px-5 xs:px-8 sm:px-10; } 
+    #project-image img { @apply rounded-md border border-white border-opacity-20 w-full; }
+    #project-content #project-about { @apply flex flex-col xl:flex-row pb-6; }
+    #project-content #left { @apply xl:w-7/12  2xl:w-3/5; }
+    #project-content #left p { @apply text-lg; }
+    #project-content #left .tools .tags { @apply flex flex-wrap gap-2; }
+    #project-content #right { @apply xl:w-5/12 2xl:w-2/5 xl:ml-8 bg-base-100 border border-white border-opacity-20 rounded-md px-8 py-10 pt-6; }
+    #project-content #right .top { @apply mt-3 mb-8 flex flex-col gap-4; }
+    #project-content #right .top .head { @apply flex items-center gap-2; }
+    #project-content #right .top h4 { @apply font-light mt-1.5; }
+    #project-content #right .top h3 { @apply m-0 p-0; }
+    #project-content #right .bottom { @apply mt-6 flex items-center gap-4; }
+    #project-content #right .bottom a { @apply no-underline; }
+    #project-content #right .bottom button { @apply flex items-center gap-2 rounded-lg; }
+    #project-content #right .bottom .github-link button { @apply border border-white button-effect text-white; }
+    #project-content #right .bottom .website-link button { @apply sub-button button-effect text-black; }
+    #project-content #project-description p { @apply text-lg; }
+    #project-pagination { @apply flex w-full justify-between pt-12 2xl:px-8; }
+    #project-pagination button { @apply text-white uppercase flex gap-1 button-effect; }
+    
 
 
     /* Media quieries*/

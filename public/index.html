@@ -12,20 +12,55 @@
 
         <title>Saran | Data Analyst</title>
         <link rel="stylesheet" href="css/style.css"/>
-        <link rel="stylesheet" href="css/loader.css"/>
+        <!-- <link rel="stylesheet" href="css/loader.css"/> -->
 
     </head>
     <body>
-        <div id="preloader">
+        
+        <!-- <div id="loading-screen">
             <span class="loader"></span>
-        </div>
-        <div id="app"> 
-            <header>
-                <div class="navbar">
-                    <div class="navbar-start">
-                        <a id="logo-text">SARAN</a>
+        </div> -->
+        <div id="main-screen">
+            <div id="app"> 
+                <header>
+                    <div class="navbar">
+                        <div class="navbar-start">
+                            <a id="logo-text">SARAN</a>
+                        </div>
+                        <div class="navbar-center">
+                            <ul class="menu">
+                                <li><a href="#intro">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#skills">Skills</a></li>
+                                <li><a href="#portfolio">Portfolio</a></li>
+                                <li><a href="#qualifications">Experience</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="navbar-end">
+                            <label id="theme-switch">
+                                <input type="checkbox" class="toggleTheme"/>
+    
+                                <svg id="dark-mode" class="fill-current w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
+                                
+                                <svg id="light-mode" class="fill-current w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
+                            </label>
+                            <button class="main-button button-effect download-resume">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25">
+                                    <image xlink:href="images/dark/download.svg" width="25" height="25"></image>
+                                </svg>
+                                <span>Resume</span>
+                            </button>
+                            <label id="menu-switch">
+                                <input type="checkbox" class="toggleMenu"/>
+                        
+                                <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
+                                
+                                <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
+                            </label>
+                        </div>
                     </div>
-                    <div class="navbar-center">
+                    <div id="mobileDropdown" class="flex-item">
                         <ul class="menu">
                             <li><a href="#intro">Home</a></li>
                             <li><a href="#about">About</a></li>
@@ -34,289 +69,198 @@
                             <li><a href="#qualifications">Experience</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
-                    </div>
-                    <div class="navbar-end">
-                        <label id="theme-switch">
-                            <input type="checkbox" class="toggleTheme"/>
-
-                            <svg id="dark-mode" class="fill-current w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/></svg>
-                            
-                            <svg id="light-mode" class="fill-current w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/></svg>
-                        </label>
-                        <button class="main-button button-effect download-resume">
+                        <button class="main-button button-effect download-resume-mobile" role="button">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25">
                                 <image xlink:href="images/dark/download.svg" width="25" height="25"></image>
                             </svg>
                             <span>Resume</span>
                         </button>
-                        <label id="menu-switch">
-                            <input type="checkbox" class="toggleMenu"/>
+                    </div>
+                </header>
+    
+                <main>
+                    <section id="intro" class="frame">
+                        <div class="section-content">
+                            <div class="intro-left">
+                                <div class="intro-text">
+                                    <div class="header">
+                                        <div>Hi, my <br>name is <b class="author">Saran<span class="dot">.</span></b></div>
+                                    </div>
+                                    <div class="summary">
+                                        <div class="first flex">
+                                            <div class="profession">I'm a <b class="job-title">data analyst</b> from Kanniyakumari,</div>
+                                        </div>
+                                        <div class="second">
+                                            <span class="state">Tamil Nadu.</span>
+                                        </div>  
+                                    </div>
+                                </div>
+                                <div class="intro-button">
+                                    <a href="#contact" class="main-button button-effect" >
+                                        <span>Contact Me</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="intro-right">
+                                <div class="intro-image">
+                                    <img src="images/intro-image-320.png" alt="" srcset="">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+    
+                    <section id="about" class="frame">
+                        <div class="section-title">
+                            <h2>About Me</h2>
+                        </div>
+                        <div class="section-content prose-lg lg:prose-xl max-w-none">
+                            <p>Hello there, friend! I'm your go-to data analyst, armed with a mighty spreadsheet sword and a heart full of humor. I dive deep into the realms of data, slaying confusion and bringing clarity to the numbers that dare to challenge us. But fear not, I'm not all seriousness and formulas—I sprinkle laughter and wit into every analysis I do. So join me on this data-driven quest, where we'll conquer data dragons, unravel statistical riddles, and create insights that will make you laugh out loud. Let's turn your data journey into an epic adventure with a dash of comedy!</p>
+                        </div>
+                    </section>
+    
+                    <section id="skills" class="frame">
+                        <div class="section-title">
+                            <h2>Skills</h2>
+                        </div>
+                        <div class="section-content">
+                            <div class="skill-block" id="personal-skills">
+                                <div class="skills-left">
+                                    <h4 class="mini-title">Personal Skill</h4>
+                                    <h3 class="mini-highlight">Skills that Define Me</h2>
+                                </div>
+                                <div class="skills-right">
+                                    <ul>
+                                        <li class="skill" name="Critical thinking" value="85">
+                                        </li>
+                                        <li class="skill" name="Problem-solving" value="80">
+                                        </li>
+                                        <li class="skill" name="Attention to detail" value="90">
+                                        </li>
+                                        <li class="skill" name="Communication" value="95">
+                                        </li>
+                                        <li class="skill" name="Collaboration" value="95">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="skill-block" id="data-analytics">
+                                <div class="skills-left">
+                                    <h4 class="mini-title">Data Anlaytics</h4>
+                                    <h3 class="mini-highlight">Data Wizardry at its Best</h2>
+                                </div>
+                                <div class="skills-right">
+                                    <ul>
+                                        <li class="skill" name="Excel" value="98">
+                                        </li>
+                                        <li class="skill" name="SQL" value="90">
+                                        </li>
+                                        <li class="skill" name="Statistics" value="80">
+                                        </li>
+                                        <li class="skill" name="Python" value="75">
+                                        </li>
+                                        <li class="skill" name="Power Bi" value="70">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="skill-block" id="web-technologies">
+                                <div class="skills-left">
+                                    <h4 class="mini-title">Web Technologies</h4>
+                                    <h3 class="mini-highlight">Transforming Ideas into Web Marvels</h2>
+                                </div>
+                                <div class="skills-right">
+                                    <ul>
+                                        <li class="skill" name="Web Developemnt" value="98">
+                                        </li>
+                                        <li class="skill" name="Web Scraping" value="98">
+                                        </li>
+                                        <li class="skill" name="Web automation" value="75">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                     
-                            <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>
-                            
-                            <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
-                        </label>
-                    </div>
-                </div>
-                <div id="mobileDropdown" class="flex-item">
-                    <ul class="menu">
-                        <li><a href="#intro">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#qualifications">Experience</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                    <button class="main-button button-effect download-resume-mobile" role="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25">
-                            <image xlink:href="images/dark/download.svg" width="25" height="25"></image>
-                        </svg>
-                        <span>Resume</span>
-                    </button>
-                </div>
-            </header>
-
-            <main>
-                <section id="intro" class="frame">
-                    <div class="section-content">
-                        <div class="intro-left">
-                            <div class="intro-text">
-                                <div class="header">
-                                    <div>Hi, my <br>name is <b class="author">Saran<span class="dot">.</span></b></div>
+                    <section id="portfolio" class="frame pb-0">
+                        <div class="section-title">
+                            <h2>My Portfolio</h2>
+                        </div>
+                        <div class="section-filters">
+                            <div id="daisy-filters">
+                                <input class="btn" type="radio" name="options" aria-label="show all" data-filter="*" checked/>
+                                <input class="btn" type="radio" name="options" aria-label="Excel" data-filter=".excel"/>
+                                <input class="btn" type="radio" name="options" aria-label="SQL" data-filter=".sql"/>
+                                <input class="btn" type="radio" name="options" aria-label="Power BI" data-filter=".power-bi"/>
+                                <input class="btn" type="radio" name="options" aria-label="Python" data-filter=".python"/>
+                                <input class="btn" type="radio" name="options" aria-label="Web Development" data-filter=".web-development"/>
+                            </div>
+                        </div>
+                        <div class="isotope-container">
+                            <div class="projects">
+                                <div class="project web-development" data-category="web-development">
+                                    <a href="projects/bootstrap-portfolio.html">
+                                        <div class="thumbnail">
+                                            <img src="images/projects/bootstrap_thumb_1.png" alt="" srcset="" class="w-full">
+                                        </div>
+                                        <div class="meta-data">
+                                            <h3 class="title">Bootstrap - Portfolio</h3>
+                                            <p class="description">
+                                                This website highlights the developer's work and skills, using Bootstrap for responsiveness, jQuery for interactivity, and GitHub for version control and collaboration.
+                                            </p>
+                                            <div class="tags">
+                                                <h4 class="tag bootstrap">Bootstrap</h4>
+                                                <h4 class="tag jquery">Jquery</h4>
+                                                <h4 class="tag github">Github</h4>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="summary">
-                                    <div class="first flex">
-                                        <div class="profession">I'm a <b class="job-title">data analyst</b> from Kanniyakumari,</div>
-                                    </div>
-                                    <div class="second">
-                                        <span class="state">Tamil Nadu.</span>
-                                    </div>  
+                                <div class="project web-development" data-category="web-development">
+                                    <a href="projects/svelte-portfolio.html">
+                                        <div class="thumbnail">
+                                            <img src="images/projects/svelte_thumb_1.png" alt="" srcset="" class="w-full">
+                                        </div>
+                                        <div class="meta-data">
+                                            <h3 class="title">Svelte - Portfolio</h3>
+                                            <p class="description">Discover a dynamic portfolio, brought to life with Svelte, JavaScript, and Tailwind CSS. Experience a modern, interactive interface that showcases impressive work and skills.</p>
+                                            <div class="tags">
+                                                <h4 class="tag svelte">Svelte</h4>
+                                                <h4 class="tag vite">Vite</h4>
+                                                <h4 class="tag daisy">Daisy UI</h4>
+                                                <h4 class="tag github">Github</h4>
+                                            </div>
+                                        </div>     
+                                    </a>         
                                 </div>
-                            </div>
-                            <div class="intro-button">
-                                <a href="#contact" class="main-button button-effect" >
-                                    <span>Contact Me</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="intro-right">
-                            <div class="intro-image">
-                                <img src="images/intro-image-320.png" alt="" srcset="">
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="about" class="frame">
-                    <div class="section-title">
-                        <h2>About Me</h2>
-                    </div>
-                    <div class="section-content prose-lg lg:prose-xl max-w-none">
-                        <p>Hello there, friend! I'm your go-to data analyst, armed with a mighty spreadsheet sword and a heart full of humor. I dive deep into the realms of data, slaying confusion and bringing clarity to the numbers that dare to challenge us. But fear not, I'm not all seriousness and formulas—I sprinkle laughter and wit into every analysis I do. So join me on this data-driven quest, where we'll conquer data dragons, unravel statistical riddles, and create insights that will make you laugh out loud. Let's turn your data journey into an epic adventure with a dash of comedy!</p>
-                    </div>
-                </section>
-
-                <section id="skills" class="frame">
-                    <div class="section-title">
-                        <h2>Skills</h2>
-                    </div>
-                    <div class="section-content">
-                        <div class="skill-block" id="personal-skills">
-                            <div class="skills-left">
-                                <h4 class="mini-title">Personal Skill</h4>
-                                <h3 class="mini-highlight">Skills that Define Me</h2>
-                            </div>
-                            <div class="skills-right">
-                                <ul>
-                                    <li class="skill" name="Critical thinking" value="85">
-                                    </li>
-                                    <li class="skill" name="Problem-solving" value="80">
-                                    </li>
-                                    <li class="skill" name="Attention to detail" value="90">
-                                    </li>
-                                    <li class="skill" name="Communication" value="95">
-                                    </li>
-                                    <li class="skill" name="Collaboration" value="95">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="skill-block" id="data-analytics">
-                            <div class="skills-left">
-                                <h4 class="mini-title">Data Anlaytics</h4>
-                                <h3 class="mini-highlight">Data Wizardry at its Best</h2>
-                            </div>
-                            <div class="skills-right">
-                                <ul>
-                                    <li class="skill" name="Excel" value="98">
-                                    </li>
-                                    <li class="skill" name="SQL" value="90">
-                                    </li>
-                                    <li class="skill" name="Statistics" value="80">
-                                    </li>
-                                    <li class="skill" name="Python" value="75">
-                                    </li>
-                                    <li class="skill" name="Power Bi" value="70">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="skill-block" id="web-technologies">
-                            <div class="skills-left">
-                                <h4 class="mini-title">Web Technologies</h4>
-                                <h3 class="mini-highlight">Transforming Ideas into Web Marvels</h2>
-                            </div>
-                            <div class="skills-right">
-                                <ul>
-                                    <li class="skill" name="Web Developemnt" value="98">
-                                    </li>
-                                    <li class="skill" name="Web Scraping" value="98">
-                                    </li>
-                                    <li class="skill" name="Web automation" value="75">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <section id="portfolio" class="frame pb-0">
-                    <div class="section-title">
-                        <h2>My Portfolio</h2>
-                    </div>
-                    <div class="section-filters">
-                        <div id="daisy-filters">
-                            <input class="btn" type="radio" name="options" aria-label="show all" data-filter="*" checked/>
-                            <input class="btn" type="radio" name="options" aria-label="Excel" data-filter=".excel"/>
-                            <input class="btn" type="radio" name="options" aria-label="SQL" data-filter=".sql"/>
-                            <input class="btn" type="radio" name="options" aria-label="Power BI" data-filter=".power-bi"/>
-                            <input class="btn" type="radio" name="options" aria-label="Python" data-filter=".python"/>
-                            <input class="btn" type="radio" name="options" aria-label="Web Development" data-filter=".web-development"/>
-                        </div>
-                    </div>
-                    <div class="isotope-container">
-                        <div class="projects">
-                            <div class="project web-development" data-category="web-development">
-                                <a href="projects/bootstrap-portfolio.html">
-                                    <div class="thumbnail">
-                                        <img src="images/projects/bootstrap_thumb_1.png" alt="" srcset="" class="w-full">
-                                    </div>
-                                    <div class="meta-data">
-                                        <h3 class="title">Bootstrap - Portfolio</h3>
-                                        <p class="description">
-                                            This website highlights the developer's work and skills, using Bootstrap for responsiveness, jQuery for interactivity, and GitHub for version control and collaboration.
-                                        </p>
-                                        <div class="tags">
-                                            <h4 class="tag bootstrap">Bootstrap</h4>
-                                            <h4 class="tag jquery">Jquery</h4>
-                                            <h4 class="tag github">Github</h4>
+                                <div class="project web-development" data-category="web-development">
+                                    <a href="projects/tailwind-portfolio.html">
+                                        <div class="thumbnail">
+                                            <img src="images/projects/tailwind_thumb_1.png" alt="" srcset="" class="w-full">
                                         </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="project web-development" data-category="web-development">
-                                <a href="projects/svelte-portfolio.html">
-                                    <div class="thumbnail">
-                                        <img src="images/projects/svelte_thumb_1.png" alt="" srcset="" class="w-full">
-                                    </div>
-                                    <div class="meta-data">
-                                        <h3 class="title">Svelte - Portfolio</h3>
-                                        <p class="description">Discover a dynamic portfolio, brought to life with Svelte, JavaScript, and Tailwind CSS. Experience a modern, interactive interface that showcases impressive work and skills.</p>
-                                        <div class="tags">
-                                            <h4 class="tag svelte">Svelte</h4>
-                                            <h4 class="tag vite">Vite</h4>
-                                            <h4 class="tag daisy">Daisy UI</h4>
-                                            <h4 class="tag github">Github</h4>
+                                        <div class="meta-data">
+                                            <h2 class="title">Tailwind - Portfolio</h3>
+                                            <p class="description">
+                                                Revamped portfolio, powered by Tailwind and Daisy UI for a modern look and feel. This website includes features such as smooth scrolling, light/dark themes, and smooth project filters
+                                            </p>
+                                            <div class="tags">
+                                                <h4 class="tag tailwind">Tailwind</h4>
+                                                <h4 class="tag daisy">Daisy UI</h4>
+                                                <h4 class="tag github">Github</h4>
+                                            </div>
                                         </div>
-                                    </div>     
-                                </a>         
-                            </div>
-                            <div class="project web-development" data-category="web-development">
-                                <a href="projects/tailwind-portfolio.html">
-                                    <div class="thumbnail">
-                                        <img src="images/projects/tailwind_thumb_1.png" alt="" srcset="" class="w-full">
-                                    </div>
-                                    <div class="meta-data">
-                                        <h2 class="title">Tailwind - Portfolio</h3>
-                                        <p class="description">
-                                            Revamped portfolio, powered by Tailwind and Daisy UI for a modern look and feel. This website includes features such as smooth scrolling, light/dark themes, and smooth project filters
-                                        </p>
-                                        <div class="tags">
-                                            <h4 class="tag tailwind">Tailwind</h4>
-                                            <h4 class="tag daisy">Daisy UI</h4>
-                                            <h4 class="tag github">Github</h4>
+                                    </a>
+                                </div>                 
+                                <div class="project python " data-category="python">
+                                    <a href="project.html">
+                                        <div class="thumbnail">
+                                            <img src="images/projects/naukri_thumb.png" alt="" srcset="" class="w-full">
                                         </div>
-                                    </div>
-                                </a>
-                            </div>                 
-                            <div class="project python " data-category="python">
-                                <a href="project.html">
-                                    <div class="thumbnail">
-                                        <img src="images/projects/naukri_thumb.png" alt="" srcset="" class="w-full">
-                                    </div>
-                                    <div class="meta-data">
-                                        <h3 class="title">Naukri Scraper</h3>
-                                        <p class="description">
-                                            Revamped portfolio, powered by Tailwind and Daisy UI for a modern look and feel. This website includes features such as smooth scrolling, light/dark themes, and smooth project filters
-                                        </p>
-                                        <div class="tags">
-                                            <h4 class="tag nodejs">Node JS</h4>
-                                            <h4 class="tag express">Express</h4>
-                                            <h4 class="tag firebase">Firestore</h4>
-                                            <h4 class="tag gcloud">GCloud</h4>
-                                        </div>
-                                    </div>
-                                </a>                 
-                            </div>
-                            <div class="project power-bi " data-category="power-bi">
-                                <a href="project.html">
-                                    <div class="thumbnail">
-                                        <img src="images/projects/linkedin_thumb.png" alt="" srcset="" class="w-full">
-                                    </div>
-                                    <div class="meta-data">
-                                        <h3 class="title">Linkedin Scraper</h3>
-                                        <p class="description">
-                                            Revamped portfolio, powered by Tailwind and Daisy UI for a modern look and feel. This website includes features such as smooth scrolling, light/dark themes, and smooth project filters
-                                        </p>
-                                        <div class="tags">
-                                            <h4 class="tag nodejs">Node JS</h4>
-                                            <h4 class="tag express">Express</h4>
-                                            <h4 class="tag firebase">Firestore</h4>
-                                            <h4 class="tag gcloud">GCloud</h4>
-                                        </div>
-                                    </div>   
-                                </a>                  
-                            </div>
-                            <div class="project excel " data-category="excel">
-                                <a href="project.html">
-                                    <div class="thumbnail">
-                                        <img src="images/projects/indeed_thumb.png" alt="" srcset="" class="w-full">
-                                    </div>
-                                    <div class="meta-data">
-                                        <h3 class="title">Indeed Scraper</h3>
-                                        <p class="description">
-                                            Revamped portfolio, powered by Tailwind and Daisy UI for a modern look and feel. This website includes features such as smooth scrolling, light/dark themes, and smooth project filters
-                                        </p>
-                                        <div class="tags">
-                                            <h4 class="tag nodejs">Node JS</h4>
-                                            <h4 class="tag express">Express</h4>
-                                            <h4 class="tag firebase">Firestore</h4>
-                                            <h4 class="tag gcloud">GCloud</h4>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="project excel " data-category="excel">
-                                <a href="project.html">
-                                    <div class="thumbnail">
-                                        <img src="images/projects/dash_thumb.png" alt="" srcset="" class="w-full">
-                                    </div>
-                                    <div class="meta-data">
-                                        <h3 class="title">Whril API</h3>
-                                        <p class="description">
-                                            Revamped portfolio, powered by Tailwind and Daisy UI for a modern look and feel. This website includes features such as smooth scrolling, light/dark themes, and smooth project filters
-                                        </p>
-                                        <div class="tags">
+                                        <div class="meta-data">
+                                            <h3 class="title">Naukri Scraper</h3>
+                                            <p class="description">
+                                                Revamped portfolio, powered by Tailwind and Daisy UI for a modern look and feel. This website includes features such as smooth scrolling, light/dark themes, and smooth project filters
+                                            </p>
                                             <div class="tags">
                                                 <h4 class="tag nodejs">Node JS</h4>
                                                 <h4 class="tag express">Express</h4>
@@ -324,20 +268,37 @@
                                                 <h4 class="tag gcloud">GCloud</h4>
                                             </div>
                                         </div>
-                                    </div> 
-                                </a>                       
-                            </div>
-                            <div class="project power-bi " data-category="power-bi">
-                                <a href="project.html">
-                                    <div class="thumbnail">
-                                        <img src="images/projects/dash_thumb.png" alt="" srcset="" class="w-full">
-                                    </div>
-                                    <div class="meta-data">
-                                        <h3 class="title">API Gateway</h3>
-                                        <p class="description">
-                                            Revamped portfolio, powered by Tailwind and Daisy UI for a modern look and feel. This website includes features such as smooth scrolling, light/dark themes, and smooth project filters
-                                        </p>
-                                        <div class="tags">
+                                    </a>                 
+                                </div>
+                                <div class="project power-bi " data-category="power-bi">
+                                    <a href="project.html">
+                                        <div class="thumbnail">
+                                            <img src="images/projects/linkedin_thumb.png" alt="" srcset="" class="w-full">
+                                        </div>
+                                        <div class="meta-data">
+                                            <h3 class="title">Linkedin Scraper</h3>
+                                            <p class="description">
+                                                Revamped portfolio, powered by Tailwind and Daisy UI for a modern look and feel. This website includes features such as smooth scrolling, light/dark themes, and smooth project filters
+                                            </p>
+                                            <div class="tags">
+                                                <h4 class="tag nodejs">Node JS</h4>
+                                                <h4 class="tag express">Express</h4>
+                                                <h4 class="tag firebase">Firestore</h4>
+                                                <h4 class="tag gcloud">GCloud</h4>
+                                            </div>
+                                        </div>   
+                                    </a>                  
+                                </div>
+                                <div class="project excel " data-category="excel">
+                                    <a href="project.html">
+                                        <div class="thumbnail">
+                                            <img src="images/projects/indeed_thumb.png" alt="" srcset="" class="w-full">
+                                        </div>
+                                        <div class="meta-data">
+                                            <h3 class="title">Indeed Scraper</h3>
+                                            <p class="description">
+                                                Revamped portfolio, powered by Tailwind and Daisy UI for a modern look and feel. This website includes features such as smooth scrolling, light/dark themes, and smooth project filters
+                                            </p>
                                             <div class="tags">
                                                 <h4 class="tag nodejs">Node JS</h4>
                                                 <h4 class="tag express">Express</h4>
@@ -345,203 +306,246 @@
                                                 <h4 class="tag gcloud">GCloud</h4>
                                             </div>
                                         </div>
-                                    </div>  
-                                </a>                      
-                            </div>
-                            <div class="project power-bi " data-category="power-bi">
-                                <a href="project.html">
-                                    <div class="thumbnail">
-                                        <img src="images/projects/dash_thumb.png" alt="" srcset="" class="w-full">
-                                    </div>
-                                    <div class="meta-data">
-                                        <h3 class="title">Finance dashboard</h3>
-                                        <p class="description">
-                                            Revamped portfolio, powered by Tailwind and Daisy UI for a modern look and feel. This website includes features such as smooth scrolling, light/dark themes, and smooth project filters
-                                        </p>
-                                        <div class="tags">
-                                            <h4 class="tag excel">Excel</h4>
-                                            <h4 class="tag firebase">Firebase</h4>
-                                            <h4 class="tag svelte">Svelte</h4>
+                                    </a>
+                                </div>
+                                <div class="project excel " data-category="excel">
+                                    <a href="project.html">
+                                        <div class="thumbnail">
+                                            <img src="images/projects/dash_thumb.png" alt="" srcset="" class="w-full">
                                         </div>
-                                    </div>        
-                                </a>           
-                            </div>
-                            <div class="project python " data-category="python">
-                                <a href="project.html">
-                                    <div class="thumbnail">
-                                        <img src="images/projects/dash_thumb.png" alt="" srcset="" class="w-full">
-                                    </div>
-                                    <div class="meta-data">
-                                        <h3 class="title">Finance dashboard</h3>
-                                        <p class="description">
-                                            Revamped portfolio, powered by Tailwind and Daisy UI for a modern look and feel. This website includes features such as smooth scrolling, light/dark themes, and smooth project filters
-                                        </p>
-                                        <div class="tags">
-                                            <h4 class="tag excel">Excel</h4>
-                                            <h4 class="tag firebase">Firebase</h4>
-                                            <h4 class="tag svelte">Svelte</h4>
+                                        <div class="meta-data">
+                                            <h3 class="title">Whril API</h3>
+                                            <p class="description">
+                                                Revamped portfolio, powered by Tailwind and Daisy UI for a modern look and feel. This website includes features such as smooth scrolling, light/dark themes, and smooth project filters
+                                            </p>
+                                            <div class="tags">
+                                                <div class="tags">
+                                                    <h4 class="tag nodejs">Node JS</h4>
+                                                    <h4 class="tag express">Express</h4>
+                                                    <h4 class="tag firebase">Firestore</h4>
+                                                    <h4 class="tag gcloud">GCloud</h4>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </a>                       
+                                </div>
+                                <div class="project power-bi " data-category="power-bi">
+                                    <a href="project.html">
+                                        <div class="thumbnail">
+                                            <img src="images/projects/dash_thumb.png" alt="" srcset="" class="w-full">
                                         </div>
-                                    </div>   
-                                </a>                       
-                            </div>
-                            <div class="project sql " data-category="sql">
-                                <a href="project.html">
-                                    <div class="thumbnail">
-                                        <img src="images/projects/dash_thumb.png" alt="" srcset="" class="w-full">
-                                    </div>
-                                    <div class="meta-data">
-                                        <h3 class="title">Finance dashboard</h3>
-                                        <p class="description">
-                                            Revamped portfolio, powered by Tailwind and Daisy UI for a modern look and feel. This website includes features such as smooth scrolling, light/dark themes, and smooth project filters
-                                        </p>
-                                        <div class="tags">
-                                            <h4 class="tag excel">Excel</h4>
-                                            <h4 class="tag firebase">Firebase</h4>
-                                            <h4 class="tag svelte">Svelte</h4>
+                                        <div class="meta-data">
+                                            <h3 class="title">API Gateway</h3>
+                                            <p class="description">
+                                                Revamped portfolio, powered by Tailwind and Daisy UI for a modern look and feel. This website includes features such as smooth scrolling, light/dark themes, and smooth project filters
+                                            </p>
+                                            <div class="tags">
+                                                <div class="tags">
+                                                    <h4 class="tag nodejs">Node JS</h4>
+                                                    <h4 class="tag express">Express</h4>
+                                                    <h4 class="tag firebase">Firestore</h4>
+                                                    <h4 class="tag gcloud">GCloud</h4>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    </a>                      
+                                </div>
+                                <div class="project power-bi " data-category="power-bi">
+                                    <a href="project.html">
+                                        <div class="thumbnail">
+                                            <img src="images/projects/dash_thumb.png" alt="" srcset="" class="w-full">
                                         </div>
-                                    </div>   
-                                </a>                     
-                            </div>
-                            <div class="project power-bi " data-category="power-bi">
-                                <a href="project.html">
-                                    <div class="thumbnail">
-                                        <img src="images/projects/dash_thumb.png" alt="" srcset="" class="w-full">
-                                    </div>
-                                    <div class="meta-data">
-                                        <h3 class="title">Finance dashboard</h3>
-                                        <p class="description">
-                                            Revamped portfolio, powered by Tailwind and Daisy UI for a modern look and feel. This website includes features such as smooth scrolling, light/dark themes, and smooth project filters
-                                        </p>
-                                        <div class="tags">
-                                            <h4 class="tag excel">Excel</h4>
-                                            <h4 class="tag firebase">Firebase</h4>
-                                            <h4 class="tag svelte">Svelte</h4>
+                                        <div class="meta-data">
+                                            <h3 class="title">Finance dashboard</h3>
+                                            <p class="description">
+                                                Revamped portfolio, powered by Tailwind and Daisy UI for a modern look and feel. This website includes features such as smooth scrolling, light/dark themes, and smooth project filters
+                                            </p>
+                                            <div class="tags">
+                                                <h4 class="tag excel">Excel</h4>
+                                                <h4 class="tag firebase">Firebase</h4>
+                                                <h4 class="tag svelte">Svelte</h4>
+                                            </div>
+                                        </div>        
+                                    </a>           
+                                </div>
+                                <div class="project python " data-category="python">
+                                    <a href="project.html">
+                                        <div class="thumbnail">
+                                            <img src="images/projects/dash_thumb.png" alt="" srcset="" class="w-full">
                                         </div>
-                                    </div>   
-                                </a>            
+                                        <div class="meta-data">
+                                            <h3 class="title">Finance dashboard</h3>
+                                            <p class="description">
+                                                Revamped portfolio, powered by Tailwind and Daisy UI for a modern look and feel. This website includes features such as smooth scrolling, light/dark themes, and smooth project filters
+                                            </p>
+                                            <div class="tags">
+                                                <h4 class="tag excel">Excel</h4>
+                                                <h4 class="tag firebase">Firebase</h4>
+                                                <h4 class="tag svelte">Svelte</h4>
+                                            </div>
+                                        </div>   
+                                    </a>                       
+                                </div>
+                                <div class="project sql " data-category="sql">
+                                    <a href="project.html">
+                                        <div class="thumbnail">
+                                            <img src="images/projects/dash_thumb.png" alt="" srcset="" class="w-full">
+                                        </div>
+                                        <div class="meta-data">
+                                            <h3 class="title">Finance dashboard</h3>
+                                            <p class="description">
+                                                Revamped portfolio, powered by Tailwind and Daisy UI for a modern look and feel. This website includes features such as smooth scrolling, light/dark themes, and smooth project filters
+                                            </p>
+                                            <div class="tags">
+                                                <h4 class="tag excel">Excel</h4>
+                                                <h4 class="tag firebase">Firebase</h4>
+                                                <h4 class="tag svelte">Svelte</h4>
+                                            </div>
+                                        </div>   
+                                    </a>                     
+                                </div>
+                                <div class="project power-bi " data-category="power-bi">
+                                    <a href="project.html">
+                                        <div class="thumbnail">
+                                            <img src="images/projects/dash_thumb.png" alt="" srcset="" class="w-full">
+                                        </div>
+                                        <div class="meta-data">
+                                            <h3 class="title">Finance dashboard</h3>
+                                            <p class="description">
+                                                Revamped portfolio, powered by Tailwind and Daisy UI for a modern look and feel. This website includes features such as smooth scrolling, light/dark themes, and smooth project filters
+                                            </p>
+                                            <div class="tags">
+                                                <h4 class="tag excel">Excel</h4>
+                                                <h4 class="tag firebase">Firebase</h4>
+                                                <h4 class="tag svelte">Svelte</h4>
+                                            </div>
+                                        </div>   
+                                    </a>            
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-                
-                <section id="qualifications" class="frame">
-                    <div class="section-title">
-                        <h2>Qualifications</h2>
-                    </div>
-                    <div class="section-content">
-                        <div class="section-container">
-                            <div id="vibe-bar">
-                                <div class="bar-container">
+                    </section>
+                    
+                    <section id="qualifications" class="frame">
+                        <div class="section-title">
+                            <h2>Qualifications</h2>
+                        </div>
+                        <div class="section-content">
+                            <div class="section-container">
+                                <div id="vibe-bar">
+                                    <div class="bar-container">
+                                        <div>
+                                            <div class="background"
+                                            ></div>
+                                            <div class="foreground"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="qualifications-container">
                                     <div>
-                                        <div class="background"
-                                        ></div>
-                                        <div class="foreground"></div>
+                                        <h4 class="mini-title">Experience</h4>
+                                        <h3 class="mini-highlight">Highlighting career Milestones</h2>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="qualifications-container">
-                                <div>
-                                    <h4 class="mini-title">Experience</h4>
-                                    <h3 class="mini-highlight">Highlighting career Milestones</h2>
-                                </div>
-                                <div class="experience">
-                                    <div class="mb-8">
-                                        <h4 class="title">Project Study</h4>
-                                        <div class="organization">Fathima Traders (March 2022)</div>
-                                    </div>
-                                    <div class="mb-8">
-                                        <h4 class="title">IT Technical Support</h4>
-                                        <div class="organization">WeFix Computer Service (Nov 2019 - June 2022)</div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h4 class="mini-title">Education</h4>
-                                    <h3 class="mini-highlight hidden lg:block">Discover my educational Journey</h2>
-                                </div>
-                                <div class="education">
-                                    <div class="mb-8">
-                                        <h4 class="title">Bachelor Degree - Business Administration</h4>
-                                        <div class="organization">NMCC Marthandam (2019 - 2022)</div>
+                                    <div class="experience">
+                                        <div class="mb-8">
+                                            <h4 class="title">Project Study</h4>
+                                            <div class="organization">Fathima Traders (March 2022)</div>
+                                        </div>
+                                        <div class="mb-8">
+                                            <h4 class="title">IT Technical Support</h4>
+                                            <div class="organization">WeFix Computer Service (Nov 2019 - June 2022)</div>
+                                        </div>
                                     </div>
                                     <div>
-                                        <h4 class="title">HSE - Computer Science</h4>
-                                        <div class="organization">Little Flower MHSS (2017 - 2019)</div>
+                                        <h4 class="mini-title">Education</h4>
+                                        <h3 class="mini-highlight hidden lg:block">Discover my educational Journey</h2>
+                                    </div>
+                                    <div class="education">
+                                        <div class="mb-8">
+                                            <h4 class="title">Bachelor Degree - Business Administration</h4>
+                                            <div class="organization">NMCC Marthandam (2019 - 2022)</div>
+                                        </div>
+                                        <div>
+                                            <h4 class="title">HSE - Computer Science</h4>
+                                            <div class="organization">Little Flower MHSS (2017 - 2019)</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-                
-                <section id="contact" class="frame">
-                    <form class="contact-form contact-container needs-validation" id="contact-form" autocomplete="off" novalidate>
-                        <div class="content-left">
-                            <div class="section-title">
-                                <h3>Contact Me</h3>
+                    </section>
+                    
+                    <section id="contact" class="frame">
+                        <form class="contact-form contact-container needs-validation" id="contact-form" autocomplete="off" novalidate>
+                            <div class="content-left">
+                                <div class="section-title">
+                                    <h3>Contact Me</h3>
+                                </div>
+                                <h3 class="contact-highlight">Let's connect and explore the possibilities</h2>
+                                <ul id="social-medias">
+                                    <li>
+                                        <a href="https://github.com/its-saran" target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25">
+                                                <image xlink:href="images/dark/github.svg" width="25" height="25"></image>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/saran-pv-1928a222a/" target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25">
+                                                <image xlink:href="images/dark/linkedin.svg" width="25" height="25"></image>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/_its.saran_/" target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25">
+                                                <image xlink:href="images/dark/instagram.svg" width="25" height="25"></image>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.kaggle.com/saranpv" target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+                                                <image xlink:href="images/dark/kaggle.svg" width="28" height="28"></image>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:its.saran.pv@gmail.com" target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+                                                <image xlink:href="images/dark/gmail.svg" width="28" height="28"></image>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
-                            <h3 class="contact-highlight">Let's connect and explore the possibilities</h2>
-                            <ul id="social-medias">
-                                <li>
-                                    <a href="https://github.com/its-saran" target="_blank">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25">
-                                            <image xlink:href="images/dark/github.svg" width="25" height="25"></image>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/in/saran-pv-1928a222a/" target="_blank">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25">
-                                            <image xlink:href="images/dark/linkedin.svg" width="25" height="25"></image>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/_its.saran_/" target="_blank">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25">
-                                            <image xlink:href="images/dark/instagram.svg" width="25" height="25"></image>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.kaggle.com/saranpv" target="_blank">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28">
-                                            <image xlink:href="images/dark/kaggle.svg" width="28" height="28"></image>
-                                        </svg>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="mailto:its.saran.pv@gmail.com" target="_blank">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28">
-                                            <image xlink:href="images/dark/gmail.svg" width="28" height="28"></image>
-                                        </svg>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="content-right">
-                            <div class="contact-info">
-                                <input type="text" id="validationCustomName" placeholder="Name" class="form-control" name="name" required>
-                                <input type="email" id="validationCustomEmail" placeholder="Email" class="form-control" name="email" required>
-                            </div>
-                            <div class="contact-msg">
-                                <textarea cols="30" rows="5" class="form-control" id="validationCustomMessage" name="message" placeholder="Message" required></textarea>
-                            </div>
-                            <div class="contact-button">
-                                <div>
-                                    <button class="main-button button-effect send-msg" type="submit" id="submit" name="submit" value="submit">Send Message</button>
-                                    <div class="success-msg"></div>
-                                    <div class="error-msg"></div>
+                            <div class="content-right">
+                                <div class="contact-info">
+                                    <input type="text" id="validationCustomName" placeholder="Name" class="form-control" name="name" required>
+                                    <input type="email" id="validationCustomEmail" placeholder="Email" class="form-control" name="email" required>
+                                </div>
+                                <div class="contact-msg">
+                                    <textarea cols="30" rows="5" class="form-control" id="validationCustomMessage" name="message" placeholder="Message" required></textarea>
+                                </div>
+                                <div class="contact-button">
+                                    <div>
+                                        <button class="main-button button-effect send-msg" type="submit" id="submit" name="submit" value="submit">Send Message</button>
+                                        <div class="success-msg"></div>
+                                        <div class="error-msg"></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </form>
-                </section>
-            </main>
-
-            <footer>
-                <p id="copyright">Copyright © 2023 - All right reserved</p>
-            </footer> 
+                        </form>
+                    </section>
+                </main>
+    
+                <footer>
+                    <p id="copyright">Copyright © 2023 - All right reserved</p>
+                </footer> 
+            </div>
         </div>
+
         <script src="js/isotope-layout.min.js"></script>
         <script src="js/script.js"></script>
     </body>

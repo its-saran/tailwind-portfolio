@@ -14,13 +14,12 @@ class App {
     }
 
     hideLoader() {
-        const preloader = document.querySelector("#preloader");
-    const app = document.querySelector("#app");
-    window.addEventListener("load", function () {
-        preloader.style.display = "none";
-        app.style.display = "flex"
-        app.classList.add("flex-col", "items-center");
-    });
+        const loading_screen = document.querySelector("#project #loading-screen");
+        const main_screen = document.querySelector("#project #main-screen");
+        window.addEventListener("load", function () {
+            loading_screen.style.display = "none";
+            main_screen.style.display = "block"
+        });
     }
 
     fixHeader() {

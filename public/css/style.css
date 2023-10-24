@@ -2723,8 +2723,10 @@ footer{
   margin-bottom: 0;
 }
 
-#app {
-  display: none;
+#app{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .frame{
@@ -4712,10 +4714,6 @@ footer{
 
 .flex-col{
   flex-direction: column;
-}
-
-.items-center{
-  align-items: center;
 }
 
 .justify-center{

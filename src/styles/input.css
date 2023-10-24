@@ -259,8 +259,7 @@
     #project-content #project-about { @apply flex flex-col xl:flex-row pb-6; }
     #project-content #left { @apply xl:w-7/12  2xl:w-3/5; }
     #project-content #left .title { 
-        font-size: 24px;
-        @apply pb-3 xl:pb-6 font-extrabold sm:text-3xl xl:text-4xl;
+        @apply pb-3 lg:pb-6 font-extrabold text-3xl xl:text-4xl;
      }
     #project-content #left p { @apply text-lg; }
     #project-content #left .tools { @apply pb-8 xl:pb-0; }

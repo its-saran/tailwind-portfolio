@@ -451,12 +451,12 @@ html{
 :root{
   --p: 32 100% 51%;
   --pf: 32 100% 44%;
-  --sf: 316 70% 43%;
+  --sf: 0 0% 93%;
   --af: 175 70% 34%;
   --nf: 213 18% 13%;
   --b3: 0 0% 8%;
   --bc: 145 0% 81%;
-  --sc: 325 84% 92%;
+  --sc: 146 0% 19%;
   --ac: 173 30% 11%;
   --nc: 215 5% 82%;
   --inc: 202 34% 14%;
@@ -474,7 +474,7 @@ html{
   --tab-border: 1px;
   --tab-radius: 0.5rem;
   --pc: 240 5% 65%;
-  --s: 316 70% 50%;
+  --s: 0 0% 100%;
   --a: 175 70% 41%;
   --n: 213 18% 20%;
   --b1: 0 0% 13%;
@@ -488,12 +488,12 @@ html{
 [data-theme=dark]{
   --p: 32 100% 51%;
   --pf: 32 100% 44%;
-  --sf: 316 70% 43%;
+  --sf: 0 0% 93%;
   --af: 175 70% 34%;
   --nf: 213 18% 13%;
   --b3: 0 0% 8%;
   --bc: 145 0% 81%;
-  --sc: 325 84% 92%;
+  --sc: 146 0% 19%;
   --ac: 173 30% 11%;
   --nc: 215 5% 82%;
   --inc: 202 34% 14%;
@@ -511,7 +511,7 @@ html{
   --tab-border: 1px;
   --tab-radius: 0.5rem;
   --pc: 240 5% 65%;
-  --s: 316 70% 50%;
+  --s: 0 0% 100%;
   --a: 175 70% 41%;
   --n: 213 18% 20%;
   --b1: 0 0% 13%;
@@ -525,7 +525,7 @@ html{
 [data-theme=light]{
   --p: 32 100% 51%;
   --pf: 32 100% 44%;
-  --sf: 314 100% 40%;
+  --sf: 0 0% 0%;
   --af: 174 75% 39%;
   --nf: 214 20% 14%;
   --in: 198 93% 60%;
@@ -547,7 +547,7 @@ html{
   --tab-border: 1px;
   --tab-radius: 0.5rem;
   --pc: 240 4% 46%;
-  --s: 314 100% 47%;
+  --s: 0 0% 0%;
   --sc: 314 100% 91%;
   --a: 174 75% 46%;
   --ac: 174 75% 11%;
@@ -3583,7 +3583,7 @@ footer{
      -moz-user-select: none;
           user-select: none;
   text-transform: none;
-  transition-property: all;
+  transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   touch-action: manipulation;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
@@ -3968,9 +3968,13 @@ footer{
   }
 }
 
+/* #portfolio .project .meta-data .description { @apply pt-4 text-primary-content 2xl:text-lg mb-6 lg:mb-0; } */
+
 #portfolio .project .meta-data .description{
   margin-bottom: 1.5rem;
   padding-top: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: hsl(var(--pc) / var(--tw-text-opacity));
 }
@@ -3978,13 +3982,6 @@ footer{
 @media (min-width: 768px){
   #portfolio .project .meta-data .description{
     margin-bottom: 0px;
-  }
-}
-
-@media (min-width: 1280px){
-  #portfolio .project .meta-data .description{
-    font-size: 1.125rem;
-    line-height: 1.75rem;
   }
 }
 
@@ -4491,7 +4488,7 @@ footer{
 #project-content #right{
   border-radius: 0.375rem;
   border-width: 1px;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  border-color: hsl(var(--s) / var(--tw-border-opacity));
   --tw-border-opacity: 0.2;
   --tw-bg-opacity: 1;
   background-color: hsl(var(--b1) / var(--tw-bg-opacity));
@@ -4566,7 +4563,7 @@ footer{
      -moz-user-select: none;
           user-select: none;
   text-transform: none;
-  transition-property: all;
+  transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   touch-action: manipulation;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
@@ -4580,9 +4577,10 @@ footer{
 #project-content #right .bottom .github-link button{
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  border-color: hsl(var(--s) / var(--tw-border-opacity));
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: hsl(var(--s) / var(--tw-text-opacity));
+  transition-property: none;
 }
 
 #project-content #right .bottom .website-link button{
@@ -4591,7 +4589,7 @@ footer{
      -moz-user-select: none;
           user-select: none;
   text-transform: none;
-  transition-property: all;
+  transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   touch-action: manipulation;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
@@ -4608,6 +4606,11 @@ footer{
   background-image: linear-gradient(45deg, #ff512f 20%, #f09819 100%, #ff512f 100%);
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+  transition-property: none;
+}
+
+#project-content #project-description{
+  margin-top: 1rem;
 }
 
 #project-content #project-description p{
@@ -4628,7 +4631,7 @@ footer{
      -moz-user-select: none;
           user-select: none;
   text-transform: none;
-  transition-property: all;
+  transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   touch-action: manipulation;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
@@ -4644,7 +4647,7 @@ footer{
   gap: 0.25rem;
   text-transform: uppercase;
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: hsl(var(--s) / var(--tw-text-opacity));
 }
 
 /* Media quieries*/
@@ -4706,10 +4709,6 @@ footer{
 
 .mb-3{
   margin-bottom: 0.75rem;
-}
-
-.mb-6{
-  margin-bottom: 1.5rem;
 }
 
 .mb-8{

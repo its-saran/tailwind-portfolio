@@ -57,7 +57,7 @@
     #menu-switch { @apply btn btn-circle btn-ghost swap swap-rotate 2xl:hidden; }
 
     .button-effect {
-        @apply cursor-pointer select-none transition-all normal-case;
+        @apply cursor-pointer select-none transition-transform normal-case;
         touch-action: manipulation;
         transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
         transition-duration: 200ms;
@@ -151,7 +151,8 @@
     }
     #portfolio .project .meta-data { @apply px-5 py-5 flex flex-col h-full; }
     #portfolio .project .meta-data .title { @apply font-bold m-0 text-xl 2xl:text-2xl ;}
-    #portfolio .project .meta-data .description { @apply pt-4 text-primary-content 2xl:text-lg mb-6 lg:mb-0; }
+    /* #portfolio .project .meta-data .description { @apply pt-4 text-primary-content 2xl:text-lg mb-6 lg:mb-0; } */
+    #portfolio .project .meta-data .description { @apply pt-4 text-primary-content text-lg mb-6 lg:mb-0; }
     #portfolio .project .meta-data .tags { @apply flex flex-wrap gap-1.5 items-center; }
 
     .tags .tag { @apply m-0 px-2 py-1 rounded-md text-sm;  }
@@ -258,13 +259,11 @@
     #project-image img { @apply xl:rounded-t-md border border-white border-opacity-20 w-full; }
     #project-content #project-about { @apply flex flex-col xl:flex-row pb-6; }
     #project-content #left { @apply xl:w-7/12  2xl:w-3/5; }
-    #project-content #left .title { 
-        @apply font-extrabold text-3xl xl:text-4xl;
-     }
+    #project-content #left .title { @apply font-extrabold text-3xl xl:text-4xl; }
     #project-content #left p { @apply text-lg; }
     #project-content #left .tools { @apply pb-8 xl:pb-0; }
     #project-content #left .tools .tags { @apply flex flex-wrap gap-2; }
-    #project-content #right { @apply xl:w-5/12 2xl:w-2/5 xl:ml-8 bg-base-100 border border-white border-opacity-20 rounded-md px-8 py-10 pt-6; }
+    #project-content #right { @apply xl:w-5/12 2xl:w-2/5 xl:ml-8 bg-base-100 border border-secondary border-opacity-20 rounded-md px-8 py-10 pt-6; }
     #project-content #right .top { @apply mt-3 mb-8 flex flex-col gap-4; }
     #project-content #right .top .head { @apply flex items-center gap-2; }
     #project-content #right .top h4 { @apply font-light mt-1.5; }
@@ -272,13 +271,14 @@
     #project-content #right .bottom { @apply mt-6 flex items-center gap-4; }
     #project-content #right .bottom a { @apply no-underline; }
     #project-content #right .bottom button { @apply flex items-center gap-2 rounded-lg px-2.5 py-2; }
-    #project-content #right .bottom .github-link button { @apply border border-white button-effect text-white; }
-    #project-content #right .bottom .website-link button { @apply sub-button button-effect text-black; }
+    #project-content #right .bottom .github-link button { @apply border border-secondary button-effect text-secondary transition-none; }
+    #project-content #right .bottom .website-link button { @apply sub-button button-effect text-black transition-none; }
+    #project-content #project-description { @apply mt-4;}
     #project-content #project-description p { @apply text-lg; }
 
 
     #project-pagination { @apply flex w-full justify-between pt-8; }
-    #project-pagination button { @apply text-white uppercase gap-1 flex button-effect; }
+    #project-pagination button { @apply text-secondary uppercase gap-1 flex button-effect; }
     
 
 

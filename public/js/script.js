@@ -71,6 +71,7 @@ class App {
         const toggleTheme = document.querySelector('#theme-switch .toggleTheme');
         const themeToggleElement = document.querySelector('html');
         const socialMediaImages = document.querySelectorAll('#social-medias svg image');
+        const github_icon = document.querySelector('#project-container #project-content #right .github-link svg image')
 
         const darkMode = document.querySelector('#dark-mode');
         const lightMode = document.querySelector('#light-mode');
@@ -90,6 +91,7 @@ class App {
                     link.setAttribute('xlink:href', socialMediaUrls[index]);
                 }
             });
+            if (github_icon) { github_icon.setAttribute('xlink:href', `../images/${theme}/github.svg`)}
 
             // Save the theme preference in local storage
             localStorage.setItem('theme', theme);

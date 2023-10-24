@@ -4454,22 +4454,14 @@ footer{
   }
 }
 
-#project-content #left .title {
-  font-size: 24px;
-  padding-bottom: 0.75rem;
+#project-content #left .title{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
   font-weight: 800;
-}
-
-@media (min-width: 420px){
-  #project-content #left .title{
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
 }
 
 @media (min-width: 1024px){
   #project-content #left .title{
-    padding-bottom: 1.5rem;
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
@@ -4965,6 +4957,11 @@ footer{
   padding-top: 2rem;
 }
 
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .text-lg{
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -5258,6 +5255,11 @@ footer{
 
   .xl\:flex-row{
     flex-direction: row;
+  }
+
+  .xl\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 

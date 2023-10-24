@@ -150,7 +150,8 @@
         transform: scale(1.01);
     }
     #portfolio .project .meta-data { @apply px-5 py-5 flex flex-col h-full; }
-    #portfolio .project .meta-data .title { @apply font-bold m-0 text-xl 2xl:text-2xl ;}
+    #portfolio .project .meta-data .title { @apply font-bold m-0 text-2xl ;}
+    /* #portfolio .project .meta-data .title { @apply font-bold m-0 text-xl 2xl:text-2xl ;} */
     /* #portfolio .project .meta-data .description { @apply pt-4 text-primary-content 2xl:text-lg mb-6 lg:mb-0; } */
     #portfolio .project .meta-data .description { @apply pt-4 text-primary-content text-lg mb-6 lg:mb-0; }
     #portfolio .project .meta-data .tags { @apply flex flex-wrap gap-1.5 items-center; }
@@ -268,7 +269,7 @@
     #project-content #right .top .head { @apply flex items-center gap-2; }
     #project-content #right .top h4 { @apply font-light mt-1.5; }
     #project-content #right .top h3 { @apply m-0 p-0; }
-    #project-content #right .bottom { @apply mt-6 flex items-center gap-4; }
+    #project-content #right .bottom { @apply mt-6 flex items-center flex-wrap gap-4; }
     #project-content #right .bottom a { @apply no-underline; }
     #project-content #right .bottom button { @apply flex items-center gap-2 rounded-lg px-2.5 py-2; }
     #project-content #right .bottom .github-link button { @apply border border-secondary button-effect text-secondary transition-none; }

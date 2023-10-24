@@ -3956,17 +3956,12 @@ footer{
 
 #portfolio .project .meta-data .title{
   margin: 0px;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
 }
 
-@media (min-width: 1280px){
-  #portfolio .project .meta-data .title{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
+/* #portfolio .project .meta-data .title { @apply font-bold m-0 text-xl 2xl:text-2xl ;} */
 
 /* #portfolio .project .meta-data .description { @apply pt-4 text-primary-content 2xl:text-lg mb-6 lg:mb-0; } */
 
@@ -4538,6 +4533,7 @@ footer{
 #project-content #right .bottom{
   margin-top: 1.5rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
 }
@@ -4689,10 +4685,6 @@ footer{
   position: relative;
 }
 
-.m-0{
-  margin: 0px;
-}
-
 .mx-2{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
@@ -4701,10 +4693,6 @@ footer{
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
-}
-
-.mb-2{
-  margin-bottom: 0.5rem;
 }
 
 .mb-3{
@@ -4719,24 +4707,8 @@ footer{
   margin-top: 0px;
 }
 
-.mt-1{
-  margin-top: 0.25rem;
-}
-
-.mt-1\.5{
-  margin-top: 0.375rem;
-}
-
-.mt-12{
-  margin-top: 3rem;
-}
-
 .mt-14{
   margin-top: 3.5rem;
-}
-
-.mt-3{
-  margin-top: 0.75rem;
 }
 
 .mt-4{
@@ -4791,36 +4763,12 @@ footer{
   flex-direction: column;
 }
 
-.flex-wrap{
-  flex-wrap: wrap;
-}
-
-.items-center{
-  align-items: center;
-}
-
 .justify-center{
   justify-content: center;
 }
 
 .justify-between{
   justify-content: space-between;
-}
-
-.gap-1{
-  gap: 0.25rem;
-}
-
-.gap-2{
-  gap: 0.5rem;
-}
-
-.gap-3{
-  gap: 0.75rem;
-}
-
-.gap-4{
-  gap: 1rem;
 }
 
 .rounded-lg{
@@ -4895,19 +4843,9 @@ footer{
   padding-right: 0.875rem;
 }
 
-.px-4{
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 .px-8{
   padding-left: 2rem;
   padding-right: 2rem;
-}
-
-.py-0{
-  padding-top: 0px;
-  padding-bottom: 0px;
 }
 
 .py-10{
@@ -4923,11 +4861,6 @@ footer{
 .py-2{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-.py-2\.5{
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem;
 }
 
 .py-3{
@@ -4954,11 +4887,6 @@ footer{
 
 .pt-8{
   padding-top: 2rem;
-}
-
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .text-lg{
@@ -5254,11 +5182,6 @@ footer{
 
   .xl\:flex-row{
     flex-direction: row;
-  }
-
-  .xl\:text-4xl{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
   }
 }
 

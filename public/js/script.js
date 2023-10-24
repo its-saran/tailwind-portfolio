@@ -1,7 +1,6 @@
 class App {
     constructor() {
         this.page = document.documentElement.id
-        
         this.header = document.querySelector('header');
         this.navbarMenuItems = document.querySelectorAll('#home .navbar .menu li');
         this.scrollDuration = 1000;
@@ -16,9 +15,12 @@ class App {
 
     hideLoader() {
         const preloader = document.querySelector("#preloader");
-        window.addEventListener("load", function () {
-            preloader.style.display = "none";
-        });
+    const app = document.querySelector("#app");
+    window.addEventListener("load", function () {
+        preloader.style.display = "none";
+        app.style.display = "flex"
+        app.classList.add("flex-col", "items-center");
+    });
     }
 
     fixHeader() {

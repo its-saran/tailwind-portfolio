@@ -1,6 +1,7 @@
 class App {
     constructor() {
         this.page = document.documentElement.id
+        
         this.header = document.querySelector('header');
         this.navbarMenuItems = document.querySelectorAll('#home .navbar .menu li');
         this.scrollDuration = 1000;
@@ -11,6 +12,13 @@ class App {
         this.contactForm = document.getElementById('contact-form');
 
         this.init();
+    }
+
+    hideLoader() {
+        const preloader = document.querySelector("#preloader");
+        window.addEventListener("load", function () {
+            preloader.style.display = "none";
+        });
     }
 
     fixHeader() {
@@ -315,6 +323,7 @@ class App {
     
     init() {
         if (this.page === "home") {
+            this.hideLoader()
             this.fixHeader();
             this.animateScroll();
             this.toggleMenu();
@@ -324,6 +333,7 @@ class App {
             this.filterPortfolio();
             this.setupForm();
         } else if (this.page === "project") {
+            this.hideLoader()
             this.fixHeader();
             this.toggleMenu();
             this.toggleTheme();

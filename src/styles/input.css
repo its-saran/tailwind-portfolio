@@ -88,6 +88,8 @@
         font-size: 28px;
     }
 
+    /* Preloader */
+    #preloader { @apply relative flex justify-center items-center h-screen; }
 
     /*Intro*/
     #intro { @apply mt-8 py-10; }
@@ -280,7 +282,7 @@
 
     #project-pagination { @apply flex w-full justify-between pt-8 gap-4; }
     #project-pagination button { @apply text-secondary uppercase flex items-center button-effect gap-0.5 sm:gap-1; }
-    
+
 
 
     /* Media quieries*/

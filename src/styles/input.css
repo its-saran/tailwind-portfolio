@@ -21,7 +21,7 @@
 
     @media (width < 1280px) { header, main, footer { width: 85%; } }
     @media (width < 1024px) { header, main, footer { width: 80%; } }
-    @media (width < 768px) { header, main, footer { width: 77%; } }
+    @media (width < 640px) { header, main, footer { width: 90%; } }
     @media (width < 420px) { header, main, footer { width: 95%; } }
 }
 
@@ -272,14 +272,14 @@
     #project-content #right .bottom { @apply mt-6 flex items-center flex-wrap gap-4; }
     #project-content #right .bottom a { @apply no-underline; }
     #project-content #right .bottom button { @apply flex items-center gap-2 rounded-lg px-2.5 py-2; }
-    #project-content #right .bottom .github-link button { @apply border border-secondary button-effect text-secondary transition-none; }
-    #project-content #right .bottom .website-link button { @apply sub-button button-effect text-black transition-none; }
+    #project-content #right .bottom .github-link button { @apply border border-secondary button-effect text-secondary; }
+    #project-content #right .bottom .website-link button { @apply sub-button button-effect text-black; }
     #project-content #project-description { @apply mt-4;}
     #project-content #project-description p { @apply text-lg; }
 
 
-    #project-pagination { @apply flex w-full justify-between pt-8; }
-    #project-pagination button { @apply text-secondary uppercase gap-1 flex button-effect; }
+    #project-pagination { @apply flex w-full justify-between pt-8 gap-4; }
+    #project-pagination button { @apply text-secondary uppercase flex items-center button-effect gap-0.5 sm:gap-1; }
     
 
 

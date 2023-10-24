@@ -74,7 +74,6 @@
     }
     .main-button:hover { background-position: right center; color: #1f2937; text-decoration: none; }
     .main-button:active { transform: scale(0.9); }
-
     .sub-button {
         box-shadow: 0px 0px 14px -7px #f09819;
         color: #1f2937;
@@ -255,10 +254,14 @@
     .box img { @apply w-full }
 
     #project-container { @apply mt-4 bg-base-200 pb-12;}
-    #project-content, #project-pagination { @apply pt-14 px-4 xs:px-4 sm:px-6 md:px-10; }
+    #project-content, #project-pagination { @apply pt-8 xl:pt-14 px-4 sm:px-6 md:px-10; }
     #project-image img { @apply xl:rounded-t-md border border-white border-opacity-20 w-full; }
     #project-content #project-about { @apply flex flex-col xl:flex-row pb-6; }
     #project-content #left { @apply xl:w-7/12  2xl:w-3/5; }
+    #project-content #left .title { 
+        font-size: 24px;
+        @apply pb-3 xl:pb-6 font-extrabold sm:text-3xl xl:text-4xl;
+     }
     #project-content #left p { @apply text-lg; }
     #project-content #left .tools { @apply pb-8 xl:pb-0; }
     #project-content #left .tools .tags { @apply flex flex-wrap gap-2; }

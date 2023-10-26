@@ -15,10 +15,8 @@ class App {
 
     hideLoader() {
         const loading_screen = document.querySelector("#project #loading-screen");
-        const main_screen = document.querySelector("#project #main-screen");
         window.addEventListener("load", function () {
             loading_screen.style.display = "none";
-            main_screen.style.display = "block"
         });
     }
 
@@ -324,7 +322,6 @@ class App {
     
     init() {
         if (this.page === "home") {
-            this.hideLoader()
             this.fixHeader();
             this.animateScroll();
             this.toggleMenu();
@@ -334,7 +331,6 @@ class App {
             this.filterPortfolio();
             this.setupForm();
         } else if (this.page === "project") {
-            this.hideLoader()
             this.fixHeader();
             this.toggleMenu();
             this.toggleTheme();

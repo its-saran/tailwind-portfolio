@@ -4736,6 +4736,15 @@ footer{
   border-style: none;
 }
 
+.border-secondary{
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--s) / var(--tw-border-opacity));
+}
+
+.border-opacity-20{
+  --tw-border-opacity: 0.2;
+}
+
 .bg-base-100{
   --tw-bg-opacity: 1;
   background-color: hsl(var(--b1) / var(--tw-bg-opacity));

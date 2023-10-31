@@ -4814,10 +4814,6 @@ html[data-theme="dark"] #project-pagination button{
   height: 2rem;
 }
 
-.h-full{
-  height: 100%;
-}
-
 .h-screen{
   height: 100vh;
 }
@@ -4916,6 +4912,11 @@ html[data-theme="dark"] #project-pagination button{
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .pb-0{

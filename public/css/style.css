@@ -1182,6 +1182,33 @@ footer{
   outline: none;
 }
 
+.stack{
+  display: inline-grid;
+  place-items: center;
+  align-items: flex-end;
+}
+
+.stack > *{
+  grid-column-start: 1;
+  grid-row-start: 1;
+  transform: translateY(10%) scale(0.9);
+  z-index: 1;
+  width: 100%;
+  opacity: 0.6;
+}
+
+.stack > *:nth-child(2){
+  transform: translateY(5%) scale(0.95);
+  z-index: 2;
+  opacity: 0.8;
+}
+
+.stack > *:nth-child(1){
+  transform: translateY(0) scale(1);
+  z-index: 3;
+  opacity: 1;
+}
+
 .swap .swap-on,
 .swap .swap-indeterminate,
 .swap input:indeterminate ~ .swap-on{
@@ -3998,10 +4025,6 @@ footer{
   font-weight: 700;
 }
 
-/* #portfolio .project .meta-data .title { @apply font-bold m-0 text-xl 2xl:text-2xl ;} */
-
-/* #portfolio .project .meta-data .description { @apply pt-4 text-primary-content 2xl:text-lg mb-6 lg:mb-0; } */
-
 #portfolio .project .meta-data .description{
   margin-bottom: 1.5rem;
   padding-top: 1rem;
@@ -4013,7 +4036,7 @@ footer{
 
 @media (min-width: 768px){
   #portfolio .project .meta-data .description{
-    margin-bottom: 0px;
+    margin-bottom: 1rem;
   }
 }
 
@@ -4099,6 +4122,13 @@ footer{
 }
 
 .tags .github{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tags .hygraph{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -4899,6 +4929,11 @@ html[data-theme="dark"] #project-pagination button{
   padding-right: 0.875rem;
 }
 
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .px-8{
   padding-left: 2rem;
   padding-right: 2rem;
@@ -4912,11 +4947,6 @@ html[data-theme="dark"] #project-pagination button{
 .py-3{
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-
-.px-4{
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .pb-0{

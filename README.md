@@ -4,7 +4,7 @@
 
 Welcome to the Tailwind - Portfolio Website Template! This template is designed to help you create a stunning portfolio website to showcase your skills, projects, and experiences. It's built with modern web development tools including Tailwind CSS, Daisy UI, and JavaScript.
 
-**Revamped Bootstrap Portfolio**: This template is a revamped version of the [John - Bootstrap portfolio template](https://github.com/its-saran/john-portfolio), bringing it into the modern era of web development with Tailwind CSS.
+**Revamped Portfolio**: This template is a revamped version of the [John - Bootstrap portfolio template](https://github.com/its-saran/john-portfolio), bringing it into the modern era of web development with Tailwind CSS.
 
 ## Features
 
@@ -33,4 +33,53 @@ Follow these steps to get started with your revamped portfolio:
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/your-username/revamped-portfolio.git
+   git clone https://github.com/its-saran/tailwind-portfolio.git
+
+2. **Install Dependencies**:
+
+   ```bash
+   cd tailwind-portfolio
+   npm install
+
+3. **Run watch**:
+
+   ```bash
+   npm run watch
+   ```
+
+   - This will automatically watches for the changes and update the puclic directory
+
+### Customization
+
+To customize this portfolio template, follow these steps:
+
+1. **Update Content**:
+   - Customize the content by editing the files in the `src` directory. You can change project details, add new projects, and adjust the layout to suit your needs.
+
+2. **Modify CSS Styles**:
+   - Navigate to the `src` directory and update the `input.css` in the `styles` folder.
+
+3. **Note**:
+   - "Please don't edit the `style.css` file in the `public/css/` folder. It's made automatically by Tailwind, so leave it as it is." .
+
+### Production
+
+To obtain a production-ready version, follow these steps:
+
+1. **Build the Project**:
+
+   Start the build process by running the following command:
+
+   ```bash
+   npm run build
+
+2. **Copy the Production Files**:
+
+    Once the build command has completed, copy the contents of the public directory. This directory contains the production-ready files.
+
+
+
+
+
+
+

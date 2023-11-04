@@ -1,15 +1,17 @@
 # Tailwind - Portfolio Website Template with Daisy UI, and JavaScript
 
-![Portfolio Screenshot](/public/images/projects/tail.png)
+![Portfolio Screenshot](/public/images/projects/tail.jpg)
 
 Welcome to the Tailwind - Portfolio Website Template! This template is designed to help you create a stunning portfolio website to showcase your skills, projects, and experiences. It's built with modern web development tools including Tailwind CSS, Daisy UI, and JavaScript.
+
+## Demo
+You can see a live demo of the John Portfolio Website Template [here](https://its-saran.github.io/portfolio/).
 
 **Revamped Portfolio**: This template is a revamped version of the [John - Bootstrap portfolio template](https://github.com/its-saran/john-portfolio), bringing it into the modern era of web development with Tailwind CSS.
 
 ## Features
 
 - **Responsive Design**: Your portfolio will look great on all devices, from desktops to mobile phones.
-
 
 - **Dark and Light Mode**: Offer users the choice of a dark or light theme for an improved viewing experience.
 
@@ -20,7 +22,6 @@ Welcome to the Tailwind - Portfolio Website Template! This template is designed 
 - **Advanced Project Filtering**: Enable users to filter and sort projects based on categories, technologies, or other criteria.
 
 - **Tailwind CSS & Daisy UI**: Customize the styling of your website easily using Tailwind CSS with the added convenience of Daisy UI components.
-
 
 - **Separate Project Page**: Provide dedicated project details pages for in-depth information about each project.
 

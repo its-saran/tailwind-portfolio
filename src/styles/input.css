@@ -169,6 +169,7 @@
     .tags .hygraph{ @apply text-white bg-[#000000]; }
     .tags .git{ @apply text-black bg-orange-600; }
     .tags .firebase { @apply text-black bg-yellow-500; }
+    .tags .puppeteer { @apply text-black bg-teal-500}
     .tags .gsheets { @apply text-black bg-green-500}
     .tags .render { @apply text-white bg-green-700}
     .tags .gcloud { @apply text-white bg-[#4285F4]; }
@@ -281,7 +282,7 @@
     #project-content #project-description p { @apply text-lg; }
 
     #project-content #project-description .features { @apply flex flex-col gap-4; }
-    #project-content #project-description .features .desc { @apply flex flex-col gap-6; }
+    #project-content #project-description .features .desc { @apply flex flex-col gap-3.5; }
     #project-content #project-description .features h4 { @apply mb-0 font-semibold text-xl inline; }
     #project-content #project-description .features p { @apply mt-1 inline; }
 

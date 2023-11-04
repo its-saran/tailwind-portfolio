@@ -278,11 +278,13 @@
     #project-content #right .bottom button { @apply flex items-center gap-2 rounded-lg px-2.5 py-2; }
     #project-content #right .bottom .github-link button { @apply border border-secondary button-effect text-secondary; }
     #project-content #right .bottom .website-link button { @apply sub-button button-effect text-black; }
+    
     #project-content #project-description { @apply mt-4;}
+    #project-content #project-description .image{ @apply flex justify-center;}
+    #project-content #project-description .image img{ @apply border border-secondary border-opacity-20 m-0; }
+    #project-content #project-description .title { @apply text-xl font-semibold ;}
     #project-content #project-description p { @apply text-lg; }
-
-    #project-content #project-description .features { @apply flex flex-col gap-4; }
-    #project-content #project-description .features .desc { @apply flex flex-col gap-3.5; }
+    #project-content #project-description .features .desc { @apply list-disc flex flex-col; }
     #project-content #project-description .features h4 { @apply mb-0 font-semibold text-xl inline; }
     #project-content #project-description .features p { @apply mt-1 inline; }
 

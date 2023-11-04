@@ -4583,21 +4583,33 @@ footer{
   margin-top: 1rem;
 }
 
+#project-content #project-description .image{
+  display: flex;
+  justify-content: center;
+}
+
+#project-content #project-description .image img{
+  margin: 0px;
+  border-width: 1px;
+  border-color: hsl(var(--s) / var(--tw-border-opacity));
+  --tw-border-opacity: 0.2;
+}
+
+#project-content #project-description .title{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
 #project-content #project-description p{
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
 
-#project-content #project-description .features{
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
 #project-content #project-description .features .desc{
   display: flex;
+  list-style-type: disc;
   flex-direction: column;
-  gap: 0.875rem;
 }
 
 #project-content #project-description .features h4{

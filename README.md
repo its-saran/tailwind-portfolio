@@ -7,7 +7,9 @@ Welcome to the Tailwind - Portfolio Website Template! This template is designed 
 ## Demo
 You can see a live demo of the John Portfolio Website Template [here](https://its-saran.github.io/portfolio/).
 
-**Revamped Portfolio**: This template is a revamped version of the [John - Bootstrap portfolio template](https://github.com/its-saran/john-portfolio), bringing it into the modern era of web development with Tailwind CSS.
+
+## Upgrade to the Modern Era
+This template is a revamped version of the [John - Bootstrap portfolio template](https://github.com/its-saran/john-portfolio), bringing it into the modern era of web development with Tailwind CSS.
 
 ## Features
 
@@ -50,7 +52,7 @@ Follow these steps to get started with your revamped portfolio:
 
    - This will automatically watches for the changes and update the puclic directory
 
-### Customization
+## Customization
 
 To customize this portfolio template, follow these steps:
 
@@ -63,7 +65,7 @@ To customize this portfolio template, follow these steps:
 3. **Note**:
    - "Please don't edit the `style.css` file in the `public/css/` folder. It's made automatically by Tailwind, so leave it as it is." .
 
-### Production
+## Production
 
 To obtain a production-ready version, follow these steps:
 

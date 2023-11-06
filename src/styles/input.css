@@ -177,6 +177,8 @@
     .tags .isotope { @apply text-white bg-amber-600; }
     .tags .vite { @apply text-white bg-purple-600; }
     .tags .filterizr { @apply text-white bg-blue-700; }
+    .tags .cheerio { @apply text-white bg-[#e88c1f]}
+    .tags .http-proxy { @apply text-white bg-cyan-800}
 
 
     /*Qualifications*/
@@ -292,7 +294,6 @@
     #project-pagination { @apply flex w-full justify-between pt-8 gap-4; }
     #project-pagination button { @apply font-bold text-orange-700 uppercase flex items-center button-effect gap-0.5 sm:gap-1; }
     html[data-theme="dark"] #project-pagination button { @apply text-orange-500 ; }
-
 
 
     /* Media quieries*/

@@ -4542,6 +4542,10 @@ footer{
   font-weight: 600;
 }
 
+#project-content #project-description .title h3{
+  margin-top: 0px;
+}
+
 #project-content #project-description p{
   font-size: 1.125rem;
   line-height: 1.75rem;

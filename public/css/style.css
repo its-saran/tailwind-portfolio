@@ -4616,6 +4616,221 @@ html[data-theme="dark"] #project-pagination button{
   color: rgb(249 115 22 / var(--tw-text-opacity));
 }
 
+#typewriter {
+  font-size: 9vmin;
+  color: #8bf;
+  text-align: left;
+  font-weight: 700;
+  margin: 1rem 0 1rem 2rem;
+}
+
+@keyframes typing {
+  0.0000%, 49.1521% {
+    content: "";
+  }
+
+  1.6949%, 47.4572% {
+    content: "D";
+  }
+
+  3.3898%, 45.7623% {
+    content: "Da";
+  }
+
+  5.0847%, 44.0674% {
+    content: "Dat";
+  }
+
+  6.7796%, 42.3725% {
+    content: "Data";
+  }
+
+  8.4745%, 40.6776% {
+    content: "Data ";
+  }
+
+  10.1694%, 38.9827% {
+    content: "Data s";
+  }
+
+  11.8643%, 37.2878% {
+    content: "Data sc";
+  }
+
+  13.5592%, 35.5929% {
+    content: "Data sci";
+  }
+
+  15.2541%, 33.8980% {
+    content: "Data scie";
+  }
+
+  16.9490%, 32.2031% {
+    content: "Data scien";
+  }
+
+  18.6439%, 30.5082% {
+    content: "Data scient";
+  }
+
+  20.3388%, 28.8133% {
+    content: "Data scienti";
+  }
+
+  22.0337%, 27.1184% {
+    content: "Data scientis";
+  }
+
+  23.7286%, 25.4235% {
+    content: "Data scientist";
+  }
+
+  50.8470%, 99.9999% {
+    content: "";
+  }
+
+  52.5419%, 98.3042% {
+    content: "W";
+  }
+
+  54.2368%, 96.6093% {
+    content: "We";
+  }
+
+  55.9317%, 94.9144% {
+    content: "Web";
+  }
+
+  57.6266%, 93.2195% {
+    content: "Web ";
+  }
+
+  59.3215%, 91.5246% {
+    content: "Web d";
+  }
+
+  61.0164%, 89.8297% {
+    content: "Web de";
+  }
+
+  62.7113%, 88.1348% {
+    content: "Web dev";
+  }
+
+  64.4062%, 86.4399% {
+    content: "Web deve";
+  }
+
+  66.1011%, 84.7450% {
+    content: "Web devel";
+  }
+
+  67.7960%, 83.0501% {
+    content: "Web devele";
+  }
+
+  69.4909%, 81.3552% {
+    content: "Web develeo";
+  }
+
+  71.1858%, 79.6603% {
+    content: "Web develeop";
+  }
+
+  72.8807%, 77.9654% {
+    content: "Web develeope";
+  }
+
+  74.5756%, 76.2705% {
+    content: "Web develeoper";
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.typewriter {
+  --caret: currentcolor;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 7s infinite;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 0.5s linear infinite;
+}
+
+.typewriter.thick::after {
+  border-right: 1ch solid var(--caret);
+}
+
+.typewriter.nocaret::after {
+  border-right: 0;
+}
+
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+    animation: none;
+  }
+
+  @keyframes sequencePopup {
+    0%, 100% {
+      content: "Web developer";
+    }
+
+    50% {
+      content: "Data scientist";
+    }
+  }
+
+  .typewriter::before {
+    content: "Web developer";
+    animation: sequencePopup 12s linear infinite;
+  }
+}
+
+/* Media queries*/
+
+@media (width >= 768px) {
+  .project {
+    width: calc(49.33% - 20px);
+  }
+
+  #portfolio .project .meta-data .description {
+    height: 205px;
+  }
+}
+
+@media (width >= 1024px) {
+  .project {
+    width: calc(33.33% - 20px);
+  }
+}
+
+@media (width < 1024px) {
+}
+
+@media (width < 1280px) {
+  .download-resume{
+    display: none;
+  }
+
+  .navbar-center{
+    display: none;
+  }
+}
+
 /* Media quieries*/
 
 @media (width >= 768px) {

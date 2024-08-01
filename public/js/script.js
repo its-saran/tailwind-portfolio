@@ -330,6 +330,7 @@ class App {
             this.generateSkills();
             this.filterPortfolio();
             this.setupForm();
+              
         } else if (this.page === "project") {
             this.fixHeader();
             this.toggleMenu();

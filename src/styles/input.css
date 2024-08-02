@@ -97,6 +97,7 @@
     #intro .section-content .intro-left .header { @apply text-3xl xs:text-4xl xl:text-5xl; }
     #intro .section-content .intro-left .header .dot { @apply text-orange-500 text-3xl ml-0.5; }
     #intro .section-content .intro-left .summary { @apply py-6 lg:py-12 text-xl xl:text-2xl; }
+    #intro .section-content .intro-left .summary .first { @apply flex-col lg:flex-row gap-1; }
     #intro .section-content .intro-right { @apply order-1 lg:order-2 lg:w-1/2 xl:w-5/12; }
     #intro .section-content .intro-right .intro-image{ @apply mx-8 mt-1.5 mb-4; }
     .intro-image { 
@@ -321,22 +322,22 @@
         22.0337%, 27.1184% { content: "Data scientis"; }
         23.7286%, 25.4235% { content: "Data scientist"; }
 
-        50.8470%, 99.9999% { content: ""; }
-        52.5419%, 98.3042% { content: "W"; }
-        54.2368%, 96.6093% { content: "We"; }
-        55.9317%, 94.9144% { content: "Web"; }
-        57.6266%, 93.2195% { content: "Web "; }
-        59.3215%, 91.5246% { content: "Web d"; }
-        61.0164%, 89.8297% { content: "Web de"; }
-        62.7113%, 88.1348% { content: "Web dev"; }
-        64.4062%, 86.4399% { content: "Web deve"; }
-        66.1011%, 84.7450% { content: "Web devel"; }
-        67.7960%, 83.0501% { content: "Web devele"; }
-        69.4909%, 81.3552% { content: "Web develeo"; }
-        71.1858%, 79.6603% { content: "Web develeop"; }
-        72.8807%, 77.9654% { content: "Web develeope"; }
-        74.5756%, 76.2705% { content: "Web develeoper"; }
+        50.8470%, 96.6093% { content: ""; }
+        52.5419%, 94.9144% { content: "W"; }
+        54.2368%, 93.2195% { content: "We"; }
+        55.9317%, 91.5246% { content: "Web"; }
+        57.6266%, 89.8297% { content: "Web "; }
+        59.3215%, 88.1348% { content: "Web d"; }
+        61.0164%, 86.4399% { content: "Web de"; }
+        62.7113%, 84.7450% { content: "Web dev"; }
+        64.4062%, 83.0501% { content: "Web deve"; }
+        66.1011%, 81.3552% { content: "Web devel"; }
+        67.7960%, 79.6603% { content: "Web develo"; }
+        69.4909%, 77.9654% { content: "Web develop"; }
+        71.1858%, 76.2705% { content: "Web develope"; }
+        72.8807%, 74.5756% { content: "Web developer"; }
       }
+
 
       @keyframes blink {
         0%, 100% { opacity: 1; }

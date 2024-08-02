@@ -3637,6 +3637,17 @@ footer{
   }
 }
 
+#intro .section-content .intro-left .summary .first{
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+@media (min-width: 768px){
+  #intro .section-content .intro-left .summary .first{
+    flex-direction: row;
+  }
+}
+
 #intro .section-content .intro-right{
   order: 1;
 }
@@ -4685,64 +4696,60 @@ html[data-theme="dark"] #project-pagination button{
     content: "Data scientist";
   }
 
-  50.8470%, 99.9999% {
+  50.8470%, 96.6093% {
     content: "";
   }
 
-  52.5419%, 98.3042% {
+  52.5419%, 94.9144% {
     content: "W";
   }
 
-  54.2368%, 96.6093% {
+  54.2368%, 93.2195% {
     content: "We";
   }
 
-  55.9317%, 94.9144% {
+  55.9317%, 91.5246% {
     content: "Web";
   }
 
-  57.6266%, 93.2195% {
+  57.6266%, 89.8297% {
     content: "Web ";
   }
 
-  59.3215%, 91.5246% {
+  59.3215%, 88.1348% {
     content: "Web d";
   }
 
-  61.0164%, 89.8297% {
+  61.0164%, 86.4399% {
     content: "Web de";
   }
 
-  62.7113%, 88.1348% {
+  62.7113%, 84.7450% {
     content: "Web dev";
   }
 
-  64.4062%, 86.4399% {
+  64.4062%, 83.0501% {
     content: "Web deve";
   }
 
-  66.1011%, 84.7450% {
+  66.1011%, 81.3552% {
     content: "Web devel";
   }
 
-  67.7960%, 83.0501% {
-    content: "Web devele";
+  67.7960%, 79.6603% {
+    content: "Web develo";
   }
 
-  69.4909%, 81.3552% {
-    content: "Web develeo";
+  69.4909%, 77.9654% {
+    content: "Web develop";
   }
 
-  71.1858%, 79.6603% {
-    content: "Web develeop";
+  71.1858%, 76.2705% {
+    content: "Web develope";
   }
 
-  72.8807%, 77.9654% {
-    content: "Web develeope";
-  }
-
-  74.5756%, 76.2705% {
-    content: "Web develeoper";
+  72.8807%, 74.5756% {
+    content: "Web developer";
   }
 }
 
